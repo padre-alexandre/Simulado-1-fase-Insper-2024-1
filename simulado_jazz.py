@@ -360,6 +360,7 @@ if login_aluno != '':
     
     resultados_gerais_disciplina3['Nota na questão'] = 1000*resultados_gerais_disciplina3['Nota na questão']/resultados_gerais_disciplina3['Valor da questão']
     resultados_gerais_disciplina3_aux = resultados_gerais_disciplina3.drop(columns = ['Turma','Login do aluno(a)','Nome do aluno(a)'])
+    
     st.dataframe(resultados_gerais_disciplina3_aux)
     
     resultados_gerais_disciplina4 = resultados_gerais_disciplina3_aux.groupby(['Disciplina']).mean().reset_index()
