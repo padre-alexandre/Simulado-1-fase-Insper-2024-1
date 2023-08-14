@@ -349,6 +349,7 @@ if login_aluno != '':
     
     base_alunos_fizeram = base[base['Nome do aluno(a)'].isin(alunos_fizeram['Nome do aluno(a)'])].reset_index(drop = True)
     st.dataframe(base_alunos_fizeram)
+    
     base_alunos_fizeram_aux = base_alunos_fizeram.drop(columns = ['Nome da avaliação','Resposta do aluno(a)','Gabarito','Certo ou errado','Assunto'])
 
     resultados_gerais_disciplina = base_alunos_fizeram_aux.groupby(['Turma','Login do aluno(a)','Nome do aluno(a)','Disciplina']).sum().reset_index()
