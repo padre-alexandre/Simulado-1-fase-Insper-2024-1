@@ -1,25 +1,7 @@
-##### Relatório Simulado Nacional Insper - Jazz Vestibular
-
-##### Base de Dados
-
-### Nome da Avaliação
-### Turma
-### Nome do aluno (a)
-### Login do aluno (a)
-### Disciplina
-### Frente
-### Assunto
-### Número da questão
-### Alternativa assinalada pelo aluno (a)
-### Gabarito
-### Certo ou Errado
-### Tempo gasto
-### Valor da questão
+##### Relatório Simulados de 1º fase - Jazz Vestibular
 
 ### Importação de bibliotecas
 
-#from pickle import FALSE
-#from tkinter import E
 from cmath import sqrt
 import pandas as pd
 import streamlit as st
@@ -56,14 +38,12 @@ scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/aut
 creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 client = gspread.authorize(creds)
 
-sheet = client.open('Banco de Dados - Relatório Simulado Nacional').sheet1          # Enquanto estiver rodando na nuvem
-#sheet = client.open('Banco de Dados - Relatório Simulado Nacional - Teste').sheet1   # Enquanto estiver rodando no local
+#sheet = client.open('Banco de Dados - Relatório Simulado Nacional').sheet1          # Enquanto estiver rodando na nuvem
+sheet = client.open('Banco de Dados - Relatório Simulado Nacional - Teste').sheet1   # Enquanto estiver rodando no local
 
 #### Colunas (id, Data e Hora, Nome, Rede, Grupo, Gestor, Produto, Faixa de licenças, Namespace, NPS, Feedback)
 row0 = ['Data e Hora', 'Turma','Nome','Login']
 
-#banco_de_dados = sheet.get_all_records()
-#banco_de_dados2 = pd.DataFrame(banco_de_dados)
 
 ### Cabeçalho principal
 

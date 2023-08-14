@@ -128,11 +128,11 @@ def tabela_questoes(dataframe,coluna1,coluna2,coluna3,coluna4,coluna5,coluna6,co
       <tr style="background-color:#9E089E; height: 90px; color:#FFFFFF; font-family:Georgia; font-size: 17px; text-align: center">
         <th style="width:100px; bordercolor=#FFF0FC">Número da questão</th>
         <th style="width:200px; bordercolor=#FFF0FC">Área do conhecimento</th>
-        <th style="width:350px; bordercolor=#FFF0FC">Assunto</th>
+        <th style="width:450px; bordercolor=#FFF0FC">Assunto</th>
         <th style="width:100px; bordercolor=#FFF0FC">Sua resposta</th>
         <th style="width:100px; bordercolor=#FFF0FC">Gabarito</th>
         <th style="width:100px; bordercolor=#FFF0FC">Seu resultado</th>
-        <th style="width:100px; bordercolor=#FFF0FC">Porcentagem de acerto geral</th>
+        <th style="width:80px; bordercolor=#FFF0FC">Porcentagem de acerto geral</th>
         <th style="width:100px; bordercolor=#FFF0FC">Tempo na questão</th>
         <th style="width:100px; bordercolor=#FFF0FC">Tempo médio na questão</th>
       </tr>
@@ -969,3 +969,9 @@ def fun_tabela_temas_arguicao(dataframe,coluna1,cor_texto,cor_back):
        </table>
     """
     return html_table_temas_arguicao
+
+def extract_login(login):
+    if login.startswith("jazzvestibular_"):
+        return login[len("jazzvestibular_"):]
+    else:
+        return login

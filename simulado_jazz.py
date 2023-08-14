@@ -1,25 +1,7 @@
-##### Relatório Simulado Nacional Insper - Jazz Vestibular
-
-##### Base de Dados
-
-### Nome da Avaliação
-### Turma
-### Nome do aluno (a)
-### Login do aluno (a)
-### Disciplina
-### Frente
-### Assunto
-### Número da questão
-### Alternativa assinalada pelo aluno (a)
-### Gabarito
-### Certo ou Errado
-### Tempo gasto
-### Valor da questão
+##### Relatório Simulados de 1º fase - Jazz Vestibular
 
 ### Importação de bibliotecas
 
-#from pickle import FALSE
-#from tkinter import E
 from cmath import sqrt
 import pandas as pd
 import streamlit as st
@@ -59,11 +41,7 @@ client = gspread.authorize(creds)
 sheet = client.open('Banco de Dados - Relatório Simulado Nacional').sheet1          # Enquanto estiver rodando na nuvem
 #sheet = client.open('Banco de Dados - Relatório Simulado Nacional - Teste').sheet1   # Enquanto estiver rodando no local
 
-#### Colunas (id, Data e Hora, Nome, Rede, Grupo, Gestor, Produto, Faixa de licenças, Namespace, NPS, Feedback)
 row0 = ['Data e Hora', 'Turma','Nome','Login']
-
-#banco_de_dados = sheet.get_all_records()
-#banco_de_dados2 = pd.DataFrame(banco_de_dados)
 
 ### Cabeçalho principal
 
@@ -77,7 +55,7 @@ html_header="""
 <meta name="author" content="Alexandre Fernandes">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<h1 style="font-size:300%; color: #9E089E; font-family:Georgia"> SIMULADO NACIONAL INSPER<br>
+<h1 style="font-size:300%; color: #9E089E; font-family:Georgia"> SIMULADO 1º FASE<br>
  <h2 style="color: #9E089E; font-family:Georgia">RELATÓRIO</h3> <br>
  <hr style= "  display: block;
   margin-top: 0.5em;
@@ -87,23 +65,6 @@ html_header="""
   border-style: inset;
   border-width: 1.5px;"></h1>
 """
-
-html_card_instagram="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #c5ffff; padding-top: 12px; width: 280px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#c5ffff; color:#008181; font-family:Georgia; text-align: center; padding: 0px 0;">Instagram: @jazz_vestibular</p>
-      </div>
-    </div>
-    """
-html_card_whatsapp="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #a5ffa5; padding-top: 12px; width: 280px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#a5ffa5; color:#008800; font-size:16px; font-family:Georgia; text-align: center; padding: 0px 0;">Whatsapp: (32) 99802-5088</p>
-      </div>
-    </div>
-    """
 html_br="""
     <br>
     """
@@ -117,48 +78,34 @@ with st.container():
         with col3:
             st.markdown(html_br, unsafe_allow_html=True)
 
-with st.container():
-        col1, col2, col3, col4= st.columns([5, 5, 5, 5])
-        with col1:
-            st.markdown(html_br, unsafe_allow_html=True)
-        with col2:
-            st.markdown(html_card_instagram, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.write("##### [Clique aqui para ver nossa página](https://www.instagram.com/jazz_vestibular/)")
-        with col3:
-            st.markdown(html_card_whatsapp, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.write("##### [Clique aqui para falar conosco](https://api.whatsapp.com/send?phone=55032998025088)")
-        with col4:
-            st.markdown(html_br, unsafe_allow_html=True)
-
 st.markdown(html_header, unsafe_allow_html=True)
 
 ### Leitura das bases de dados
 
 base_matriz = pd.read_csv('./matrizquestoes.csv')
-
 base_resultados = pd.read_csv('./resultado1fase.csv')
 base_resultados_2fase = pd.read_csv('./resultado2fase.csv')
-#base_resultados_2fase = pd.read_csv('./Jazz Vestibular - 2022.2 - Operacao - [RELATORIO] Base de Dados 2 fase copy.csv')
-
-#base_resultados_2fase = pd.read_csv('./Jazz Vestibular - 2022.2 - Operacao - [RELATORIO] Base de Dados 2 fase copy.csv')
 
 ### Turmas
 
-turma_eng = 'Simulado Nacional Insper 2023.2 - Engenharia'
-turma_cien = 'Simulado Nacional Insper 2023.2 - Ciência da Computação'
-turma_adm = 'Simulado Nacional Insper 2023.2 - Administração'
-turma_eco = 'Simulado Nacional Insper 2023.2 - Economia'
-turma_dir = 'Simulado Nacional Insper 2023.2 - Direito'
+turma_eng12 = '#focoinsper - 2024.1 - Engenharias e Ciência da Computação'
+turma_cien12 = '#focoinsper - 2024.1 - Engenharias e Ciência da Computação'
+turma_adm12 = '#focoinsper - 2024.1 - Administração, Economia e Direito'
+turma_eco12 = '#focoinsper - 2024.1 - Administração, Economia e Direito'
+turma_dir12 = '#focoinsper - 2024.1 - Administração, Economia e Direito'
+
+turma_eng2 = '#focoinsper 2º fase - 2024.1 - Engenharias e Ciência da Computação'
+turma_cien2 = '#focoinsper 2º fase - 2024.1 - Engenharias e Ciência da Computação'
+turma_adm2 = '#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito'
+turma_eco2 = '#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito'
+turma_dir2 = '#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito'
 
 ### Renomeando colunas e ajustando células vazias
 
 for i in range(len(base_resultados['atividade_nome'])):
-    if (base_resultados['turma'][i] == turma_eng or base_resultados['turma'][i] == turma_cien):
-        if base_resultados['num_exercicio'][i] != 73:
-            base_resultados['num_exercicio'][i] = base_resultados['num_exercicio'][i] + 24
-
+    if (base_resultados['turma'][i] == turma_eng12 or base_resultados['turma'][i] == turma_eng2 or base_resultados['turma'][i] == turma_cien12 or base_resultados['turma'][i] == turma_cien2):
+        if base_resultados['num_exercicio'][i] > 48 and base_resultados['num_exercicio'][i] != 73:
+            base_resultados['num_exercicio'][i] = base_resultados['num_exercicio'][i] + 25
 
 base = pd.merge(base_resultados, base_matriz, on = 'num_exercicio', how = 'inner')
 
@@ -176,86 +123,59 @@ for i in range(len(base['Nome da avaliação'])):
     if base['Certo ou errado'][i] == 'certo':
         base['Acerto'][i] = 1
         base['Nota na questão'][i] = base['Acerto'][i]*base['Valor da questão'][i]
-    #if base['Número da questão'][i] == 73 and base['Resposta do aluno(a)'][i] != 'x':
-    #    base['Acerto'][i] = float(base['Resposta do aluno(a)'][i])/base['Valor da questão'][i]
-    #    base['Nota na questão'][i] = base['Acerto'][i]*base['Valor da questão'][i]
 
+base['Login do aluno(a)'] = base['Login do aluno(a)'].apply(extract_login)
 resultados_gerais = base.groupby(['Nome da avaliação','Turma','Nome do aluno(a)','Login do aluno(a)']).sum().reset_index()
-
-#for i in range(len(resultados_gerais['Nome do aluno(a)'])):
-#    if (resultados_gerais['Turma'][i] == turma_eng or resultados_gerais['Turma'][i] == turma_cien) and resultados_gerais['Nome da avaliação'][i] == 'Simulado Nacional Insper 1º fase - Matemática e Linguagens':
-#        resultados_gerais['Nota na questão'][i] = (1/3)*resultados_gerais['Nota na questão'][i]
-#    elif resultados_gerais['Turma'][i] == 'Simulado Nacional - Ciências da Computação' and resultados_gerais['Nome da avaliação'][i] == 'Simulado Nacional Insper 1º fase - Matemática e Linguagens':
-#        resultados_gerais['Nota na questão'][i] = (1/3)*resultados_gerais['Nota na questão'][i]
-#    elif  resultados_gerais['Nome da avaliação'][i] == 'Simulado Nacional Insper 1º fase - Matemática e Linguagens':
-#        resultados_gerais['Nota na questão'][i] = (750/2000)*resultados_gerais['Nota na questão'][i]
-#    
-#    if resultados_gerais['Nome da avaliação'][i] == 'Simulado Nacional Insper 1º fase - Ciências Humanas':
-#        resultados_gerais['Nota na questão'][i] = (250/1000)*resultados_gerais['Nota na questão'][i]
-#
-#    if resultados_gerais['Nome da avaliação'][i] == 'Simulado Nacional Insper 1º fase - Ciências da Natureza':
-#        resultados_gerais['Nota na questão'][i] = (1/3)*resultados_gerais['Nota na questão'][i]
     
 resultados_gerais2 = resultados_gerais.groupby(['Turma','Nome do aluno(a)','Login do aluno(a)']).sum().reset_index()
 resultados_gerais2_aux = resultados_gerais2.copy()
 for i in range(len(resultados_gerais2_aux['Login do aluno(a)'])):
-    if (resultados_gerais2_aux['Turma'][i] == turma_eng or resultados_gerais2_aux['Turma'][i] == turma_cien):
+    if (resultados_gerais2_aux['Turma'][i] == turma_eng12 or resultados_gerais2_aux['Turma'][i] == turma_eng2 or resultados_gerais2_aux['Turma'][i] == turma_cien12 or resultados_gerais2_aux['Turma'][i] == turma_cien2):
         resultados_gerais2_aux['Nota na questão'][i] = (6/5)*resultados_gerais2_aux['Nota na questão'][i]
     else:
         resultados_gerais2_aux['Nota na questão'][i] = 1.25*resultados_gerais2_aux['Nota na questão'][i]
 
-
-#resultados_gerais2 = resultados_gerais.drop(columns = ['Número da questão'])
 resultados_gerais3 = resultados_gerais2_aux.sort_values(by = 'Nota na questão', ascending = False).reset_index(drop = True)                
 
 ### Selecionar o aluno
 login_aluno = st.text_input('Digite o seu login', '')
 
-
-#nome_aluno = resultados_gerais3.sort_values(by = 'Nome do aluno(a)')
-#nome_aluno2 = inserir_linha(pd.DataFrame(data = nome_aluno['Nome do aluno(a)'].unique()),pd.DataFrame({0: 'Nome'}, index=[-1]))
-#nome_aluno3 = str(st.selectbox('Selecione o aluno(a)',nome_aluno2[0]))
-
 if len(login_aluno) > 0:
+    
+    resultados_gerais3["Login do aluno(a)"] = resultados_gerais3["Login do aluno(a)"].apply(extract_login)
     nome_aluno3 = resultados_gerais3[resultados_gerais3['Login do aluno(a)'] == login_aluno]['Nome do aluno(a)'].reset_index()
-    turma_aluno = resultados_gerais3[resultados_gerais3['Login do aluno(a)'] == login_aluno]['Turma'].reset_index() 
+    turma_aluno = resultados_gerais3[resultados_gerais3['Login do aluno(a)'] == login_aluno]['Turma'].reset_index()
+    
     row = [str(datetime.today()),turma_aluno['Turma'][0],nome_aluno3['Nome do aluno(a)'][0],login_aluno]
     index = 2
     sheet.insert_row(row, index)
 
-
-    html_br="""
-    <br>
-    """
-    html_download_pdfs="""
-    <h2 style="font-size:200%; color: #9E089E; font-family:Georgia">PDF DO SIMULADO<br>
-     <hr style= "  display: block;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: auto;
-      margin-right: auto;
-      border-style: inset;
-      border-width: 1.5px;"></h2>
-    """
-    st.markdown(html_download_pdfs, unsafe_allow_html=True)
-    if turma_aluno['Turma'][0] == turma_eng or turma_aluno['Turma'][0] == turma_cien:
-        st.markdown(get_binary_file_downloader_html('Simulado Nacional Insper 1ª fase - Engenharias e Ciências da Computação.pdf', 'Simulado Nacional Insper 1º fase'), unsafe_allow_html=True)
-    else:
-        st.markdown(get_binary_file_downloader_html('Simulado Nacional Insper 1ª fase - Administração, Economia e Direito.pdf', 'Simulado Nacional Insper 1º fase'), unsafe_allow_html=True)
-    html_br="""
-    <br>
-    """
 if login_aluno != '':
     resultados_gerais3.to_csv('resultado_compilado.csv')
     resultados_gerais_aluno = resultados_gerais3[resultados_gerais3['Nome do aluno(a)'] == nome_aluno3['Nome do aluno(a)'][0]].reset_index()
     resultados_gerais_aluno.rename(columns = {'index':'Classificação'}, inplace = True)
     resultados_gerais_aluno['Classificação'][0] = resultados_gerais_aluno['Classificação'][0] + 1
-    
-    
+    resultados_gerais_aluno['Tempo na questão2'] = ''
+
+    hours_aluno, minutes = divmod(int(resultados_gerais_aluno['Tempo na questão'][0]), 3600)
+    minutes_certo, seconds= divmod(minutes, 60)
+    resultados_gerais_aluno['Tempo na questão2'][0] = ' h '+str(minutes_certo)+' min '+str(seconds)+' s' 
+
     resultados_gerais4 = resultados_gerais3[resultados_gerais3['Nota na questão'] > 0]
-    resultados_gerais4_aux = resultados_gerais4[['Login do aluno(a)','Número da questão','Tempo na questão','Valor da questão','Unnamed: 10','Acerto','Nota na questão']]
+
+    resultados_gerais4_aux = resultados_gerais4[['Login do aluno(a)','Número da questão','Tempo na questão','Valor da questão','Acerto','Nota na questão']]
     resultados_gerais5 = resultados_gerais4_aux.copy()
-    #resultados_gerais5 = resultados_gerais4.groupby('Login do aluno(a)').mean().reset_index()
+
+    resultados_gerais5['Tempo na questão2'] = ''
+    for i in range(len(resultados_gerais5['Tempo na questão'])):
+        hours, minutes = divmod(resultados_gerais5['Tempo na questão'][i], 3600)
+        minutes_certo, seconds= divmod(minutes, 60)
+        resultados_gerais5['Tempo na questão2'][i] = str(hours)+' h '+str(minutes_certo)+' min '+str(seconds)+' s' 
+
+    resultados_gerais_media_tempo = resultados_gerais5['Tempo na questão'].mean()  
+    hours_media, minutes_media = divmod(int(resultados_gerais_media_tempo), 3600) 
+    minutes_certo_media, seconds_media = divmod(minutes_media, 60)
+    resultados_gerais_media_tempo_str = str(hours_media)+' h '+str(minutes_certo_media)+' min '+str(seconds_media)+' s' 
 
     alunos_fizeram = pd.DataFrame()
     alunos_fizeram['Nome do aluno(a)'] = resultados_gerais4['Nome do aluno(a)']
@@ -263,8 +183,8 @@ if login_aluno != '':
     ### Resultados gerais do aluno
 
     numero_candidatos = len(resultados_gerais4['Nome do aluno(a)'])
-    aux = resultados_gerais4[resultados_gerais4['Turma'] == turma_eng]
-    aux2 = resultados_gerais4[resultados_gerais4['Turma'] == turma_cien]
+    aux = resultados_gerais4[(resultados_gerais4['Turma'] == turma_eng12) | (resultados_gerais4['Turma'] == turma_eng2)]
+    aux2 = resultados_gerais4[(resultados_gerais4['Turma'] == turma_cien12) | (resultados_gerais4['Turma'] == turma_cien2)]
     numero_eng_cien = len(aux['Nome do aluno(a)']) + len(aux2['Nome do aluno(a)'])
 
     html_header_geral="""
@@ -304,7 +224,6 @@ if login_aluno != '':
       </div>
     </div>
     """
-
     html_card_header2="""
     <div class="card">
       <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #9E089E; padding-top: 12px; width: 350px;
@@ -333,7 +252,7 @@ if login_aluno != '':
     <div class="card">
       <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #9E089E; padding-top: 12px; width: 350px;
        height: 50px;">
-        <h4 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Classificação</h4>
+        <h4 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Tempo</h4>
       </div>
     </div>
     """
@@ -341,7 +260,15 @@ if login_aluno != '':
     <div class="card">
       <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
        height: 50px;">
-        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Quantidade de alunos: """+str(numero_candidatos)+"""</p>
+        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Duracão: 5 h 15 min</p>
+      </div>
+    </div>
+    """
+    html_card_footer_med3="""
+    <div class="card">
+      <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
+       height: 50px;">
+        <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(resultados_gerais_media_tempo_str)+"""</p>
       </div>
     </div>
     """
@@ -395,75 +322,28 @@ if login_aluno != '':
             st.write("")
         with col6:
             st.markdown(html_card_header3, unsafe_allow_html=True)
-            fig_c3 = go.Figure(go.Indicator(
-                mode="number",
-                value=resultados_gerais_aluno['Classificação'][0],
-                number={'suffix': "º", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                delta={'position': "bottom", 'reference': 1, 'relative': False},
+            fig_c2 = go.Figure(go.Indicator(
+                mode="number+delta",
+                value=hours_aluno,
+                number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": resultados_gerais_aluno['Tempo na questão2'][0]},
+                #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
                 domain={'x': [0, 1], 'y': [0, 1]}))
-            fig_c3.update_layout(autosize=False,
+            fig_c2.update_layout(autosize=False,
                                  width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
                                  paper_bgcolor="#FFF0FC", font={'size': 20})
-            fig_c3.update_traces(delta_decreasing_color="#3D9970",
-                                 delta_increasing_color="#FF4136",
-                                 delta_valueformat='.3f',
+            fig_c2.update_traces(delta_decreasing_color="#FF4136",
+                                 delta_increasing_color="#3D9970",
+                                 delta_valueformat='f',
                                  selector=dict(type='indicator'))
-            st.plotly_chart(fig_c3)
+            st.plotly_chart(fig_c2)
             st.markdown(html_card_footer3, unsafe_allow_html=True)
+            st.markdown(html_br, unsafe_allow_html=True)
+            st.markdown(html_card_footer_med3, unsafe_allow_html=True)
         with col7:
             st.write("")
     
     st.markdown(html_br, unsafe_allow_html=True)
     st.markdown(html_br, unsafe_allow_html=True)
-
-    ponto = str(round(100*(numero_candidatos-(resultados_gerais_aluno['Classificação'][0]-1))/numero_candidatos,0)).find('.')
-    texto = str(round(100*(numero_candidatos-(resultados_gerais_aluno['Classificação'][0]-1))/numero_candidatos,0))[0:ponto]
-    html_card_header_destaques_gerais="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #0010B3; padding-top: 60px; width: 495px;
-       height: 150px;">
-        <h5 class="card-title" style="background-color:#0010B3; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 10px 0;">Você foi melhor que """+texto+"""% dos alunos!</h5>
-      </div>
-    </div>
-    """    
-    ### Block 1#########################################################################################
-    with st.container():
-        col1, col2, col3, col4, col5 = st.columns([9,25,2,25,4])
-        with col1:
-            st.write("")
-        with col2:
-            # create the bins
-            counts, bins = np.histogram(resultados_gerais4['Nota na questão'], bins=range(0, 1100, 100))
-            bins = 0.5 * (bins[:-1] + bins[1:])
-            fig = px.bar(x=bins, y=counts, labels={'x':'Nota no simulado', 'y':'Número de alunos'})
-            fig.update_layout(title={'text': "Distribuição de notas", 'x': 0.5}, paper_bgcolor="#FFF0FC", 
-                           plot_bgcolor="#FFF0FC", font={'color': "#9E089E", 'size': 14, 'family': "Georgia"}, height=400,
-                           width=540,
-                           legend=dict(orientation="h",
-                                       yanchor="top",
-                                       y=0.99,
-                                       xanchor="left",
-                                       x=0.01),
-                           margin=dict(l=1, r=1, b=1, t=30))
-            fig.add_vline(x=int(round(resultados_gerais_aluno['Nota na questão'][0],1)), line_width=7, line_dash="dash", line_color="#9E089E", annotation_text="Você está aqui!", annotation_position="top right")
-            fig.add_vline(x=int(round(truncar(resultados_gerais5['Nota na questão'].mean(),-1),0)), line_width=7, line_dash="dash", line_color="#01ECEC", annotation_text="Média", annotation_position="top right")
-            fig.update_xaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=6, rangemode="tozero",
-                          showgrid=False, gridwidth=0.5, gridcolor='#f6f6f6')
-            fig.update_yaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=10, rangemode="tozero",
-                          showgrid=True, gridwidth=0.5, gridcolor='#f6f6f6')
-            fig.update_traces(marker_color='#0010B3')
-            st.plotly_chart(fig)
-        with col3:
-            st.write("")
-        with col4:
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            if resultados_gerais_aluno['Classificação'][0] <= numero_candidatos:
-                st.markdown(html_card_header_destaques_gerais, unsafe_allow_html=True)
-        with col5:
-            st.write("")
 
     #### Resultados gerais por disciplina
     
@@ -484,7 +364,7 @@ if login_aluno != '':
     resultados_gerais_disciplina5 = resultados_gerais_disciplina4.sort_values(by = 'Disciplina', ascending = False)
     
     ### Resultados do aluno por disciplina
-    
+    resultados_gerais_disciplina3['Login do aluno(a)'] = resultados_gerais_disciplina3['Login do aluno(a)'].apply(extract_login)
     resultados_disciplina_aluno = resultados_gerais_disciplina3[resultados_gerais_disciplina3['Login do aluno(a)'] == login_aluno].reset_index()
     resultados_disciplina_aluno2 = resultados_disciplina_aluno.sort_values(by = 'Disciplina', ascending = False)
     
@@ -551,7 +431,8 @@ if login_aluno != '':
       </div>
     </div>
     """
-    if len(resultados_ciencias_hum['Nota na questão'] == 0):
+
+    if len(resultados_ciencias_hum['Nota na questão']) != 0:
         html_card_footer1_disc_med_cie="""
         <div class="card">
           <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
@@ -604,7 +485,7 @@ if login_aluno != '':
     """
 
   
-    if resultados_gerais_aluno['Turma'][0] != turma_eng and resultados_gerais_aluno['Turma'][0] != turma_cien:
+    if resultados_gerais_aluno['Turma'][0] != turma_eng12 and resultados_gerais_aluno['Turma'][0] != turma_eng2 and resultados_gerais_aluno['Turma'][0] != turma_cien12 and resultados_gerais_aluno['Turma'][0] != turma_cien2:
         html_card_footer2_disc_med_cie="""
     <div class="card">
       <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
@@ -638,7 +519,7 @@ if login_aluno != '':
           </div>
         </div>
         """
-    if resultados_gerais_aluno['Turma'][0] != turma_eng and resultados_gerais_aluno['Turma'][0] != turma_cien:
+    if resultados_gerais_aluno['Turma'][0] != turma_eng12 and resultados_gerais_aluno['Turma'][0] != turma_eng2 and resultados_gerais_aluno['Turma'][0] != turma_cien12 and resultados_gerais_aluno['Turma'][0] != turma_cien2:
         html_card_footer3_disc="""
         <div class="card">
           <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
@@ -656,12 +537,23 @@ if login_aluno != '':
           </div>
         </div>
         """
-
+    base_alunos_fizeram['Login do aluno(a)'] = base_alunos_fizeram['Login do aluno(a)'].apply(extract_login)
     matematica_detalhes = base_alunos_fizeram[base_alunos_fizeram['Disciplina'] == 'Matemática']
     matematica_detalhes_media = matematica_detalhes.groupby(['Assunto']).mean(['Acerto']).reset_index()
     
     matematica_aluno = matematica_detalhes[matematica_detalhes['Login do aluno(a)'] == login_aluno]
-    
+
+    matematica_aluno_tempo = 24*matematica_aluno['Tempo na questão'].mean()
+    hours_aluno, minutes_aluno = divmod(int(matematica_aluno_tempo), 3600)
+    minutes_certo, seconds = divmod(minutes_aluno, 60)
+    matematica_aluno_tempo_str = ' h '+str(minutes_certo)+' min '+str(seconds)+' s' 
+
+    matematica_media_tempo = 24*matematica_detalhes['Tempo na questão'].mean()
+    hours_mat_media, minutes_mat_media = divmod(int(matematica_media_tempo), 3600)
+    minutes_certo, seconds_mat_media = divmod(minutes_mat_media, 60)
+    matematica_media_tempo_str = str(hours_mat_media)+' h '+str(minutes_certo)+' min '+str(seconds_mat_media)+' s' 
+
+
     matematica_aluno_media = matematica_aluno.groupby('Assunto').mean(['Acerto']).reset_index()
     matematica_aluno_media2 = matematica_aluno.groupby('Assunto').count().reset_index()
     matematica_aluno_media3 = pd.DataFrame()
@@ -711,6 +603,25 @@ if login_aluno != '':
       border-style: inset;
       border-width: 1.5px;"></h2>
     """
+
+    html_card_footer_med_mat3="""
+    <div class="card">
+      <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
+       height: 50px;">
+        <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(matematica_media_tempo_str)+"""</p>
+      </div>
+    </div>
+    """
+
+    html_card_footer_duracao3="""
+    <div class="card">
+      <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
+       height: 50px;">
+        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;"></p>
+      </div>
+    </div>
+    """
+
     if len(resultados_matematica['Nome do aluno(a)']) != 0:
 
         ### MATEMÁTICA
@@ -761,78 +672,32 @@ if login_aluno != '':
             with col5:
                 st.write("")
             with col6:
-                st.markdown(html_card_header3_disc, unsafe_allow_html=True)
-                fig_c3 = go.Figure(go.Indicator(
-                    mode="number",
-                    value=classificacao_aluno_mat['index'][0]+1,
-                    number={'suffix': "º", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                    delta={'position': "bottom", 'reference': 1, 'relative': False},
+                st.markdown(html_card_header3, unsafe_allow_html=True)
+                fig_c2 = go.Figure(go.Indicator(
+                    mode="number+delta",
+                    value=hours_aluno,
+                    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": matematica_aluno_tempo_str},
+                    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
                     domain={'x': [0, 1], 'y': [0, 1]}))
-                fig_c3.update_layout(autosize=False,
-                                     width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                     paper_bgcolor="#FFF0FC", font={'size': 20})
-                fig_c3.update_traces(delta_decreasing_color="#3D9970",
-                                     delta_increasing_color="#FF4136",
-                                     delta_valueformat='.3f',
-                                     selector=dict(type='indicator'))
-                st.plotly_chart(fig_c3)
-                st.markdown(html_card_footer3_disc_matlin, unsafe_allow_html=True)
+                fig_c2.update_layout(autosize=False,
+                                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
+                                    paper_bgcolor="#FFF0FC", font={'size': 20})
+                fig_c2.update_traces(delta_decreasing_color="#FF4136",
+                                    delta_increasing_color="#3D9970",
+                                    delta_valueformat='f',
+                                    selector=dict(type='indicator'))
+                st.plotly_chart(fig_c2)
+                st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
+                st.markdown(html_br, unsafe_allow_html=True)
+                st.markdown(html_card_footer_med_mat3, unsafe_allow_html=True)
             with col7:
                 st.write("")
+
         html_br="""
         <br>
         """
-        ponto = str(round(100*(numero_candidatos-(classificacao_aluno_mat['index'][0]))/numero_candidatos,0)).find('.')
-        texto = str(round(100*(numero_candidatos-(classificacao_aluno_mat['index'][0]))/numero_candidatos,0))[0:ponto]
-        html_card_header_destaques_mat="""
-        <div class="card">
-          <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #0010B3; padding-top: 60px; width: 495px;
-           height: 150px;">
-            <h5 class="card-title" style="background-color:#0010B3; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 10px 0;">Você foi melhor que """+texto+"""% dos alunos!</h5>
-          </div>
-        </div>
-        """  
-
+        
         st.markdown(html_br, unsafe_allow_html=True)
-        st.markdown(html_br, unsafe_allow_html=True)
-
-        with st.container():
-            col1, col2, col3, col4, col5 = st.columns([9,25,2,25,4])
-            with col1:
-                st.write("")
-            with col2:
-               # create the bins
-                counts, bins = np.histogram(resultados_gerais_disciplina3_mat['Nota na questão'], bins=range(0, 1100, 100))
-                bins = 0.5 * (bins[:-1] + bins[1:])
-                fig = px.bar(x=bins, y=counts, labels={'x':'Nota no simulado', 'y':'Número de alunos'})
-                fig.update_layout(title={'text': "Distribuição de notas", 'x': 0.5}, paper_bgcolor="#FFF0FC", 
-                               plot_bgcolor="#FFF0FC", font={'color': "#9E089E", 'size': 14, 'family': "Georgia"}, height=400,
-                               width=540,
-                               legend=dict(orientation="h",
-                                           yanchor="top",
-                                           y=0.99,
-                                           xanchor="left",
-                                           x=0.01),
-                               margin=dict(l=1, r=1, b=1, t=30))
-                fig.add_vline(x=int(resultados_matematica['Nota na questão']), line_width=7, line_dash="dash", line_color="#9E089E", annotation_text="Você está aqui!", annotation_position="top right")
-                fig.add_vline(x=int(round(truncar(resultados_gerais_disciplina_med_mat['Nota na questão'][0],-1),0)), line_width=7, line_dash="dash", line_color="#01ECEC", annotation_text="Média", annotation_position="top right")
-                fig.update_xaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=6, rangemode="tozero",
-                              showgrid=False, gridwidth=0.5, gridcolor='#f6f6f6')
-                fig.update_yaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=10, rangemode="tozero",
-                              showgrid=True, gridwidth=0.5, gridcolor='#f6f6f6')
-                fig.update_traces(marker_color='#0010B3')
-                st.plotly_chart(fig)
-            with col3:
-                st.write("")
-            with col4:
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_card_header_destaques_mat, unsafe_allow_html=True)
-            with col5:
-                st.write("")
-
         st.markdown(html_br, unsafe_allow_html=True)
         
         html_table=""" 
@@ -921,20 +786,6 @@ if login_aluno != '':
             <th>"""+str(matematica_tabela3['Resultado Geral'][10])+"""</th>
             <th>"""+str(matematica_tabela3['Status'][10])+"""</th>
           </tr>
-          <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-            <th>"""+str(matematica_tabela3['Assunto'][11])+"""</th>
-            <th>"""+str(matematica_tabela3['Quantidade de questões'][11])+"""</th>
-            <th>"""+str(matematica_tabela3['Resultado Individual'][11])+"""</th>
-            <th>"""+str(matematica_tabela3['Resultado Geral'][11])+"""</th>
-            <th>"""+str(matematica_tabela3['Status'][11])+"""</th>
-          </tr>
-          <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-            <th>"""+str(matematica_tabela3['Assunto'][12])+"""</th>
-            <th>"""+str(matematica_tabela3['Quantidade de questões'][12])+"""</th>
-            <th>"""+str(matematica_tabela3['Resultado Individual'][12])+"""</th>
-            <th>"""+str(matematica_tabela3['Resultado Geral'][12])+"""</th>
-            <th>"""+str(matematica_tabela3['Status'][12])+"""</th>
-          </tr>
         </table>
         """
 
@@ -1008,6 +859,7 @@ if login_aluno != '':
               </div>
             </div>
             """
+        
         with st.container():
             col1, col2, col3, col4 = st.columns([0.5,12,0.5,10.5])
             with col1:
@@ -1047,10 +899,18 @@ if login_aluno != '':
         ### LINGUAGENS
 
         linguagens_detalhes = base_alunos_fizeram[base_alunos_fizeram['Disciplina'] == 'Linguagens']
-    
+        
         linguagens_detalhes_media = linguagens_detalhes.groupby('Assunto').mean(['Acerto']).reset_index()
-
         linguagens_aluno = linguagens_detalhes[linguagens_detalhes['Login do aluno(a)'] == login_aluno]
+        linguagens_aluno_tempo = 24*linguagens_aluno['Tempo na questão'].mean()
+        hours_aluno, minutes_aluno = divmod(int(linguagens_aluno_tempo), 3600)
+        minutes_certo, seconds = divmod(minutes_aluno, 60)
+        linguagens_aluno_tempo_str = ' h '+str(minutes_certo)+' min '+str(seconds)+' s' 
+
+        linguagens_media_tempo = 24*linguagens_detalhes['Tempo na questão'].mean()
+        hours_mat_media, minutes_mat_media = divmod(int(linguagens_media_tempo), 3600)
+        minutes_certo, seconds_mat_media = divmod(minutes_mat_media, 60)
+        linguagens_media_tempo_str = str(hours_mat_media)+' h '+str(minutes_certo)+' min '+str(seconds_mat_media)+' s'
 
         linguagens_aluno_media = linguagens_aluno.groupby('Assunto').mean(['Acerto']).reset_index()
         linguagens_aluno_media2 = linguagens_aluno.groupby('Assunto').count().reset_index()
@@ -1101,6 +961,24 @@ if login_aluno != '':
           border-style: inset;
           border-width: 1.5px;"></h2>
         """
+
+        html_card_footer_med_lin3="""
+        <div class="card">
+        <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
+        height: 50px;">
+            <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(linguagens_media_tempo_str)+"""</p>
+        </div>
+        </div>
+        """
+
+        html_card_footer_duracao3="""
+        <div class="card">
+        <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
+        height: 50px;">
+            <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;"></p>
+        </div>
+        </div>
+        """
         st.markdown(html_header_lin, unsafe_allow_html=True)
         ### Block 1#########################################################################################
         with st.container():
@@ -1146,78 +1024,32 @@ if login_aluno != '':
             with col5:
                 st.write("")
             with col6:
-                st.markdown(html_card_header3_disc, unsafe_allow_html=True)
-                fig_c3 = go.Figure(go.Indicator(
-                    mode="number",
-                    value=classificacao_aluno_lin['index'][0]+1,
-                    number={'suffix': "º", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                    delta={'position': "bottom", 'reference': 1, 'relative': False},
+                st.markdown(html_card_header3, unsafe_allow_html=True)
+                fig_c2 = go.Figure(go.Indicator(
+                    mode="number+delta",
+                    value=hours_aluno,
+                    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": linguagens_aluno_tempo_str},
+                    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
                     domain={'x': [0, 1], 'y': [0, 1]}))
-                fig_c3.update_layout(autosize=False,
-                                     width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                     paper_bgcolor="#FFF0FC", font={'size': 20})
-                fig_c3.update_traces(delta_decreasing_color="#3D9970",
-                                     delta_increasing_color="#FF4136",
-                                     delta_valueformat='.3f',
-                                     selector=dict(type='indicator'))
-                st.plotly_chart(fig_c3)
-                st.markdown(html_card_footer3_disc_matlin, unsafe_allow_html=True)
+                fig_c2.update_layout(autosize=False,
+                                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
+                                    paper_bgcolor="#FFF0FC", font={'size': 20})
+                fig_c2.update_traces(delta_decreasing_color="#FF4136",
+                                    delta_increasing_color="#3D9970",
+                                    delta_valueformat='f',
+                                    selector=dict(type='indicator'))
+                st.plotly_chart(fig_c2)
+                st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
+                st.markdown(html_br, unsafe_allow_html=True)
+                st.markdown(html_card_footer_med_lin3, unsafe_allow_html=True)
             with col7:
                 st.write("")
+
         html_br="""
         <br>
         """
         st.markdown(html_br, unsafe_allow_html=True)
-
-        ponto = str(round(100*(numero_candidatos-(classificacao_aluno_lin['index'][0]))/numero_candidatos,0)).find('.')
-        texto = str(round(100*(numero_candidatos-(classificacao_aluno_lin['index'][0]))/numero_candidatos,0))[0:ponto]
-        html_card_header_destaques_lin="""
-        <div class="card">
-          <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #0010B3; padding-top: 60px; width: 495px;
-           height: 150px;">
-            <h5 class="card-title" style="background-color:#0010B3; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 10px 0;">Você foi melhor que """+texto+"""% dos alunos!</h5>
-          </div>
-        </div>
-        """  
-
         st.markdown(html_br, unsafe_allow_html=True)
-
-        with st.container():
-            col1, col2, col3, col4, col5 = st.columns([9,25,2,25,4])
-            with col1:
-                st.write("")
-            with col2:
-               # create the bins
-                counts, bins = np.histogram(resultados_gerais_disciplina3_lin['Nota na questão'], bins=range(0, 1100, 100))
-                bins = 0.5 * (bins[:-1] + bins[1:])
-                fig = px.bar(x=bins, y=counts, labels={'x':'Nota no simulado', 'y':'Número de alunos'})
-                fig.update_layout(title={'text': "Distribuição de notas", 'x': 0.5}, paper_bgcolor="#FFF0FC", 
-                               plot_bgcolor="#FFF0FC", font={'color': "#9E089E", 'size': 14, 'family': "Georgia"}, height=400,
-                               width=540,
-                               legend=dict(orientation="h",
-                                           yanchor="top",
-                                           y=0.99,
-                                           xanchor="left",
-                                           x=0.01),
-                               margin=dict(l=1, r=1, b=1, t=30))
-                fig.add_vline(x=int(resultados_linguagens['Nota na questão']), line_width=7, line_dash="dash", line_color="#9E089E", annotation_text="Você está aqui!", annotation_position="top right")
-                fig.add_vline(x=int(round(truncar(resultados_gerais_disciplina_med_lin['Nota na questão'][0],-1),0)), line_width=7, line_dash="dash", line_color="#01ECEC", annotation_text="Média", annotation_position="top right")
-                fig.update_xaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=6, rangemode="tozero",
-                              showgrid=False, gridwidth=0.5, gridcolor='#f6f6f6')
-                fig.update_yaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=10, rangemode="tozero",
-                              showgrid=True, gridwidth=0.5, gridcolor='#f6f6f6')
-                fig.update_traces(marker_color='#0010B3')
-                st.plotly_chart(fig)
-            with col3:
-                st.write("")
-            with col4:
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_card_header_destaques_lin, unsafe_allow_html=True)
-            with col5:
-                st.write("")
 
         html_table_lin=""" 
         <table bordercolor=#FFF0FC>
@@ -1297,6 +1129,13 @@ if login_aluno != '':
             <th>"""+str(linguagens_tabela3['Resultado Individual'][9])+"""</th>
             <th>"""+str(linguagens_tabela3['Resultado Geral'][9])+"""</th>
             <th>"""+str(linguagens_tabela3['Status'][9])+"""</th>
+          </tr>
+          <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+            <th>"""+str(linguagens_tabela3['Assunto'][10])+"""</th>
+            <th>"""+str(linguagens_tabela3['Quantidade de questões'][10])+"""</th>
+            <th>"""+str(linguagens_tabela3['Resultado Individual'][10])+"""</th>
+            <th>"""+str(linguagens_tabela3['Resultado Geral'][10])+"""</th>
+            <th>"""+str(linguagens_tabela3['Status'][10])+"""</th>
           </tr>
         </table>
         """
@@ -1408,7 +1247,7 @@ if login_aluno != '':
 
         st.markdown(html_br, unsafe_allow_html=True)
 
-        if resultados_gerais_aluno['Turma'][0] != turma_eng and resultados_gerais_aluno['Turma'][0] != turma_cien:
+        if resultados_gerais_aluno['Turma'][0] != turma_eng12 and resultados_gerais_aluno['Turma'][0] != turma_eng2 and resultados_gerais_aluno['Turma'][0] != turma_cien12 and resultados_gerais_aluno['Turma'][0] != turma_cien2:
             ciencias_detalhes = base_alunos_fizeram[base_alunos_fizeram['Disciplina'] == 'Ciências Humanas']
         else:
             ciencias_detalhes = base_alunos_fizeram[base_alunos_fizeram['Disciplina'] == 'Ciências da Natureza']
@@ -1416,6 +1255,16 @@ if login_aluno != '':
         ciencias_detalhes_media = ciencias_detalhes.groupby('Assunto').mean(['Acerto']).reset_index()
 
         ciencias_aluno = ciencias_detalhes[ciencias_detalhes['Login do aluno(a)'] == login_aluno]
+
+        ciencias_aluno_tempo = 24*ciencias_aluno['Tempo na questão'].mean()
+        hours_aluno, minutes_aluno = divmod(int(ciencias_aluno_tempo), 3600)
+        minutes_certo, seconds = divmod(minutes_aluno, 60)
+        ciencias_aluno_tempo_str = ' h '+str(minutes_certo)+' min '+str(seconds)+' s' 
+
+        ciencias_media_tempo = 24*ciencias_detalhes['Tempo na questão'].mean()
+        hours_mat_media, minutes_mat_media = divmod(int(ciencias_media_tempo), 3600)
+        minutes_certo, seconds_mat_media = divmod(minutes_mat_media, 60)
+        ciencias_media_tempo_str = str(hours_mat_media)+' h '+str(minutes_certo)+' min '+str(seconds_mat_media)+' s'
 
         ciencias_aluno_media = ciencias_aluno.groupby('Assunto').mean(['Acerto']).reset_index()
         ciencias_aluno_media2 = ciencias_aluno.groupby('Assunto').count().reset_index()
@@ -1425,6 +1274,7 @@ if login_aluno != '':
 
         ciencias_tabela = pd.merge(ciencias_aluno_media,ciencias_detalhes_media, on = 'Assunto', how = 'inner')
         ciencias_tabela2 = ciencias_tabela.drop(columns = ['Número da questão_x','Número da questão_y','Valor da questão_x','Valor da questão_y','Nota na questão_x','Nota na questão_y','Tempo na questão_x','Tempo na questão_y'])
+        
         ciencias_tabela2.rename(columns = {'Acerto_x':'Resultado Individual decimal','Acerto_y':'Resultado Geral decimal'}, inplace = True)
         ciencias_tabela2['Resultado Geral'] = ''
         ciencias_tabela2['Resultado Individual'] = ''
@@ -1478,6 +1328,16 @@ if login_aluno != '':
           border-style: inset;
           border-width: 1.5px;"></h2>
         """
+
+        html_card_footer_med_cie3="""
+        <div class="card">
+        <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
+        height: 50px;">
+            <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(ciencias_media_tempo_str)+"""</p>
+        </div>
+        </div>
+        """
+
         if len(resultados_ciencias_hum['Disciplina']) == 0:
             st.markdown(html_header_nat, unsafe_allow_html=True)
         else:
@@ -1527,84 +1387,154 @@ if login_aluno != '':
             with col5:
                 st.write("")
             with col6:
-                st.markdown(html_card_header3_disc, unsafe_allow_html=True)
-                fig_c3 = go.Figure(go.Indicator(
-                    mode="number",
-                    value=classificacao_aluno_fim['index'][0]+1,
-                    number={'suffix': "º", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                    delta={'position': "bottom", 'reference': 1, 'relative': False},
+                st.markdown(html_card_header3, unsafe_allow_html=True)
+                fig_c2 = go.Figure(go.Indicator(
+                    mode="number+delta",
+                    value=hours_aluno,
+                    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": ciencias_aluno_tempo_str},
+                    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
                     domain={'x': [0, 1], 'y': [0, 1]}))
-                fig_c3.update_layout(autosize=False,
-                                     width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                     paper_bgcolor="#FFF0FC", font={'size': 20})
-                fig_c3.update_traces(delta_decreasing_color="#3D9970",
-                                     delta_increasing_color="#FF4136",
-                                     delta_valueformat='.3f',
-                                     selector=dict(type='indicator'))
-                st.plotly_chart(fig_c3)
-                st.markdown(html_card_footer3_disc, unsafe_allow_html=True)
+                fig_c2.update_layout(autosize=False,
+                                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
+                                    paper_bgcolor="#FFF0FC", font={'size': 20})
+                fig_c2.update_traces(delta_decreasing_color="#FF4136",
+                                    delta_increasing_color="#3D9970",
+                                    delta_valueformat='f',
+                                    selector=dict(type='indicator'))
+                st.plotly_chart(fig_c2)
+                st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
+                st.markdown(html_br, unsafe_allow_html=True)
+                st.markdown(html_card_footer_med_cie3, unsafe_allow_html=True)
             with col7:
                 st.write("")
+
         html_br="""
         <br>
         """
         st.markdown(html_br, unsafe_allow_html=True)
-        if resultados_gerais_aluno['Turma'][0] != turma_eng and resultados_gerais_aluno['Turma'][0] != turma_cien:
-            ponto = str(round(100*((numero_candidatos-numero_eng_cien)-(classificacao_aluno_fim['index'][0]))/(numero_candidatos-numero_eng_cien),0)).find('.')
-            texto = str(round(100*((numero_candidatos-numero_eng_cien)-(classificacao_aluno_fim['index'][0]))/(numero_candidatos-numero_eng_cien),0))[0:ponto]
-        else:
-            ponto = str(round(100*((numero_eng_cien)-(classificacao_aluno_fim['index'][0]))/(numero_eng_cien),0)).find('.')
-            texto = str(round(100*((numero_eng_cien)-(classificacao_aluno_fim['index'][0]))/(numero_eng_cien),0))[0:ponto]
-       
-        html_card_header_destaques_cie="""
-        <div class="card">
-          <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #0010B3; padding-top: 60px; width: 495px;
-           height: 150px;">
-            <h5 class="card-title" style="background-color:#0010B3; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 10px 0;">Você foi melhor que """+texto+"""% dos alunos!</h5>
-          </div>
-        </div>
-        """  
-
         st.markdown(html_br, unsafe_allow_html=True)
-
-        with st.container():
-            col1, col2, col3, col4, col5 = st.columns([9,25,2,25,4])
-            with col1:
-                st.write("")
-            with col2:
-               # create the bins
-                counts, bins = np.histogram(resultados_gerais_disciplina3_fim['Nota na questão'], bins=range(0, 1100, 100))
-                bins = 0.5 * (bins[:-1] + bins[1:])
-                fig = px.bar(x=bins, y=counts, labels={'x':'Nota no simulado', 'y':'Número de alunos'})
-                fig.update_layout(title={'text': "Distribuição de notas", 'x': 0.5}, paper_bgcolor="#FFF0FC", 
-                               plot_bgcolor="#FFF0FC", font={'color': "#9E089E", 'size': 14, 'family': "Georgia"}, height=400,
-                               width=540,
-                               legend=dict(orientation="h",
-                                           yanchor="top",
-                                           y=0.99,
-                                           xanchor="left",
-                                           x=0.01),
-                               margin=dict(l=1, r=1, b=1, t=30))
-                fig.add_vline(x=int(resultados_ciencias_fim['Nota na questão']), line_width=7, line_dash="dash", line_color="#9E089E", annotation_text="Você está aqui!", annotation_position="top right")
-                fig.add_vline(x=int(round(truncar(resultados_gerais_disciplina_med_cie['Nota na questão'][0],-1),0)), line_width=7, line_dash="dash", line_color="#01ECEC", annotation_text="Média", annotation_position="top right")
-                fig.update_xaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=6, rangemode="tozero",
-                              showgrid=False, gridwidth=0.5, gridcolor='#f6f6f6')
-                fig.update_yaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=10, rangemode="tozero",
-                              showgrid=True, gridwidth=0.5, gridcolor='#f6f6f6')
-                fig.update_traces(marker_color='#0010B3')
-                st.plotly_chart(fig)
-            with col3:
-                st.write("")
-            with col4:
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_card_header_destaques_cie, unsafe_allow_html=True)
-            with col5:
-                st.write("")
-        if turma_aluno['Turma'][0] != turma_eng and turma_aluno['Turma'][0] != turma_cien:
+        
+        if turma_aluno['Turma'][0] != turma_eng12 and turma_aluno['Turma'][0] != turma_eng2 and turma_aluno['Turma'][0] != turma_cien12 and turma_aluno['Turma'][0] != turma_cien2:
             html_table_cie_hum=""" 
+            <table bordercolor=#FFF0FC>
+            <tr style="background-color:#9E089E; height: 90px; color:#FFFFFF; font-family:Georgia; font-size: 17px; text-align: center">
+                <th style="width:350px; bordercolor=#FFF0FC">Assunto</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Quantidade de questões</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Resultado Individual</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Resultado Geral</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Status</th>
+            </tr>
+            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][0])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][0])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][0])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][0])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][0])+"""</th>
+            </tr>
+            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][1])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][1])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][1])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][1])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][1])+"""</th>
+            </tr>
+            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][2])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][2])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][2])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][2])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][2])+"""</th>
+            </tr>
+            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][3])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][3])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][3])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][3])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][3])+"""</th>
+            </tr>
+            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][4])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][4])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][4])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][4])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][4])+"""</th>
+            </tr>
+            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][5])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][5])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][5])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][5])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][5])+"""</th>
+            </tr>
+            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][6])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][6])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][6])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][6])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][6])+"""</th>
+            </tr>
+            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][7])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][7])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][7])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][7])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][7])+"""</th>
+            </tr>
+            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][8])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][8])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][8])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][8])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][8])+"""</th>
+            </tr>
+            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][9])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][9])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][9])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][9])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][9])+"""</th>
+            </tr>
+            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][10])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][10])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][10])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][10])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][10])+"""</th>
+            </tr>
+            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][11])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][11])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][11])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][11])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][11])+"""</th>
+            </tr>
+            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][12])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][12])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][12])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][12])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][12])+"""</th>
+            </tr>
+            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][13])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][13])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][13])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][13])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][13])+"""</th>
+            </tr>
+            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(ciencias_tabela3['Assunto'][14])+"""</th>
+                <th>"""+str(ciencias_tabela3['Quantidade de questões'][14])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Individual'][14])+"""</th>
+                <th>"""+str(ciencias_tabela3['Resultado Geral'][14])+"""</th>
+                <th>"""+str(ciencias_tabela3['Status'][14])+"""</th>
+            </tr>
+            </tr>
+            </tr>
+            </table>
+            """
+        else:
+            html_table_cie_nat=""" 
             <table bordercolor=#FFF0FC>
             <tr style="background-color:#9E089E; height: 90px; color:#FFFFFF; font-family:Georgia; font-size: 17px; text-align: center">
                 <th style="width:350px; bordercolor=#FFF0FC">Assunto</th>
@@ -1760,125 +1690,6 @@ if login_aluno != '':
                 <th>"""+str(ciencias_tabela3['Resultado Geral'][20])+"""</th>
                 <th>"""+str(ciencias_tabela3['Status'][20])+"""</th>
             </tr>
-            </tr>
-            </tr>
-            </table>
-            """
-        else:
-            html_table_cie_nat=""" 
-            <table bordercolor=#FFF0FC>
-            <tr style="background-color:#9E089E; height: 90px; color:#FFFFFF; font-family:Georgia; font-size: 17px; text-align: center">
-                <th style="width:350px; bordercolor=#FFF0FC">Assunto</th>
-                <th style="width:150px; bordercolor=#FFF0FC">Quantidade de questões</th>
-                <th style="width:150px; bordercolor=#FFF0FC">Resultado Individual</th>
-                <th style="width:150px; bordercolor=#FFF0FC">Resultado Geral</th>
-                <th style="width:150px; bordercolor=#FFF0FC">Status</th>
-            </tr>
-            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][0])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][0])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][0])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][0])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][0])+"""</th>
-            </tr>
-            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][1])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][1])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][1])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][1])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][1])+"""</th>
-            </tr>
-            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][2])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][2])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][2])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][2])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][2])+"""</th>
-            </tr>
-            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][3])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][3])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][3])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][3])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][3])+"""</th>
-            </tr>
-            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][4])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][4])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][4])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][4])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][4])+"""</th>
-            </tr>
-            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][5])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][5])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][5])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][5])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][5])+"""</th>
-            </tr>
-            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][6])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][6])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][6])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][6])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][6])+"""</th>
-            </tr>
-            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][7])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][7])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][7])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][7])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][7])+"""</th>
-            </tr>
-            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][8])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][8])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][8])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][8])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][8])+"""</th>
-            </tr>
-            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][9])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][9])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][9])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][9])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][9])+"""</th>
-            </tr>
-            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][10])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][10])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][10])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][10])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][10])+"""</th>
-            </tr>
-            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][11])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][11])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][11])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][11])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][11])+"""</th>
-            </tr>
-            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][12])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][12])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][12])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][12])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][12])+"""</th>
-            </tr>
-            <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][13])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][13])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][13])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][13])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][13])+"""</th>
-            </tr>
-            <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(ciencias_tabela3['Assunto'][14])+"""</th>
-                <th>"""+str(ciencias_tabela3['Quantidade de questões'][14])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Individual'][14])+"""</th>
-                <th>"""+str(ciencias_tabela3['Resultado Geral'][14])+"""</th>
-                <th>"""+str(ciencias_tabela3['Status'][14])+"""</th>
-            </tr>
             </table>
             """
 
@@ -1958,7 +1769,7 @@ if login_aluno != '':
             with col1:
                 st.write("")
             with col2:
-                if turma_aluno['Turma'][0] == turma_eng or turma_aluno['Turma'][0] == turma_cien:
+                if turma_aluno['Turma'][0] == turma_eng12 or turma_aluno['Turma'][0] == turma_eng2 or turma_aluno['Turma'][0] == turma_cien12 or turma_aluno['Turma'][0] == turma_cien2:
                     st.markdown(html_table_cie_nat, unsafe_allow_html=True)
                 else:
                     st.markdown(html_table_cie_hum, unsafe_allow_html=True)
@@ -1996,8 +1807,8 @@ if login_aluno != '':
     ### Redação
 
     base_redacao = pd.read_csv('./resultadoredacao.csv')
-    
     base_redacao['Acerto'] = 0.00
+    base_redacao['Login do aluno(a)'] = base_redacao['Login do aluno(a)'].apply(extract_login)
     for i in range(len(base_redacao)):
         base_redacao['Acerto'][i] = base_redacao['Nota na questão'][i]/base_redacao['Valor da questão'][i]
     
@@ -2115,7 +1926,7 @@ if login_aluno != '':
         
         ### Block 1#########################################################################################
         with st.container():
-            col1, col2, col3, col4, col5, col6, col7 = st.columns([1,20,1,20,1,20,1])
+            col1, col2, col3, col4, col5 = st.columns([1,20,1,20,1])
             with col1:
                 st.write("")
             with col2:
@@ -2136,28 +1947,10 @@ if login_aluno != '':
             with col3:
                 st.write("")
             with col4:
-                st.markdown(html_card_header3_disc, unsafe_allow_html=True)
-                fig_c3 = go.Figure(go.Indicator(
-                    mode="number",
-                    value=classificacao_aluno_red['level_0'][0]+1,
-                    number={'suffix': "º", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                    delta={'position': "bottom", 'reference': 1, 'relative': False},
-                    domain={'x': [0, 1], 'y': [0, 1]}))
-                fig_c3.update_layout(autosize=False,
-                                     width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                     paper_bgcolor="#FFF0FC", font={'size': 20})
-                fig_c3.update_traces(delta_decreasing_color="#3D9970",
-                                     delta_increasing_color="#FF4136",
-                                     delta_valueformat='.3f',
-                                     selector=dict(type='indicator'))
-                st.plotly_chart(fig_c3)
-                st.markdown(html_card_footer3_disc_matlin, unsafe_allow_html=True)
+                st.write("")
             with col5:
                 st.write("")
-            with col6:
-                st.write("")
-            with col7:
-                st.write("")
+
         html_br="""
         <br>
         """
@@ -2174,42 +1967,6 @@ if login_aluno != '':
 
         base_redacao5 = base_redacao3aux['Nota na questão'].mean()
 
-        with st.container():
-            col1, col2, col3, col4, col5 = st.columns([9,25,2,25,4])
-            with col1:
-                st.write("")
-            with col2:
-               # create the bins
-                counts, bins = np.histogram(base_redacao3aux['Nota na questão'], bins=range(0, 1100, 100))
-                bins = 0.5 * (bins[:-1] + bins[1:])
-                fig = px.bar(x=bins, y=counts, labels={'x':'Nota no simulado', 'y':'Número de alunos'})
-                fig.update_layout(title={'text': "Distribuição de notas", 'x': 0.5}, paper_bgcolor="#FFF0FC", 
-                               plot_bgcolor="#FFF0FC", font={'color': "#9E089E", 'size': 14, 'family': "Georgia"}, height=400,
-                               width=540,
-                               legend=dict(orientation="h",
-                                           yanchor="top",
-                                           y=0.99,
-                                           xanchor="left",
-                                           x=0.01),
-                               margin=dict(l=1, r=1, b=1, t=30))
-                fig.add_vline(x=int(base_redacao4['Nota na questão']), line_width=7, line_dash="dash", line_color="#9E089E", annotation_text="Você está aqui!", annotation_position="top right")
-                fig.add_vline(x=int(round(truncar(base_redacao5,-1),0)), line_width=7, line_dash="dash", line_color="#01ECEC", annotation_text="Média", annotation_position="top right")
-                fig.update_xaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=6, rangemode="tozero",
-                              showgrid=False, gridwidth=0.5, gridcolor='#f6f6f6')
-                fig.update_yaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=10, rangemode="tozero",
-                              showgrid=True, gridwidth=0.5, gridcolor='#f6f6f6')
-                fig.update_traces(marker_color='#0010B3')
-                st.plotly_chart(fig)
-            with col3:
-                st.write("")
-            with col4:
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_card_header_destaques_red, unsafe_allow_html=True)
-            with col5:
-                st.write("")
 
         st.markdown(html_br, unsafe_allow_html=True)
 
@@ -2401,18 +2158,19 @@ if login_aluno != '':
             tabela_detalhes['Gabarito'][i] = 'E'
         else:
             tabela_detalhes['Gabarito'][i] = ''
+    
+    tabela_detalhes['Login do aluno(a)'] = tabela_detalhes['Login do aluno(a)'].apply(extract_login)
     tabela_detalhes_fizeram = tabela_detalhes[tabela_detalhes['Nome do aluno(a)'].isin(alunos_fizeram['Nome do aluno(a)'])].reset_index(drop = True)
     tabela_detalhes_aluno = tabela_detalhes[tabela_detalhes['Login do aluno(a)'] == login_aluno]
+
     tabela_detalhes_aluno2 = tabela_detalhes_aluno.drop(columns = ['Nota na questão','Valor da questão','Nome do aluno(a)','Login do aluno(a)','Certo ou errado'])
-    tabela_detalhes_media = tabela_detalhes_fizeram.groupby('Número da questão').mean(['Acerto']).reset_index()
+    tabela_detalhes_media = tabela_detalhes_fizeram.groupby(['Número da questão','Assunto']).mean(['Acerto']).reset_index()
     tabela_detalhes_media2 = tabela_detalhes_media.drop(columns = ['Nota na questão','Valor da questão'])
 
-    tabela_detalhes_aluno3 = pd.merge(tabela_detalhes_aluno2, tabela_detalhes_media2, on = 'Número da questão', how = 'inner')
-        
-    if turma_aluno['Turma'][0] == turma_eng or turma_aluno['Turma'][0] == turma_cien:
+    tabela_detalhes_aluno3 = pd.merge(tabela_detalhes_aluno2, tabela_detalhes_media2, on = ['Número da questão','Assunto'], how = 'inner')
+ 
+    if turma_aluno['Turma'][0] == turma_eng12 or turma_aluno['Turma'][0] == turma_eng2 or turma_aluno['Turma'][0] == turma_cien12 or turma_aluno['Turma'][0] == turma_cien2:
         for i in range(len(tabela_detalhes_aluno3['Número da questão'])):
-            if tabela_detalhes_aluno3['Número da questão'][i] < 73:
-                tabela_detalhes_aluno3['Número da questão'][i] = tabela_detalhes_aluno3['Número da questão'][i] - 24
             if tabela_detalhes_aluno3['Número da questão'][i] > 73:
                 tabela_detalhes_aluno3['Número da questão'][i] = tabela_detalhes_aluno3['Número da questão'][i] - 25
 
@@ -2450,7 +2208,6 @@ if login_aluno != '':
     tabela_detalhes_aluno4 = tabela_detalhes_aluno4[['Número da questão','Disciplina','Assunto','Resposta do aluno(a)','Gabarito','Acerto_x','Acerto_y','Tempo na questão_x','Tempo na questão_y']]
     tabela_detalhes_aluno4.rename(columns = {'Disciplina':'Área do conhecimento','Acerto_x':'Resultado Individual','Acerto_y':'Resultado Geral','Tempo na questão_x':'Tempo na questão','Tempo na questão_y':'Média geral'}, inplace = True)
         #tabela_detalhes_aluno5 = tabela_detalhes_aluno4.sort_values(by = 'Número da questão', ascending = True).reset_index()
-        
     tabela_final = tabela_questoes(tabela_detalhes_aluno4,'Número da questão','Área do conhecimento','Assunto','Resposta do aluno(a)','Gabarito','Resultado Individual','Resultado Geral','Tempo na questão','Média geral',cor_texto,cor_back)
         
     with st.container():
@@ -2462,948 +2219,3 @@ if login_aluno != '':
         with col3:
             st.write("")
 
-    html_header_2fase="""
-    <h2 style="font-size:200%; color: #9E089E; font-family:Georgia"> 2º FASE<br>
-     <hr style= "  display: block;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: auto;
-      margin-right: auto;
-      border-style: inset;
-      border-width: 1.5px;"></h2>
-    """
-    st.markdown(html_br, unsafe_allow_html=True)
-    st.markdown(html_header_2fase, unsafe_allow_html=True)
-    
-    
-    for i in range(len(base_resultados_2fase['Login do aluno(a)'])):
-        base_resultados_2fase['Tema 1 - Comunicação assertiva'][i] = float(str(base_resultados_2fase['Tema 1 - Comunicação assertiva'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 1 - Interação com pessoas'][i] = float(str(base_resultados_2fase['Tema 1 - Interação com pessoas'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 1 - Pensamento crítico'][i] = float(str(base_resultados_2fase['Tema 1 - Pensamento crítico'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 1 - Aprender a aprender'][i] = float(str(base_resultados_2fase['Tema 1 - Aprender a aprender'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 2 - Comunicação assertiva'][i] = float(str(base_resultados_2fase['Tema 2 - Comunicação assertiva'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 2 - Interação com pessoas'][i] = float(str(base_resultados_2fase['Tema 2 - Interação com pessoas'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 2 - Pensamento crítico'][i] = float(str(base_resultados_2fase['Tema 2 - Pensamento crítico'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 2 - Aprender a aprender'][i] = float(str(base_resultados_2fase['Tema 2 - Aprender a aprender'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 3 - Comunicação assertiva'][i] = float(str(base_resultados_2fase['Tema 3 - Comunicação assertiva'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 3 - Interação com pessoas'][i] = float(str(base_resultados_2fase['Tema 3 - Interação com pessoas'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 3 - Pensamento crítico'][i] = float(str(base_resultados_2fase['Tema 3 - Pensamento crítico'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 4 - Comunicação assertiva'][i] = float(str(base_resultados_2fase['Tema 4 - Comunicação assertiva'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 4 - Interação com pessoas'][i] = float(str(base_resultados_2fase['Tema 4 - Interação com pessoas'][i]).replace(',','.'))
-        base_resultados_2fase['Tema 4 - Pensamento crítico'][i] = float(str(base_resultados_2fase['Tema 4 - Pensamento crítico'][i]).replace(',','.'))
-        if base_resultados_2fase['Tema 1 - Comunicação assertiva'][i] > 0:
-            base_resultados_2fase['Tema 1 - Comunicação assertiva'][i] = base_resultados_2fase['Tema 1 - Comunicação assertiva'][i]
-        else:
-            base_resultados_2fase['Tema 1 - Comunicação assertiva'][i] = 0
-
-        if base_resultados_2fase['Tema 1 - Interação com pessoas'][i] > 0:
-            base_resultados_2fase['Tema 1 - Interação com pessoas'][i] = base_resultados_2fase['Tema 1 - Interação com pessoas'][i]
-        else:
-            base_resultados_2fase['Tema 1 - Interação com pessoas'][i] = 0
-
-        if base_resultados_2fase['Tema 1 - Pensamento crítico'][i] > 0:
-            base_resultados_2fase['Tema 1 - Pensamento crítico'][i] = base_resultados_2fase['Tema 1 - Pensamento crítico'][i]
-        else:
-            base_resultados_2fase['Tema 1 - Pensamento crítico'][i] = 0
-
-        if base_resultados_2fase['Tema 1 - Aprender a aprender'][i] > 0:
-            base_resultados_2fase['Tema 1 - Aprender a aprender'][i] = base_resultados_2fase['Tema 1 - Aprender a aprender'][i]
-        else:
-            base_resultados_2fase['Tema 1 - Aprender a aprender'][i] = 0
-
-        if base_resultados_2fase['Tema 2 - Comunicação assertiva'][i] > 0:
-            base_resultados_2fase['Tema 2 - Comunicação assertiva'][i] = base_resultados_2fase['Tema 2 - Comunicação assertiva'][i]
-        else:
-            base_resultados_2fase['Tema 2 - Comunicação assertiva'][i] = 0
-
-        if base_resultados_2fase['Tema 2 - Interação com pessoas'][i] > 0:
-            base_resultados_2fase['Tema 2 - Interação com pessoas'][i] = base_resultados_2fase['Tema 2 - Interação com pessoas'][i]
-        else:
-            base_resultados_2fase['Tema 2 - Interação com pessoas'][i] = 0
-
-        if base_resultados_2fase['Tema 2 - Pensamento crítico'][i] > 0:
-            base_resultados_2fase['Tema 2 - Pensamento crítico'][i] = base_resultados_2fase['Tema 2 - Pensamento crítico'][i]
-        else:
-            base_resultados_2fase['Tema 2 - Pensamento crítico'][i] = 0
-
-        if base_resultados_2fase['Tema 2 - Aprender a aprender'][i] > 0:
-            base_resultados_2fase['Tema 2 - Aprender a aprender'][i] = base_resultados_2fase['Tema 2 - Aprender a aprender'][i]
-        else:
-            base_resultados_2fase['Tema 2 - Aprender a aprender'][i] = 0
-
-        if base_resultados_2fase['Tema 3 - Comunicação assertiva'][i] > 0:
-            base_resultados_2fase['Tema 3 - Comunicação assertiva'][i] = base_resultados_2fase['Tema 3 - Comunicação assertiva'][i]
-        else:
-            base_resultados_2fase['Tema 3 - Comunicação assertiva'][i] = 0
-
-        if base_resultados_2fase['Tema 3 - Interação com pessoas'][i] > 0:
-            base_resultados_2fase['Tema 3 - Interação com pessoas'][i] = base_resultados_2fase['Tema 3 - Interação com pessoas'][i]
-        else:
-            base_resultados_2fase['Tema 3 - Interação com pessoas'][i] = 0
-
-        if base_resultados_2fase['Tema 3 - Pensamento crítico'][i] > 0:
-            base_resultados_2fase['Tema 3 - Pensamento crítico'][i] = base_resultados_2fase['Tema 3 - Pensamento crítico'][i]
-        else:
-            base_resultados_2fase['Tema 3 - Pensamento crítico'][i] = 0
-
-        if base_resultados_2fase['Tema 4 - Comunicação assertiva'][i] > 0:
-            base_resultados_2fase['Tema 4 - Comunicação assertiva'][i] = base_resultados_2fase['Tema 4 - Comunicação assertiva'][i]
-        else:
-            base_resultados_2fase['Tema 4 - Comunicação assertiva'][i] = 0
-
-        if base_resultados_2fase['Tema 4 - Interação com pessoas'][i] > 0:
-            base_resultados_2fase['Tema 4 - Interação com pessoas'][i] = base_resultados_2fase['Tema 4 - Interação com pessoas'][i]
-        else:
-            base_resultados_2fase['Tema 4 - Interação com pessoas'][i] = 0
-
-        if base_resultados_2fase['Tema 4 - Pensamento crítico'][i] > 0:
-            base_resultados_2fase['Tema 4 - Pensamento crítico'][i] = base_resultados_2fase['Tema 4 - Pensamento crítico'][i]
-        else:
-            base_resultados_2fase['Tema 4 - Pensamento crítico'][i] = 0
-
-    base_resultados_2fase['Nota 2º fase'] = 0.00
-    base_resultados_2fase['Nota 2º fase'] = (750*base_resultados_2fase['Tema 1 - Comunicação assertiva']/12 + 750*base_resultados_2fase['Tema 1 - Interação com pessoas']/12 + 750*base_resultados_2fase['Tema 1 - Pensamento crítico']/12 + 250*base_resultados_2fase['Tema 1 - Aprender a aprender']/2 + 750*base_resultados_2fase['Tema 2 - Comunicação assertiva']/12 +  750*base_resultados_2fase['Tema 2 - Interação com pessoas']/12 + 750*base_resultados_2fase['Tema 2 - Pensamento crítico']/12 + 250*base_resultados_2fase['Tema 2 - Aprender a aprender']/2 + 750*base_resultados_2fase['Tema 3 - Comunicação assertiva']/12 + 750*base_resultados_2fase['Tema 3 - Interação com pessoas']/12 + 750*base_resultados_2fase['Tema 3 - Pensamento crítico']/12 + 750*base_resultados_2fase['Tema 4 - Comunicação assertiva']/12 + 750*base_resultados_2fase['Tema 4 - Interação com pessoas']/12 + 750*base_resultados_2fase['Tema 4 - Pensamento crítico']/12)/4
-
-
-    #base_resultados_2fase2 = base_resultados_2fase[base_resultados_2fase['Tema 1 - Comunicação assertiva'] > 0]
-    
-    ### Resultados gerais do aluno
-    base_resultados_2fase = base_resultados_2fase[base_resultados_2fase['Nota 2º fase'] >= 0]
-    base_resultados_2faseaux = base_resultados_2fase[base_resultados_2fase['Nota 2º fase'] > 0]
-    numero_candidatos = len(base_resultados_2faseaux['Nome do aluno(a)'])
-
-    html_card_header1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <h4 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Nota</h4>
-      </div>
-    </div>
-    """
-    html_card_footer1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Nota máxima: 1000</p>
-      </div>
-    </div>
-    """
-
-    html_card_footer_med1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(int(round(base_resultados_2faseaux['Nota 2º fase'].mean(),0)))+"""</p>
-      </div>
-    </div>
-    """
-    html_card_header3="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <h4 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Classificação</h4>
-      </div>
-    </div>
-    """
-    html_card_footer3="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Quantidade de alunos: """+str(numero_candidatos)+"""</p>
-      </div>
-    </div>
-    """
-    base_resultados_2fase_aluno = base_resultados_2fase.sort_values(by = 'Nota 2º fase', ascending = False).reset_index(drop = True).reset_index()
-    base_resultados_2fase_aluno.rename(columns = {'index':'Classificação'}, inplace = True)
-
-    base_resultados_2fase_aluno2 = base_resultados_2fase_aluno[base_resultados_2fase_aluno['Login do aluno(a)'] == login_aluno].reset_index()
-    for i in range(len(base_resultados_2fase_aluno2['Nota 2º fase'])):
-        if base_resultados_2fase_aluno2['Nota 2º fase'][i] == 0:
-            base_resultados_2fase_aluno2['Classificação'][0] = numero_candidatos + 1
-        else:
-            base_resultados_2fase_aluno2['Classificação'][0] = base_resultados_2fase_aluno2['Classificação'][0] + 1
-    base_resultados_2faseaux = base_resultados_2fase[base_resultados_2fase['Nota 2º fase'] > 0]
-    ### Block 1#########################################################################################
-    with st.container():
-        col1, col2, col3, col4, col5, col6, col7 = st.columns([1,20,1,20,1,20,1])
-        with col1:
-            st.write("")
-        with col2:
-            st.markdown(html_card_header1, unsafe_allow_html=True)
-            fig_c1 = go.Figure(go.Indicator(
-                mode="number+delta",
-                value=round(base_resultados_2fase_aluno2['Nota 2º fase'].mean(),1),
-                number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                delta={'position': "bottom", 'reference': int(round(truncar(base_resultados_2faseaux['Nota 2º fase'].mean(),-1),0)), 'relative': False},
-                domain={'x': [0, 1], 'y': [0, 1]}))
-            fig_c1.update_layout(autosize=False,
-                                 width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                 paper_bgcolor="#FFF0FC", font={'size': 20})
-            fig_c1.update_traces(delta_decreasing_color="#FF4136",
-                                delta_increasing_color="#3D9970",
-                                delta_valueformat='.0f',
-                                selector=dict(type='indicator'))
-            st.plotly_chart(fig_c1)
-            st.markdown(html_card_footer1, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_card_footer_med1, unsafe_allow_html=True)
-        with col3:
-            st.write("")
-        with col4:
-            st.markdown(html_card_header3, unsafe_allow_html=True)
-            fig_c3 = go.Figure(go.Indicator(
-                mode="number",
-                value=base_resultados_2fase_aluno2['Classificação'][0],
-                number={'suffix': "º", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                delta={'position': "bottom", 'reference': 1, 'relative': False},
-                domain={'x': [0, 1], 'y': [0, 1]}))
-            fig_c3.update_layout(autosize=False,
-                                 width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                 paper_bgcolor="#FFF0FC", font={'size': 20})
-            fig_c3.update_traces(delta_decreasing_color="#3D9970",
-                                 delta_increasing_color="#FF4136",
-                                 delta_valueformat='.3f',
-                                 selector=dict(type='indicator'))
-            st.plotly_chart(fig_c3)
-            st.markdown(html_card_footer3, unsafe_allow_html=True)
-        with col5:
-            st.write("")
-        with col6:
-            st.write("")
-        with col7:
-            st.write("")
-    
-    st.markdown(html_br, unsafe_allow_html=True)
-    st.markdown(html_br, unsafe_allow_html=True)
-
-    ponto = str(round(100*(numero_candidatos-(base_resultados_2fase_aluno2['Classificação'][0]-1))/numero_candidatos,0)).find('.')
-    texto = str(round(100*(numero_candidatos-(base_resultados_2fase_aluno2['Classificação'][0]-1))/numero_candidatos,0))[0:ponto]
-    html_card_header_destaques_gerais="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #0010B3; padding-top: 60px; width: 495px;
-       height: 150px;">
-        <h5 class="card-title" style="background-color:#0010B3; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 10px 0;">Você foi melhor que """+texto+"""% dos alunos!</h5>
-      </div>
-    </div>
-    """    
-    ### Block 1#########################################################################################
-    with st.container():
-        col1, col2, col3, col4, col5 = st.columns([9,25,2,25,4])
-        with col1:
-            st.write("")
-        with col2:
-            # create the bins
-            counts, bins = np.histogram(base_resultados_2faseaux['Nota 2º fase'], bins=range(0, 1100, 100))
-            bins = 0.5 * (bins[:-1] + bins[1:])
-            fig = px.bar(x=bins, y=counts, labels={'x':'Nota no simulado', 'y':'Número de alunos'})
-            fig.update_layout(title={'text': "Distribuição de notas", 'x': 0.5}, paper_bgcolor="#FFF0FC", 
-                           plot_bgcolor="#FFF0FC", font={'color': "#9E089E", 'size': 14, 'family': "Georgia"}, height=400,
-                           width=540,
-                           legend=dict(orientation="h",
-                                       yanchor="top",
-                                       y=0.99,
-                                       xanchor="left",
-                                       x=0.01),
-                           margin=dict(l=1, r=1, b=1, t=30))
-            fig.add_vline(x=int(round(base_resultados_2fase_aluno2['Nota 2º fase'].mean(),1)), line_width=7, line_dash="dash", line_color="#9E089E", annotation_text="Você está aqui!", annotation_position="top right")
-            fig.add_vline(x=int(round(truncar(base_resultados_2faseaux['Nota 2º fase'].mean(),-1),0)), line_width=7, line_dash="dash", line_color="#01ECEC", annotation_text="Média", annotation_position="top right")
-            fig.update_xaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=6, rangemode="tozero",
-                          showgrid=False, gridwidth=0.5, gridcolor='#f6f6f6')
-            fig.update_yaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=10, rangemode="tozero",
-                          showgrid=True, gridwidth=0.5, gridcolor='#f6f6f6')
-            fig.update_traces(marker_color='#0010B3')
-            st.plotly_chart(fig)
-        with col3:
-            st.write("")
-        with col4:
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_card_header_destaques_gerais, unsafe_allow_html=True)
-        with col5:
-            st.write("")
-
-    base_resultados_2fase_debate = pd.DataFrame()
-    base_resultados_2fase_debate = base_resultados_2fase
-    
-    base_resultados_2fase_debate2 = base_resultados_2fase_debate.drop(columns = ['Tema 1 - Aprender a aprender','Tema 2 - Aprender a aprender'])
-   
-    base_resultados_2fase_debate2['Nota 2º fase'] = 1000*(750*base_resultados_2fase_debate2['Tema 1 - Comunicação assertiva']/12 + 750*base_resultados_2fase_debate2['Tema 1 - Interação com pessoas']/12 + 750*base_resultados_2fase_debate2['Tema 1 - Pensamento crítico']/12 + 750*base_resultados_2fase_debate2['Tema 2 - Comunicação assertiva']/12 +  750*base_resultados_2fase_debate2['Tema 2 - Interação com pessoas']/12 + 750*base_resultados_2fase_debate2['Tema 2 - Pensamento crítico']/12 + 750*base_resultados_2fase_debate2['Tema 3 - Comunicação assertiva']/12 + 750*base_resultados_2fase_debate2['Tema 3 - Interação com pessoas']/12 + 750*base_resultados_2fase_debate2['Tema 3 - Pensamento crítico']/12 + 750*base_resultados_2fase_debate2['Tema 4 - Comunicação assertiva']/12 + 750*base_resultados_2fase_debate2['Tema 4 - Interação com pessoas']/12 + 750*base_resultados_2fase_debate2['Tema 4 - Pensamento crítico']/12)/3000
-    base_resultados_2fase_debate2aux = base_resultados_2fase_debate2[base_resultados_2fase_debate2['Nota 2º fase'] > 0]
-    html_header_2fase="""
-    <h2 style="font-size:200%; color: #9E089E; font-family:Georgia"> DEBATE<br>
-     <hr style= "  display: block;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: auto;
-      margin-right: auto;
-      border-style: inset;
-      border-width: 1.5px;"></h2>
-    """
-    st.markdown(html_br, unsafe_allow_html=True)
-    st.markdown(html_header_2fase, unsafe_allow_html=True)
-
-    html_card_header1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <h4 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Nota</h4>
-      </div>
-    </div>
-    """
-    html_card_footer1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Nota máxima: 1000</p>
-      </div>
-    </div>
-    """
-
-    html_card_footer_med1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 10px 10px; background:#FFA73E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(int(round(base_resultados_2fase_debate2aux['Nota 2º fase'].mean(),0)))+"""</p>
-      </div>
-    </div>
-    """
-    html_card_header3="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <h4 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Classificação</h4>
-      </div>
-    </div>
-    """
-    html_card_footer3="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Quantidade de alunos: """+str(numero_candidatos)+"""</p>
-      </div>
-    </div>
-    """
-    base_resultados_2fase_aluno_debate = base_resultados_2fase_debate2.sort_values(by = 'Nota 2º fase', ascending = False).reset_index(drop = True).reset_index()
-    base_resultados_2fase_aluno_debate.rename(columns = {'index':'Classificação'}, inplace = True)
-    base_resultados_2fase_aluno_debate2 = base_resultados_2fase_aluno_debate[base_resultados_2fase_aluno_debate['Login do aluno(a)'] == login_aluno].reset_index()
-    if base_resultados_2fase_aluno_debate2['Nota 2º fase'][0] == 0:
-        base_resultados_2fase_aluno_debate2['Classificação'][0] = numero_candidatos + 1
-    else:
-        base_resultados_2fase_aluno_debate2['Classificação'][0] = base_resultados_2fase_aluno_debate2['Classificação'][0] + 1
-    
-    ### Block 1#########################################################################################
-    with st.container():
-        col1, col2, col3, col4, col5, col6, col7 = st.columns([1,20,1,20,1,20,1])
-        with col1:
-            st.write("")
-        with col2:
-            st.markdown(html_card_header1, unsafe_allow_html=True)
-            fig_c1 = go.Figure(go.Indicator(
-                mode="number+delta",
-                value=round(base_resultados_2fase_aluno_debate2['Nota 2º fase'].mean(),1),
-                number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                delta={'position': "bottom", 'reference': int(round(truncar(base_resultados_2fase_debate2aux['Nota 2º fase'].mean(),-1),0)), 'relative': False},
-                domain={'x': [0, 1], 'y': [0, 1]}))
-            fig_c1.update_layout(autosize=False,
-                                 width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                 paper_bgcolor="#FFF0FC", font={'size': 20})
-            fig_c1.update_traces(delta_decreasing_color="#FF4136",
-                                delta_increasing_color="#3D9970",
-                                delta_valueformat='.0f',
-                                selector=dict(type='indicator'))
-            st.plotly_chart(fig_c1)
-            st.markdown(html_card_footer1, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_card_footer_med1, unsafe_allow_html=True)
-        with col3:
-            st.write("")
-        with col4:
-            st.markdown(html_card_header3, unsafe_allow_html=True)
-            fig_c3 = go.Figure(go.Indicator(
-                mode="number",
-                value=base_resultados_2fase_aluno_debate2['Classificação'][0],
-                number={'suffix': "º", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                delta={'position': "bottom", 'reference': 1, 'relative': False},
-                domain={'x': [0, 1], 'y': [0, 1]}))
-            fig_c3.update_layout(autosize=False,
-                                 width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                 paper_bgcolor="#FFF0FC", font={'size': 20})
-            fig_c3.update_traces(delta_decreasing_color="#3D9970",
-                                 delta_increasing_color="#FF4136",
-                                 delta_valueformat='.3f',
-                                 selector=dict(type='indicator'))
-            st.plotly_chart(fig_c3)
-            st.markdown(html_card_footer3, unsafe_allow_html=True)
-        with col5:
-            st.write("")
-        with col6:
-            st.write("")
-        with col7:
-            st.write("")
-    
-    st.markdown(html_br, unsafe_allow_html=True)
-    st.markdown(html_br, unsafe_allow_html=True)
-
-    ponto = str(round(100*(numero_candidatos-(base_resultados_2fase_aluno_debate2['Classificação'][0]-1))/numero_candidatos,0)).find('.')
-    texto = str(round(100*(numero_candidatos-(base_resultados_2fase_aluno_debate2['Classificação'][0]-1))/numero_candidatos,0))[0:ponto]
-    html_card_header_destaques_gerais="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #0010B3; padding-top: 60px; width: 495px;
-       height: 150px;">
-        <h5 class="card-title" style="background-color:#0010B3; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 10px 0;">Você foi melhor que """+texto+"""% dos alunos!</h5>
-      </div>
-    </div>
-    """    
-    ### Block 1#########################################################################################
-    with st.container():
-        col1, col2, col3, col4, col5 = st.columns([9,25,2,25,4])
-        with col1:
-            st.write("")
-        with col2:
-            # create the bins
-            counts, bins = np.histogram(base_resultados_2fase_debate2aux['Nota 2º fase'], bins=range(0, 1100, 100))
-            bins = 0.5 * (bins[:-1] + bins[1:])
-            fig = px.bar(x=bins, y=counts, labels={'x':'Nota no simulado', 'y':'Número de alunos'})
-            fig.update_layout(title={'text': "Distribuição de notas", 'x': 0.5}, paper_bgcolor="#FFF0FC", 
-                           plot_bgcolor="#FFF0FC", font={'color': "#9E089E", 'size': 14, 'family': "Georgia"}, height=400,
-                           width=540,
-                           legend=dict(orientation="h",
-                                       yanchor="top",
-                                       y=0.99,
-                                       xanchor="left",
-                                       x=0.01),
-                           margin=dict(l=1, r=1, b=1, t=30))
-            fig.add_vline(x=int(round(base_resultados_2fase_aluno_debate2['Nota 2º fase'].mean(),1)), line_width=7, line_dash="dash", line_color="#9E089E", annotation_text="Você está aqui!", annotation_position="top right")
-            fig.add_vline(x=int(round(truncar(base_resultados_2fase_debate2aux['Nota 2º fase'].mean(),-1),0)), line_width=7, line_dash="dash", line_color="#01ECEC", annotation_text="Média", annotation_position="top right")
-            fig.update_xaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=6, rangemode="tozero",
-                          showgrid=False, gridwidth=0.5, gridcolor='#f6f6f6')
-            fig.update_yaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=10, rangemode="tozero",
-                          showgrid=True, gridwidth=0.5, gridcolor='#f6f6f6')
-            fig.update_traces(marker_color='#0010B3')
-            st.plotly_chart(fig)
-        with col3:
-            st.write("")
-        with col4:
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_card_header_destaques_gerais, unsafe_allow_html=True)
-        with col5:
-            st.write("")
-
-    base_resultados_2fase_debate3 = base_resultados_2fase_debate2[base_resultados_2fase_debate2['Login do aluno(a)'] == login_aluno].reset_index()
-
-    data = [
-    {'Temas': 'Tema 1',  'Comunicação Assertiva - Resultado Individual': base_resultados_2fase_debate3['Tema 1 - Comunicação assertiva'][0], 'Comunicação Assertiva - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 1 - Comunicação assertiva'].mean(),1), 'Interação com pessoas - Resultado Individual':base_resultados_2fase_debate3['Tema 1 - Interação com pessoas'][0], 'Interação com pessoas - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 1 - Interação com pessoas'].mean(),1), 'Pensamento crítico - Resultado Individual': base_resultados_2fase_debate3['Tema 1 - Pensamento crítico'][0], 'Pensamento crítico - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 1 - Pensamento crítico'].mean(),1)},
-
-
-    {'Temas': 'Tema 2', 'Comunicação Assertiva - Resultado Individual': base_resultados_2fase_debate3['Tema 2 - Comunicação assertiva'][0], 'Comunicação Assertiva - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 2 - Comunicação assertiva'].mean(),1), 'Interação com pessoas - Resultado Individual':base_resultados_2fase_debate3['Tema 2 - Interação com pessoas'][0], 'Interação com pessoas - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 2 - Interação com pessoas'].mean(),1), 'Pensamento crítico - Resultado Individual': base_resultados_2fase_debate3['Tema 2 - Pensamento crítico'][0], 'Pensamento crítico - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 2 - Pensamento crítico'].mean(),1)}, 
-
-
-    {'Temas': 'Tema 3', 'Comunicação Assertiva - Resultado Individual': base_resultados_2fase_debate3['Tema 3 - Comunicação assertiva'][0], 'Comunicação Assertiva - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 3 - Comunicação assertiva'].mean(),1), 'Interação com pessoas - Resultado Individual':base_resultados_2fase_debate3['Tema 3 - Interação com pessoas'][0], 'Interação com pessoas - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 3 - Interação com pessoas'].mean(),1), 'Pensamento crítico - Resultado Individual': base_resultados_2fase_debate3['Tema 3 - Pensamento crítico'][0], 'Pensamento crítico - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 3 - Pensamento crítico'].mean(),1)},
-
-
-    {'Temas': 'Tema 4', 'Comunicação Assertiva - Resultado Individual': base_resultados_2fase_debate3['Tema 4 - Comunicação assertiva'][0], 'Comunicação Assertiva - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 4 - Comunicação assertiva'].mean(),1), 'Interação com pessoas - Resultado Individual':base_resultados_2fase_debate3['Tema 4 - Interação com pessoas'][0], 'Interação com pessoas - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 4 - Interação com pessoas'].mean(),1), 'Pensamento crítico - Resultado Individual': base_resultados_2fase_debate3['Tema 4 - Pensamento crítico'][0], 'Pensamento crítico - Resultado Geral': round(base_resultados_2fase_debate2aux['Tema 4 - Pensamento crítico'].mean(),1)},
-
-
-    {'Temas': 'Total', 'Comunicação Assertiva - Resultado Individual': round((base_resultados_2fase_debate3['Tema 1 - Comunicação assertiva'][0]+base_resultados_2fase_debate3['Tema 2 - Comunicação assertiva'][0]+base_resultados_2fase_debate3['Tema 3 - Comunicação assertiva'][0]+base_resultados_2fase_debate3['Tema 4 - Comunicação assertiva'][0])/4,1), 'Comunicação Assertiva - Resultado Geral': round((base_resultados_2fase_debate2aux['Tema 1 - Comunicação assertiva'].mean() + base_resultados_2fase_debate2aux['Tema 2 - Comunicação assertiva'].mean() + base_resultados_2fase_debate2aux['Tema 3 - Comunicação assertiva'].mean() + base_resultados_2fase_debate2aux['Tema 4 - Comunicação assertiva'].mean())/4,1), 'Interação com pessoas - Resultado Individual': round((base_resultados_2fase_debate3['Tema 1 - Interação com pessoas'][0]+base_resultados_2fase_debate3['Tema 2 - Interação com pessoas'][0]+base_resultados_2fase_debate3['Tema 3 - Interação com pessoas'][0]+base_resultados_2fase_debate3['Tema 4 - Interação com pessoas'][0])/4,1), 'Interação com pessoas - Resultado Geral': round(((base_resultados_2fase_debate2aux['Tema 1 - Interação com pessoas'].mean() + base_resultados_2fase_debate2aux['Tema 2 - Interação com pessoas'].mean() + base_resultados_2fase_debate2aux['Tema 3 - Interação com pessoas'].mean() + base_resultados_2fase_debate2aux['Tema 4 - Interação com pessoas'].mean())/4),1), 'Pensamento crítico - Resultado Individual': round((base_resultados_2fase_debate3['Tema 1 - Pensamento crítico'][0]+base_resultados_2fase_debate3['Tema 2 - Pensamento crítico'][0]+base_resultados_2fase_debate3['Tema 3 - Pensamento crítico'][0]+base_resultados_2fase_debate3['Tema 4 - Pensamento crítico'][0])/4,1), 'Pensamento crítico - Resultado Geral': round((base_resultados_2fase_debate2aux['Tema 1 - Pensamento crítico'].mean() + base_resultados_2fase_debate2aux['Tema 2 - Pensamento crítico'].mean() + base_resultados_2fase_debate2aux['Tema 3 - Pensamento crítico'].mean() + base_resultados_2fase_debate2aux['Tema 4 - Pensamento crítico'].mean())/4,1)}
-    ]
-
-    tabela_debate = pd.DataFrame(data)
-    cor_back = []
-    cor_texto = []
-    for i in range(len(tabela_debate)):
-        if (tabela_debate['Comunicação Assertiva - Resultado Individual'][i]+ tabela_debate['Interação com pessoas - Resultado Individual'][i] + tabela_debate['Pensamento crítico - Resultado Individual'][i]) > (tabela_debate['Comunicação Assertiva - Resultado Geral'][i] + tabela_debate['Interação com pessoas - Resultado Geral'][i] + tabela_debate['Pensamento crítico - Resultado Geral'][i]):
-            cor_back.append('#a5ffa5')
-            cor_texto.append('#008800')
-        else:
-            cor_back.append('#ffb1b1')
-            cor_texto.append('#a80000')
-
-    #tabela_detalhes_aluno_debate = tabela_debate.sort_values(by = 'Temas', ascending = True).reset_index()
-        
-    tabela_final = tabela_questoes_debate(tabela_debate,'Temas', 'Comunicação Assertiva - Resultado Individual', 'Comunicação Assertiva - Resultado Geral', 'Interação com pessoas - Resultado Individual', 'Interação com pessoas - Resultado Geral', 'Pensamento crítico - Resultado Individual', 'Pensamento crítico - Resultado Geral', cor_texto,cor_back)
-
-    tabela_temas_debate = pd.DataFrame()
-
-    tabela_temas_debate['Temas'] = ['Tema 1 -  Empresas devem contratar pessoas que tiveram comportamentos racistas no passado?', 'Tema 2 -  A solução para a crise econômica do sistema público de saúde no Brasil é a parceria privada?', 'Tema 3 - Incentivos fiscais, como a Lei Rouanet, são boas medidas para melhorar a cultura no Brasil?', 'Tema 4 - É correto ter a mesma quantidade de vagas pra mulheres e homens nas faculdades?']
-
-    cor_back_debate = []
-    cor_texto_debate = []
-    for i in range(len(tabela_temas_debate)):
-        cor_back_debate.append('#a5ffa5')
-        cor_texto_debate.append('#008800')
-
-    tabela_final_temas_debate = fun_tabela_temas_debate(tabela_temas_debate,'Temas',cor_texto_debate,cor_back_debate)
-
-    with st.container():
-            col1, col2, col3 = st.columns([6, 20, 7])
-            with col1:
-                st.write("")
-            with col2:
-                st.markdown(tabela_final_temas_debate, unsafe_allow_html=True)
-            with col3:
-                st.write("")
-
-    st.markdown(html_br, unsafe_allow_html=True)
-
-    with st.container():
-            col1, col2, col3 = st.columns([6, 20, 7])
-            with col1:
-                st.write("")
-            with col2:
-                st.markdown(tabela_final, unsafe_allow_html=True)
-            with col3:
-                st.write("")
-    
-
-    ### ARGUIÇÃO
-
-    base_resultados_2fase_arguicao = pd.DataFrame()
-    base_resultados_2fase_arguicao = base_resultados_2fase
-    
-    base_resultados_2fase_arguicao2 = base_resultados_2fase_arguicao.drop(columns = ['Tema 1 - Comunicação assertiva','Tema 1 - Interação com pessoas','Tema 1 - Pensamento crítico','Tema 2 - Comunicação assertiva','Tema 2 - Interação com pessoas','Tema 2 - Pensamento crítico','Tema 3 - Comunicação assertiva','Tema 3 - Interação com pessoas','Tema 3 - Pensamento crítico','Tema 4 - Comunicação assertiva','Tema 4 - Interação com pessoas','Tema 4 - Pensamento crítico'])
-   
-    base_resultados_2fase_arguicao2['Nota 2º fase'] = 125*(base_resultados_2fase_arguicao2['Tema 1 - Aprender a aprender'] + base_resultados_2fase_arguicao2['Tema 2 - Aprender a aprender'])
-    base_resultados_2fase_arguicao2aux = base_resultados_2fase_arguicao2[base_resultados_2fase_arguicao2['Nota 2º fase'] > 0]
-
-    html_header_2fase="""
-    <h2 style="font-size:200%; color: #9E089E; font-family:Georgia"> ARGUIÇÃO<br>
-     <hr style= "  display: block;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: auto;
-      margin-right: auto;
-      border-style: inset;
-      border-width: 1.5px;"></h2>
-    """
-    st.markdown(html_br, unsafe_allow_html=True)
-    st.markdown(html_header_2fase, unsafe_allow_html=True)
-
-    html_card_header1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <h4 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Nota</h4>
-      </div>
-    </div>
-    """
-    html_card_footer1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Nota máxima: 1000</p>
-      </div>
-    </div>
-    """
-
-    html_card_footer_med1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(int(round(base_resultados_2fase_arguicao2aux['Nota 2º fase'].mean(),0)))+"""</p>
-      </div>
-    </div>
-    """
-    html_card_header3="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <h4 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Classificação</h4>
-      </div>
-    </div>
-    """
-    html_card_footer3="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Quantidade de alunos: """+str(numero_candidatos)+"""</p>
-      </div>
-    </div>
-    """
-    base_resultados_2fase_aluno_arguicao = base_resultados_2fase_arguicao2.sort_values(by = 'Nota 2º fase', ascending = False).reset_index(drop = True).reset_index()
-    base_resultados_2fase_aluno_arguicao.rename(columns = {'index':'Classificação'}, inplace = True)
-
-    base_resultados_2fase_aluno_arguicao2 = base_resultados_2fase_aluno_arguicao[base_resultados_2fase_aluno_arguicao['Login do aluno(a)'] == login_aluno].reset_index()
-
-    if base_resultados_2fase_aluno_arguicao2['Nota 2º fase'][0] == 0:
-        base_resultados_2fase_aluno_arguicao2['Classificação'][0] = numero_candidatos + 1
-    else:
-        base_resultados_2fase_aluno_arguicao2['Classificação'][0] = base_resultados_2fase_aluno_arguicao2['Classificação'][0] + 1
-    
-
-    ### Block 1#########################################################################################
-    with st.container():
-        col1, col2, col3, col4, col5, col6, col7 = st.columns([1,20,1,20,1,20,1])
-        with col1:
-            st.write("")
-        with col2:
-            st.markdown(html_card_header1, unsafe_allow_html=True)
-            fig_c1 = go.Figure(go.Indicator(
-                mode="number+delta",
-                value=round(base_resultados_2fase_aluno_arguicao2['Nota 2º fase'].mean(),1),
-                number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                delta={'position': "bottom", 'reference': int(round(truncar(base_resultados_2fase_arguicao2aux['Nota 2º fase'].mean(),-1),0)), 'relative': False},
-                domain={'x': [0, 1], 'y': [0, 1]}))
-            fig_c1.update_layout(autosize=False,
-                                 width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                 paper_bgcolor="#FFF0FC", font={'size': 20})
-            fig_c1.update_traces(delta_decreasing_color="#FF4136",
-                                delta_increasing_color="#3D9970",
-                                delta_valueformat='.0f',
-                                selector=dict(type='indicator'))
-            st.plotly_chart(fig_c1)
-            st.markdown(html_card_footer1, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_card_footer_med1, unsafe_allow_html=True)
-        with col3:
-            st.write("")
-        with col4:
-            st.markdown(html_card_header3, unsafe_allow_html=True)
-            fig_c3 = go.Figure(go.Indicator(
-                mode="number",
-                value=base_resultados_2fase_aluno_arguicao2['Classificação'][0],
-                number={'suffix': "º", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                delta={'position': "bottom", 'reference': 1, 'relative': False},
-                domain={'x': [0, 1], 'y': [0, 1]}))
-            fig_c3.update_layout(autosize=False,
-                                 width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                 paper_bgcolor="#FFF0FC", font={'size': 20})
-            fig_c3.update_traces(delta_decreasing_color="#3D9970",
-                                 delta_increasing_color="#FF4136",
-                                 delta_valueformat='.3f',
-                                 selector=dict(type='indicator'))
-            st.plotly_chart(fig_c3)
-            st.markdown(html_card_footer3, unsafe_allow_html=True)
-        with col5:
-            st.write("")
-        with col6:
-            st.write("")
-        with col7:
-            st.write("")
-    
-    st.markdown(html_br, unsafe_allow_html=True)
-    st.markdown(html_br, unsafe_allow_html=True)
-
-    ponto = str(round(100*(numero_candidatos-(base_resultados_2fase_aluno_arguicao2['Classificação'][0]-1))/numero_candidatos,0)).find('.')
-    texto = str(round(100*(numero_candidatos-(base_resultados_2fase_aluno_arguicao2['Classificação'][0]-1))/numero_candidatos,0))[0:ponto]
-    html_card_header_destaques_gerais="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #0010B3; padding-top: 60px; width: 495px;
-       height: 150px;">
-        <h5 class="card-title" style="background-color:#0010B3; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 10px 0;">Você foi melhor que """+texto+"""% dos alunos!</h5>
-      </div>
-    </div>
-    """    
-    ### Block 1#########################################################################################
-    with st.container():
-        col1, col2, col3, col4, col5 = st.columns([9,25,2,25,4])
-        with col1:
-            st.write("")
-        with col2:
-            # create the bins
-            counts, bins = np.histogram(base_resultados_2fase_arguicao2aux['Nota 2º fase'], bins=range(0, 1100, 100))
-            bins = 0.5 * (bins[:-1] + bins[1:])
-            fig = px.bar(x=bins, y=counts, labels={'x':'Nota no simulado', 'y':'Número de alunos'})
-            fig.update_layout(title={'text': "Distribuição de notas", 'x': 0.5}, paper_bgcolor="#FFF0FC", 
-                           plot_bgcolor="#FFF0FC", font={'color': "#9E089E", 'size': 14, 'family': "Georgia"}, height=400,
-                           width=540,
-                           legend=dict(orientation="h",
-                                       yanchor="top",
-                                       y=0.99,
-                                       xanchor="left",
-                                       x=0.01),
-                           margin=dict(l=1, r=1, b=1, t=30))
-            fig.add_vline(x=int(round(base_resultados_2fase_aluno_arguicao2['Nota 2º fase'].mean(),1)), line_width=7, line_dash="dash", line_color="#9E089E", annotation_text="Você está aqui!", annotation_position="top right")
-            fig.add_vline(x=int(round(truncar(base_resultados_2fase_arguicao2aux['Nota 2º fase'].mean(),-1),0)), line_width=7, line_dash="dash", line_color="#01ECEC", annotation_text="Média", annotation_position="top right")
-            fig.update_xaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=6, rangemode="tozero",
-                          showgrid=False, gridwidth=0.5, gridcolor='#f6f6f6')
-            fig.update_yaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=10, rangemode="tozero",
-                          showgrid=True, gridwidth=0.5, gridcolor='#f6f6f6')
-            fig.update_traces(marker_color='#0010B3')
-            st.plotly_chart(fig)
-        with col3:
-            st.write("")
-        with col4:
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_card_header_destaques_gerais, unsafe_allow_html=True)
-        with col5:
-            st.write("")
-
-    base_resultados_2fase_arguicao3 = base_resultados_2fase_arguicao2[base_resultados_2fase_arguicao2['Login do aluno(a)'] == login_aluno].reset_index()
-
-    data2 = [
-    {'Temas': 'Tema 1',  'Aprender a aprender - Resultado Individual': base_resultados_2fase_arguicao3['Tema 1 - Aprender a aprender'][0], 'Aprender a aprender - Resultado Geral': round(base_resultados_2fase_arguicao2aux['Tema 1 - Aprender a aprender'].mean(),1)},
-
-    {'Temas': 'Tema 2', 'Aprender a aprender - Resultado Individual': base_resultados_2fase_arguicao3['Tema 2 - Aprender a aprender'][0], 'Aprender a aprender - Resultado Geral': round(base_resultados_2fase_arguicao2aux['Tema 2 - Aprender a aprender'].mean(),1)},
-
-    {'Temas': 'Total', 'Aprender a aprender - Resultado Individual': round((base_resultados_2fase_arguicao3['Tema 1 - Aprender a aprender'][0]+base_resultados_2fase_arguicao3['Tema 2 - Aprender a aprender'][0])/2,1), 'Aprender a aprender - Resultado Geral': round((base_resultados_2fase_arguicao2aux['Tema 1 - Aprender a aprender'].mean() + base_resultados_2fase_arguicao2aux['Tema 2 - Aprender a aprender'].mean())/2,1)}
-    ]
-    tabela_arguicao = pd.DataFrame(data2)
-    cor_back = []
-    cor_texto = []
-    for i in range(len(tabela_arguicao)):
-        if (tabela_arguicao['Aprender a aprender - Resultado Individual'][i] > tabela_arguicao['Aprender a aprender - Resultado Geral'][i]):
-            cor_back.append('#a5ffa5')
-            cor_texto.append('#008800')
-        else:
-            cor_back.append('#ffb1b1')
-            cor_texto.append('#a80000')
-
-    #tabela_detalhes_aluno_debate = tabela_debate.sort_values(by = 'Temas', ascending = True).reset_index()
-        
-    tabela_final2 = tabela_questoes_arguicao(tabela_arguicao,'Temas', 'Aprender a aprender - Resultado Individual', 'Aprender a aprender - Resultado Geral', cor_texto,cor_back)
-
-    tabela_temas_arguicao = pd.DataFrame()
-
-    tabela_temas_arguicao['Temas'] = ['Tema 1 - Deveria ser instalada inteligência artificial mas casas da população para evitar violência contra mulheres e crianças?','Tema 2 - Assim como o IPVA, as multas de trânsito deveriam ser proporcionais ao valor do veículo?']
-
-    cor_back_arguicao = []
-    cor_texto_arguicao = []
-    for i in range(len(tabela_temas_arguicao)):
-        cor_back_arguicao.append('#a5ffa5')
-        cor_texto_arguicao.append('#008800')
-
-    tabela_final_temas_arguicao = fun_tabela_temas_arguicao(tabela_temas_arguicao,'Temas',cor_texto_arguicao,cor_back_arguicao)
-
-    with st.container():
-            col1, col2, col3 = st.columns([3, 5 , 3])
-            with col1:
-                st.write("")
-            with col2:
-                st.markdown(tabela_final_temas_arguicao, unsafe_allow_html=True)
-            with col3:
-                st.write("")   
-
-    st.markdown(html_br, unsafe_allow_html=True)
-
-    with st.container():
-            col1, col2, col3 = st.columns([3, 5, 3])
-            with col1:
-                st.write("")
-            with col2:
-                st.markdown(tabela_final2, unsafe_allow_html=True)
-            with col3:
-                st.write("")
-    
-    primeira_fase = resultados_gerais5
-    primeira_fase2 = primeira_fase.drop(columns = ['Número da questão','Tempo na questão','Valor da questão','Unnamed: 10','Acerto'])
-    segunda_fase = base_resultados_2fase
-    
-    segunda_fase2 = segunda_fase.drop(columns = ['Tema 1 - Comunicação assertiva','Tema 2 - Comunicação assertiva','Tema 3 - Comunicação assertiva','Tema 4 - Comunicação assertiva', 'Tema 1 - Interação com pessoas', 'Tema 2 - Interação com pessoas', 'Tema 3 - Interação com pessoas', 'Tema 4 - Interação com pessoas', 'Tema 1 - Pensamento crítico', 'Tema 2 - Pensamento crítico', 'Tema 3 - Pensamento crítico', 'Tema 4 - Pensamento crítico', 'Tema 1 - Aprender a aprender', 'Tema 2 - Aprender a aprender']) 
-    segunda_fase3 = pd.merge(segunda_fase2, base_redacao_disciplina2, on = 'Login do aluno(a)', how = 'left')
-    segunda_fase3.rename(columns = {'Nota na questão':'Nota Redação'}, inplace = True)
-
-    segunda_fase3['Nota Final 2º fase'] = 0.25*segunda_fase3['Nota Redação'] + 0.75*segunda_fase3['Nota 2º fase']
-    primeira_fase2.rename(columns = {'Nota na questão':'Nota 1º fase'}, inplace = True)
-    
-
-    resultado_final = pd.merge(segunda_fase3, primeira_fase2, on = 'Login do aluno(a)', how = 'left')
-    for i in range(len(resultado_final['Login do aluno(a)'])):
-        if resultado_final['Nota 1º fase'][i] > 0:
-            resultado_final['Nota 1º fase'][i] = resultado_final['Nota 1º fase'][i]
-        else:
-            resultado_final['Nota 1º fase'][i] = 0
-    resultado_final['Nota Final'] = 0.00
-    for i in range(len(resultado_final['Login do aluno(a)'])):
-        #resultado_final['Nota Final'][i] = sqrt(sqrt(float(resultado_final['Nota 1º fase'][i])*float(resultado_final['Nota 1º fase'][i])*float(resultado_final['Nota 1º fase'][i])*float(resultado_final['Nota 2º fase'][i])))
-        resultado_final['Nota Final'][i] = ((resultado_final['Nota 1º fase'][i]**3)*resultado_final['Nota Final 2º fase'][i])**0.25
-
-
-    html_header_2fase="""
-    <h2 style="font-size:200%; color: #9E089E; font-family:Georgia"> RESULTADO FINAL<br>
-     <hr style= "  display: block;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-      margin-left: auto;
-      margin-right: auto;
-      border-style: inset;
-      border-width: 1.5px;"></h2>
-    """
-    st.markdown(html_br, unsafe_allow_html=True)
-    st.markdown(html_header_2fase, unsafe_allow_html=True)
-    
-    resultado_final2 = resultado_final[resultado_final['Nota Final 2º fase'] >= 0]
-    
-    resultado_finalaux = resultado_final[resultado_final['Nota Final 2º fase'] > 0]
-
-    numero_candidatos = len(resultado_finalaux['Nome do aluno(a)_x'])
-
-    html_card_header1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <h4 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Nota</h4>
-      </div>
-    </div>
-    """
-    html_card_footer1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Nota máxima: 1000</p>
-      </div>
-    </div>
-    """
-
-    html_card_footer_med1="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(int(round(resultado_finalaux['Nota Final'].mean(),0)))+"""</p>
-      </div>
-    </div>
-    """
-    html_card_header3="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <h4 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Classificação</h4>
-      </div>
-    </div>
-    """
-    html_card_footer3="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 0px 0px 10px 10px; background: #9E089E; padding-top: 12px; width: 350px;
-       height: 50px;">
-        <p class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Quantidade de alunos: """+str(numero_candidatos)+"""</p>
-      </div>
-    </div>
-    """
-
-    resultado_final_aluno = resultado_final.sort_values(by = 'Nota Final', ascending = False).reset_index(drop = True).reset_index()
-    resultado_final_aluno.rename(columns = {'level_0':'Classificação'}, inplace = True)
-
-    resultado_final_aluno2 = resultado_final_aluno[resultado_final_aluno['Login do aluno(a)'] == login_aluno].reset_index()
-    for i in range(len(resultado_final_aluno2['Nota Final'])):
-        if resultado_final_aluno2['Nota Final'][i] == 0:
-            resultado_final_aluno2['Classificação'][0] = numero_candidatos + 1
-        else:
-            resultado_final_aluno2['Classificação'][0] = resultado_final_aluno2['Classificação'][0] + 1
-
-    ### Block 1#########################################################################################
-    with st.container():
-        col1, col2, col3, col4, col5, col6, col7 = st.columns([1,20,1,20,1,20,1])
-        with col1:
-            st.write("")
-        with col2:
-            st.markdown(html_card_header1, unsafe_allow_html=True)
-            fig_c1 = go.Figure(go.Indicator(
-                mode="number+delta",
-                value=round(resultado_final_aluno2['Nota Final'].mean(),1),
-                number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                delta={'position': "bottom", 'reference': int(round(truncar(resultado_finalaux['Nota Final'].mean(),-1),0)), 'relative': False},
-                domain={'x': [0, 1], 'y': [0, 1]}))
-            fig_c1.update_layout(autosize=False,
-                                 width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                 paper_bgcolor="#FFF0FC", font={'size': 20})
-            fig_c1.update_traces(delta_decreasing_color="#FF4136",
-                                delta_increasing_color="#3D9970",
-                                delta_valueformat='.0f',
-                                selector=dict(type='indicator'))
-            st.plotly_chart(fig_c1)
-            st.markdown(html_card_footer1, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_card_footer_med1, unsafe_allow_html=True)
-        with col3:
-            st.write("")
-        with col4:
-            st.markdown(html_card_header3, unsafe_allow_html=True)
-            fig_c3 = go.Figure(go.Indicator(
-                mode="number",
-                value=resultado_final_aluno2['Classificação'][0],
-                number={'suffix': "º", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                delta={'position': "bottom", 'reference': 1, 'relative': False},
-                domain={'x': [0, 1], 'y': [0, 1]}))
-            fig_c3.update_layout(autosize=False,
-                                 width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                 paper_bgcolor="#FFF0FC", font={'size': 20})
-            fig_c3.update_traces(delta_decreasing_color="#3D9970",
-                                 delta_increasing_color="#FF4136",
-                                 delta_valueformat='.3f',
-                                 selector=dict(type='indicator'))
-            st.plotly_chart(fig_c3)
-            st.markdown(html_card_footer3, unsafe_allow_html=True)
-        with col5:
-            st.write("")
-        with col6:
-            st.write("")
-        with col7:
-            st.write("")
-    
-    st.markdown(html_br, unsafe_allow_html=True)
-    st.markdown(html_br, unsafe_allow_html=True)
-
-    ponto = str(round(100*(numero_candidatos-(resultado_final_aluno2['Classificação'][0]-1))/numero_candidatos,0)).find('.')
-    texto = str(round(100*(numero_candidatos-(resultado_final_aluno2['Classificação'][0]-1))/numero_candidatos,0))[0:ponto]
-    html_card_header_destaques_gerais="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 0px 0px; background: #0010B3; padding-top: 60px; width: 495px;
-       height: 150px;">
-        <h5 class="card-title" style="background-color:#0010B3; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 10px 0;">Você foi melhor que """+texto+"""% dos alunos!</h5>
-      </div>
-    </div>
-    """    
-    ### Block 1#########################################################################################
-    with st.container():
-        col1, col2, col3, col4, col5 = st.columns([9,25,2,25,4])
-        with col1:
-            st.write("")
-        with col2:
-            # create the bins
-            counts, bins = np.histogram(resultado_finalaux['Nota Final'], bins=range(0, 1100, 100))
-            bins = 0.5 * (bins[:-1] + bins[1:])
-            fig = px.bar(x=bins, y=counts, labels={'x':'Nota no simulado', 'y':'Número de alunos'})
-            fig.update_layout(title={'text': "Distribuição de notas", 'x': 0.5}, paper_bgcolor="#FFF0FC", 
-                           plot_bgcolor="#FFF0FC", font={'color': "#9E089E", 'size': 14, 'family': "Georgia"}, height=400,
-                           width=540,
-                           legend=dict(orientation="h",
-                                       yanchor="top",
-                                       y=0.99,
-                                       xanchor="left",
-                                       x=0.01),
-                           margin=dict(l=1, r=1, b=1, t=30))
-            if resultado_final_aluno2['Classificação'][0] <= numero_candidatos:
-                fig.add_vline(x=int(round(resultado_final_aluno2['Nota Final'].mean(),1)), line_width=7, line_dash="dash", line_color="#9E089E", annotation_text="Você está aqui!", annotation_position="top right")
-            fig.add_vline(x=int(round(truncar(resultado_finalaux['Nota Final'].mean(),-1),0)), line_width=7, line_dash="dash", line_color="#01ECEC", annotation_text="Média", annotation_position="top right")
-            fig.update_xaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=6, rangemode="tozero",
-                          showgrid=False, gridwidth=0.5, gridcolor='#f6f6f6')
-            fig.update_yaxes(showline=True, linewidth=1, linecolor='#9E089E', mirror=False, nticks=10, rangemode="tozero",
-                          showgrid=True, gridwidth=0.5, gridcolor='#f6f6f6')
-            fig.update_traces(marker_color='#0010B3')
-            st.plotly_chart(fig)
-        with col3:
-            st.write("")
-        with col4:
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            if resultado_final_aluno2['Classificação'][0] <= numero_candidatos:
-                st.markdown(html_card_header_destaques_gerais, unsafe_allow_html=True)
-        with col5:
-            st.write("")
-    html_final="""
-    <div class="card">
-      <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #9E089E; padding-top: 20px; padding-bottom: 20px; width: 800px;
-       height: 100px;">
-        <h5 class="card-title" style="background-color:#9E089E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 10px 0;">Sucesso é o acúmulo de pequenos esforços, repetidos dia e noite. Robert Collier</h5>
-      </div>
-    </div>
-    """ 
-
-    with st.container():
-        col1, col2, col3 = st.columns([1,3,2.5])
-        with col1:
-            st.write("")
-        with col2:
-            st.markdown(html_final, unsafe_allow_html=True)
-        with col3:
-            st.write("")
-        
