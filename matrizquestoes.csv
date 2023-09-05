@@ -1,98 +1,195 @@
-num_exercicio,disciplina,assunto
-1,Linguagens,Funções da linguagem
-2,Linguagens,Tese e argumentação
-3,Linguagens,Interpretação de texto
-4,Linguagens,Texto verbal e não verbal
-5,Linguagens,Texto não verbal
-6,Linguagens,Texto verbal e não verbal
-7,Linguagens,Tese e argumentação
-8,Linguagens,Interpretação de texto
-9,Linguagens,Interpretação de texto
-10,Linguagens,Texto verbal e não verbal
-11,Linguagens,Interpretação de texto
-12,Linguagens,Interpretação de texto
-13,Linguagens,Interpretação de texto
-14,Linguagens,Interpretação de texto
-15,Linguagens,Figura de linguagem
-16,Linguagens,Texto verbal e não verbal
-17,Linguagens,Figura de linguagem
-18,Linguagens,Oração
-19,Linguagens,Concordância
-20,Linguagens,Interpretação de texto
-21,Linguagens,Preposição
-22,Linguagens,Modos verbais
-23,Linguagens,Interpretação de texto
-24,Linguagens,Gênero textual
-25,Matemática,Sistema de equações
-26,Matemática,Sistema de equações
-27,Matemática,Semelhança
-28,Matemática,Fatoração em números primos
-29,Matemática,Semelhança
-30,Matemática,Equação do 2º grau
-31,Matemática,Operações numéricas
-32,Matemática,Operações numéricas
-33,Matemática,Equação do 2º grau
-34,Matemática,Triângulo retângulo
-35,Matemática,Equação do 1º grau
-36,Matemática,MMC e MDC
-37,Matemática,MMC e MDC
-38,Matemática,Sistema de equações
-39,Matemática,Operações numéricas
-40,Matemática,Sistema de equações
-41,Matemática,Operações numéricas
-42,Matemática,Equação do 2º grau
-43,Matemática,Ângulos
-44,Matemática,Inequação do 1º grau
-45,Matemática,MMC e MDC
-46,Matemática,Triângulos
-47,Matemática,Sistema de equações
-48,Matemática,Ângulos
-49,Ciências Humanas,Formação dos estados nacionais
-50,Ciências Humanas,Formação dos estados nacionais
-51,Ciências Humanas,Capitalismo
-52,Ciências Humanas,Globalização
-53,Ciências Humanas,Espaço geográfico
-54,Ciências Humanas,Movimentos da terra
-55,Ciências Humanas,Movimentos da terra
-56,Ciências Humanas,Projeções cartográficas
-57,Ciências Humanas,Placas tectônicas
-58,Ciências Humanas,Placas tectônicas
-59,Ciências Humanas,Sociedade brasileira
-60,Ciências Humanas,Intolerância religiosa
-61,Ciências Humanas,Yanomami
-62,Ciências Humanas,Palestina
-63,Ciências Humanas,Pré-história
-64,Ciências Humanas,Pré-história
-65,Ciências Humanas,Idade antiga
-66,Ciências Humanas,Idade antiga
-67,Ciências Humanas,Idade antiga
-68,Ciências Humanas,Idade antiga
-69,Ciências Humanas,Colonização
-70,Ciências Humanas,Brasil Colônia
-71,Ciências Humanas,Brasil Colônia
-72,Ciências Humanas,Brasil Colônia
-73,Redação,Redação
-74,Ciências da Natureza,Genética
-75,Ciências da Natureza,Genética
-76,Ciências da Natureza,Mitose e meiose
-77,Ciências da Natureza,Macromoléculas biológicas
-78,Ciências da Natureza,Histologia
-79,Ciências da Natureza,Reprodução humana
-80,Ciências da Natureza,Botânica
-81,Ciências da Natureza,Doenças
-82,Ciências da Natureza,Fórmula molecular
-83,Ciências da Natureza,Estequiometria
-84,Ciências da Natureza,Estequiometria
-85,Ciências da Natureza,Isomeria
-86,Ciências da Natureza,Funções orgânicas
-87,Ciências da Natureza,Termoquímica
-88,Ciências da Natureza,Gases ideais
-89,Ciências da Natureza,Reações ácido-base
-90,Ciências da Natureza,Calometria
-91,Ciências da Natureza,Gravitação
-92,Ciências da Natureza,Dinâmica
-93,Ciências da Natureza,Energia mecânica
-94,Ciências da Natureza,Energia mecânica
-95,Ciências da Natureza,Radiação
-96,Ciências da Natureza,Termodinâmica
-97,Ciências da Natureza,Dilatação
+num_exercicio,disciplina,assunto,Simulado
+1,Linguagens,Funções da linguagem,1º simulado
+2,Linguagens,Tese e argumentação,1º simulado
+3,Linguagens,Interpretação de texto,1º simulado
+4,Linguagens,Texto verbal e não verbal,1º simulado
+5,Linguagens,Texto não verbal,1º simulado
+6,Linguagens,Texto verbal e não verbal,1º simulado
+7,Linguagens,Tese e argumentação,1º simulado
+8,Linguagens,Interpretação de texto,1º simulado
+9,Linguagens,Interpretação de texto,1º simulado
+10,Linguagens,Texto verbal e não verbal,1º simulado
+11,Linguagens,Interpretação de texto,1º simulado
+12,Linguagens,Interpretação de texto,1º simulado
+13,Linguagens,Interpretação de texto,1º simulado
+14,Linguagens,Interpretação de texto,1º simulado
+15,Linguagens,Figura de linguagem,1º simulado
+16,Linguagens,Texto verbal e não verbal,1º simulado
+17,Linguagens,Figura de linguagem,1º simulado
+18,Linguagens,Oração,1º simulado
+19,Linguagens,Concordância,1º simulado
+20,Linguagens,Interpretação de texto,1º simulado
+21,Linguagens,Preposição,1º simulado
+22,Linguagens,Modos verbais,1º simulado
+23,Linguagens,Interpretação de texto,1º simulado
+24,Linguagens,Gênero textual,1º simulado
+25,Matemática,Sistema de equações,1º simulado
+26,Matemática,Sistema de equações,1º simulado
+27,Matemática,Semelhança,1º simulado
+28,Matemática,Fatoração em números primos,1º simulado
+29,Matemática,Semelhança,1º simulado
+30,Matemática,Equação do 2º grau,1º simulado
+31,Matemática,Operações numéricas,1º simulado
+32,Matemática,Operações numéricas,1º simulado
+33,Matemática,Equação do 2º grau,1º simulado
+34,Matemática,Triângulo retângulo,1º simulado
+35,Matemática,Equação do 1º grau,1º simulado
+36,Matemática,MMC e MDC,1º simulado
+37,Matemática,MMC e MDC,1º simulado
+38,Matemática,Sistema de equações,1º simulado
+39,Matemática,Operações numéricas,1º simulado
+40,Matemática,Sistema de equações,1º simulado
+41,Matemática,Operações numéricas,1º simulado
+42,Matemática,Equação do 2º grau,1º simulado
+43,Matemática,Ângulos,1º simulado
+44,Matemática,Inequação do 1º grau,1º simulado
+45,Matemática,MMC e MDC,1º simulado
+46,Matemática,Triângulos,1º simulado
+47,Matemática,Sistema de equações,1º simulado
+48,Matemática,Ângulos,1º simulado
+49,Ciências Humanas,Formação dos estados nacionais,1º simulado
+50,Ciências Humanas,Formação dos estados nacionais,1º simulado
+51,Ciências Humanas,Capitalismo,1º simulado
+52,Ciências Humanas,Globalização,1º simulado
+53,Ciências Humanas,Espaço geográfico,1º simulado
+54,Ciências Humanas,Movimentos da terra,1º simulado
+55,Ciências Humanas,Movimentos da terra,1º simulado
+56,Ciências Humanas,Projeções cartográficas,1º simulado
+57,Ciências Humanas,Placas tectônicas,1º simulado
+58,Ciências Humanas,Placas tectônicas,1º simulado
+59,Ciências Humanas,Sociedade brasileira,1º simulado
+60,Ciências Humanas,Intolerância religiosa,1º simulado
+61,Ciências Humanas,Yanomami,1º simulado
+62,Ciências Humanas,Palestina,1º simulado
+63,Ciências Humanas,Pré-história,1º simulado
+64,Ciências Humanas,Pré-história,1º simulado
+65,Ciências Humanas,Idade antiga,1º simulado
+66,Ciências Humanas,Idade antiga,1º simulado
+67,Ciências Humanas,Idade antiga,1º simulado
+68,Ciências Humanas,Idade antiga,1º simulado
+69,Ciências Humanas,Colonização,1º simulado
+70,Ciências Humanas,Brasil Colônia,1º simulado
+71,Ciências Humanas,Brasil Colônia,1º simulado
+72,Ciências Humanas,Brasil Colônia,1º simulado
+73,Redação,Redação,1º simulado
+74,Ciências da Natureza,Genética,1º simulado
+75,Ciências da Natureza,Genética,1º simulado
+76,Ciências da Natureza,Mitose e meiose,1º simulado
+77,Ciências da Natureza,Macromoléculas biológicas,1º simulado
+78,Ciências da Natureza,Histologia,1º simulado
+79,Ciências da Natureza,Reprodução humana,1º simulado
+80,Ciências da Natureza,Botânica,1º simulado
+81,Ciências da Natureza,Doenças,1º simulado
+82,Ciências da Natureza,Fórmula molecular,1º simulado
+83,Ciências da Natureza,Estequiometria,1º simulado
+84,Ciências da Natureza,Estequiometria,1º simulado
+85,Ciências da Natureza,Isomeria,1º simulado
+86,Ciências da Natureza,Funções orgânicas,1º simulado
+87,Ciências da Natureza,Termoquímica,1º simulado
+88,Ciências da Natureza,Gases ideais,1º simulado
+89,Ciências da Natureza,Reações ácido-base,1º simulado
+90,Ciências da Natureza,Calometria,1º simulado
+91,Ciências da Natureza,Gravitação,1º simulado
+92,Ciências da Natureza,Dinâmica,1º simulado
+93,Ciências da Natureza,Energia mecânica,1º simulado
+94,Ciências da Natureza,Energia mecânica,1º simulado
+95,Ciências da Natureza,Radiação,1º simulado
+96,Ciências da Natureza,Termodinâmica,1º simulado
+97,Ciências da Natureza,Dilatação,1º simulado
+1,Ciências Humanas,Industrialização,2º simulado
+2,Ciências Humanas,Industrialização,2º simulado
+3,Ciências Humanas,Neoliberalismo,2º simulado
+4,Ciências Humanas,Industrialização,2º simulado
+5,Ciências Humanas,Neoliberalismo,2º simulado
+6,Ciências Humanas,Clima,2º simulado
+7,Ciências Humanas,Rochas,2º simulado
+8,Ciências Humanas,Cartografia,2º simulado
+9,Ciências Humanas,Clima,2º simulado
+10,Ciências Humanas,Clima,2º simulado
+11,Ciências Humanas,Período Joanino,2º simulado
+12,Ciências Humanas,Independência,2º simulado
+13,Ciências Humanas,Independência,2º simulado
+14,Ciências Humanas,Independência,2º simulado
+15,Ciências Humanas,Independência,2º simulado
+16,Ciências Humanas,Roma,2º simulado
+17,Ciências Humanas,Roma,2º simulado
+18,Ciências Humanas,Roma,2º simulado
+19,Ciências Humanas,Roma,2º simulado
+20,Ciências Humanas,Grecia,2º simulado
+21,Ciências Humanas,Desastres Sociais,2º simulado
+22,Ciências Humanas,Guerra na Síria,2º simulado
+23,Ciências Humanas,Cultura,2º simulado
+24,Ciências Humanas,Cultura,2º simulado
+25,Matemática,Conjuntos,2º simulado
+26,Matemática,Domínio,2º simulado
+27,Matemática,Conjuntos,2º simulado
+28,Matemática,Conjuntos,2º simulado
+29,Matemática,Função inversa,2º simulado
+30,Matemática,Divisores,2º simulado
+31,Matemática,Conjuntos,2º simulado
+32,Matemática,Função composta,2º simulado
+33,Matemática,Semelhança,2º simulado
+34,Matemática,Semelhança,2º simulado
+35,Matemática,Semelhança,2º simulado
+36,Matemática,Área,2º simulado
+37,Matemática,Área,2º simulado
+38,Matemática,Semelhança,2º simulado
+39,Matemática,Lei dos cossenos,2º simulado
+40,Matemática,Semelhança,2º simulado
+41,Matemática,Porcentagem,2º simulado
+42,Matemática,Porcentagem,2º simulado
+43,Matemática,Conjuntos,2º simulado
+44,Matemática,Porcentagem,2º simulado
+45,Matemática,Porcentagem,2º simulado
+46,Matemática,Porcentagem,2º simulado
+47,Matemática,Juros,2º simulado
+48,Matemática,Porcentagem,2º simulado
+49,Linguagens,Texto verbal e não verbal,2º simulado
+50,Linguagens,Funções da linguagem,2º simulado
+51,Linguagens,Funções da linguagem,2º simulado
+52,Linguagens,Tipos textuais,2º simulado
+53,Linguagens,Gênero textual,2º simulado
+54,Linguagens,Interpretação de texto,2º simulado
+55,Linguagens,Figura de linguagem,2º simulado
+56,Linguagens,Interpretação de texto,2º simulado
+57,Linguagens,Figura de linguagem,2º simulado
+58,Linguagens,Interpretação de texto,2º simulado
+59,Linguagens,Interpretação de texto,2º simulado
+60,Linguagens,Interpretação de texto,2º simulado
+61,Linguagens,Interpretação de texto,2º simulado
+62,Linguagens,Interpretação de texto,2º simulado
+63,Linguagens,Funções da linguagem,2º simulado
+64,Linguagens,Interpretação de texto,2º simulado
+65,Linguagens,Interpretação de texto,2º simulado
+66,Linguagens,Figura de linguagem,2º simulado
+67,Linguagens,Interpretação de texto,2º simulado
+68,Linguagens,Interpretação de texto,2º simulado
+69,Linguagens,Interpretação de texto,2º simulado
+70,Linguagens,Interpretação de texto,2º simulado
+71,Linguagens,Interpretação de texto,2º simulado
+72,Linguagens,Interpretação de texto,2º simulado
+73,Redação,Redação,2º simulado
+74,Ciências da Natureza,Cinemática,2º simulado
+75,Ciências da Natureza,Cinemática,2º simulado
+76,Ciências da Natureza,Cinemática,2º simulado
+77,Ciências da Natureza,Cinemática,2º simulado
+78,Ciências da Natureza,Cinemática,2º simulado
+79,Ciências da Natureza,Cinemática,2º simulado
+80,Ciências da Natureza,Cinemática,2º simulado
+81,Ciências da Natureza,Cinemática,2º simulado
+82,Ciências da Natureza,Bioquímica,2º simulado
+83,Ciências da Natureza,Bioquímica,2º simulado
+84,Ciências da Natureza,Bioquímica,2º simulado
+85,Ciências da Natureza,Bioquímica,2º simulado
+86,Ciências da Natureza,Cadeia alimentar,2º simulado
+87,Ciências da Natureza,Transferência de energia,2º simulado
+88,Ciências da Natureza,Cadeia alimentar,2º simulado
+89,Ciências da Natureza,Transferência de energia,2º simulado
+90,Ciências da Natureza,Modelo atômico,2º simulado
+91,Ciências da Natureza,Estrutura do átomo,2º simulado
+92,Ciências da Natureza,Elementos químicos,2º simulado
+93,Ciências da Natureza,Modelo atômico,2º simulado
+94,Ciências da Natureza,Estrutura do átomo,2º simulado
+95,Ciências da Natureza,Modelo atômico,2º simulado
+96,Ciências da Natureza,Modelo atômico,2º simulado
+97,Ciências da Natureza,Modelo atômico,2º simulado
