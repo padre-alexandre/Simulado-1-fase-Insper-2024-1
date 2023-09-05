@@ -2163,8 +2163,7 @@ if login_aluno != '':
     hours_mat_media, minutes_mat_media = divmod(int(redacao_media_tempo), 3600)
     minutes_certo, seconds_mat_media = divmod(minutes_mat_media, 60)
     redacao_media_tempo_str = str(hours_mat_media)+' h '+str(minutes_certo)+' min '+str(seconds_mat_media)+' s'
-    st.dataframe(redacao_aluno_media)
-    st.dataframe(redacao_detalhes_media)
+
     redacao_tabela = pd.merge(redacao_aluno_media,redacao_detalhes_media, on = 'Competência', how = 'inner')
 
     redacao_tabela2 = redacao_tabela.drop(columns = ['Valor da questão_x','Valor da questão_y','Nota na questão_x','Nota na questão_y'])
