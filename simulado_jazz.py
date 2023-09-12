@@ -146,7 +146,7 @@ login_aluno = st.text_input('Digite o seu login', '')
 
 simulados = resultados_gerais3['Simulado'].drop_duplicates()
 
-simulado_selecionado = st.selectbox('Escolha o simulado:', simulados)
+simulado_selecionado = st.selectbox('Selecione o simulado:', simulados)
 
 if len(login_aluno) > 0:
     
