@@ -3228,7 +3228,7 @@ if login_aluno != '':
     cor_texto = []
 
     tabela_detalhes_aluno4 = tabela_detalhes_aluno4[tabela_detalhes_aluno4['index'] < 72]
-
+    st.dataframe(tabela_detalhes_aluno4)
     for i in range(len(tabela_detalhes_aluno4['Número da questão'])):
         minutes, seconds= divmod(tabela_detalhes_aluno4['Tempo na questão_x'][i], 60)
         aux1 = str(round(minutes,0)).find('.')
