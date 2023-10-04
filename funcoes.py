@@ -917,7 +917,7 @@ def tabela_questoes(dataframe,coluna1,coluna2,coluna3,coluna4,coluna5,coluna6,co
         <th>"""+str(dataframe[coluna8][70])+"""</th>
         <th>"""+str(dataframe[coluna9][70])+"""</th>
       </tr>
-      <tr style="background-color:"""+cor_back[69]+"""; height: 42px; color:"""+cor_texto[69]+"""; font-size: 16px;text-align: center">
+      <tr style="background-color:"""+cor_back[71]+"""; height: 42px; color:"""+cor_texto[71]+"""; font-size: 16px;text-align: center">
         <th>"""+str(dataframe[coluna1][71])+"""</th>
         <th>"""+str(dataframe[coluna2][71])+"""</th>
         <th>"""+str(dataframe[coluna3][71])+"""</th>
