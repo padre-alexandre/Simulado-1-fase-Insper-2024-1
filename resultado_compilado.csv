@@ -1,134 +1,21 @@
-,Turma,Nome do aluno(a),Login do aluno(a),Simulado,Número da questão,Tempo na questão,Valor da questão,Acerto,Nota na questão
-0,"#focoinsper - 2024.1 - Administração, Economia e Direito",Clara Postiga,jazz.clara01,4º simulado,2701,17156.0,1000.00307,60.0,833.3362999999999
-1,"#focoinsper - 2024.1 - Administração, Economia e Direito",João Dutra,jazz.joao08,3º simulado,2701,17700.0,1000.0025,57.0,822.9186
-2,"#focoinsper - 2024.1 - Administração, Economia e Direito",Gustavo Barroso,jazz.gustavo67,1º simulado,2701,19112.0,999.8925099999999,56.0,812.3798999999999
-3,"#focoinsper - 2024.1 - Administração, Economia e Direito",André parente Alves Cavalcanti Filho,jazz.andre78,4º simulado,2701,16559.0,1000.00307,57.0,791.671075
-4,"#focoinsper - 2024.1 - Administração, Economia e Direito",Gustavo Barroso,jazz.gustavo67,3º simulado,2701,16938.0,1000.0025,57.0,791.66905
-5,"#focoinsper - 2024.1 - Administração, Economia e Direito",João Dutra,jazz.joao08,1º simulado,2701,16231.0,999.8925099999999,54.0,791.6322624999999
-6,"#focoinsper - 2024.1 - Administração, Economia e Direito",João Dutra,jazz.joao08,4º simulado,2701,17345.0,1000.00307,51.0,770.8373375000001
-7,"#focoinsper - 2024.1 - Administração, Economia e Direito",Gustavo Barroso,jazz.gustavo67,2º simulado,2701,14765.0,1000.00307,54.0,770.834175
-8,"#focoinsper - 2024.1 - Administração, Economia e Direito",André parente Alves Cavalcanti Filho,jazz.andre78,Prova Antiga 2019.1,2701,11634.0,1000.0025,52.0,770.833425
-9,"#focoinsper - 2024.1 - Administração, Economia e Direito",Clara Postiga,jazz.clara01,3º simulado,2701,16443.0,1000.0025,52.0,760.41895
-10,"#focoinsper - 2024.1 - Administração, Economia e Direito",Matheus Andrade Lordello de Mattos,jazz.matheus26,3º simulado,2701,13863.0,1000.0025,52.0,739.58555
-11,"#focoinsper - 2024.1 - Administração, Economia e Direito",Isabela Cubas de Almeida Melo,jazz.isabela12,4º simulado,2701,16593.0,1000.00307,52.0,729.1693625
-12,"#focoinsper - 2024.1 - Administração, Economia e Direito",João Pedro Gomes,jazz.joao01,4º simulado,2701,16458.0,1000.00307,53.0,729.16895
-13,"#focoinsper - 2024.1 - Administração, Economia e Direito",Guilherme Brandão,jazz.guilherme77,4º simulado,2701,17615.0,1000.00307,53.0,718.7532874999999
-14,"#focoinsper - 2024.1 - Administração, Economia e Direito",Matheus Andrade Lordello de Mattos,jazz.matheus26,2º simulado,2701,16407.0,1000.00307,50.0,718.751975
-15,"#focoinsper - 2024.1 - Administração, Economia e Direito",Ian Dallamaria,jazz.ian80,3º simulado,2701,14229.0,1000.0025,50.0,708.3362750000001
-16,"#focoinsper - 2024.1 - Administração, Economia e Direito",Daniel Kroeff,jazz.daniel35,2º simulado,2701,17951.0,1000.00307,52.0,708.3358499999999
-17,"#focoinsper - 2024.1 - Administração, Economia e Direito",Guilherme Brandão,jazz.guilherme77,3º simulado,2701,16397.0,1000.0025,52.0,708.3355999999999
-18,"#focoinsper - 2024.1 - Administração, Economia e Direito",Arthur del puppo,jazz.arthur24,Prova Antiga 2019.1,2701,18763.0,1000.0025,49.0,708.3353749999999
-19,"#focoinsper - 2024.1 - Administração, Economia e Direito",Joao Pedro Menegazzo,jazz.joao00,1º simulado,2701,12829.0,999.8925099999999,50.0,708.2155875
-20,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Gianlucca Severo de Melo,Gianlucca,3º simulado,3301,18068.0,1000.0101,53.0,706.6751999999999
-21,"#focoinsper - 2024.1 - Administração, Economia e Direito",João Pedro Gomes,jazz.joao01,Prova Antiga 2019.1,2701,15445.0,1000.0025,53.0,697.9200000000001
-22,"#focoinsper - 2024.1 - Administração, Economia e Direito",Joao Pedro Menegazzo,jazz.joao00,3º simulado,2701,14636.0,1000.0025,49.0,697.9192375
-23,"#focoinsper - 2024.1 - Administração, Economia e Direito",Arthur del puppo,jazz.arthur24,3º simulado,2701,12464.0,1000.0025,48.0,697.9191000000001
-24,"#focoinsper - 2024.1 - Administração, Economia e Direito",Ian Dallamaria,jazz.ian80,4º simulado,2701,14940.0,1000.00307,50.0,687.5028500000001
-25,"#focoinsper - 2024.1 - Administração, Economia e Direito",Clara Postiga,jazz.clara01,2º simulado,2701,17757.0,1000.00307,51.0,677.0868625
-26,"#focoinsper - 2024.1 - Administração, Economia e Direito",Pedro Guerra,jazz.pedro16,1º simulado,2701,19011.0,999.8925099999999,50.0,676.9631875
-27,"#focoinsper - 2024.1 - Administração, Economia e Direito",Pedro Guerra,jazz.pedro16,4º simulado,2701,18773.0,1000.00307,51.0,666.6693375
-28,"#focoinsper - 2024.1 - Administração, Economia e Direito",André parente Alves Cavalcanti Filho,jazz.andre78,3º simulado,2701,18535.0,1000.0025,48.0,666.6686749999999
-29,"#focoinsper - 2024.1 - Administração, Economia e Direito",Joao Pedro Menegazzo,jazz.joao00,2º simulado,2701,16084.0,1000.00307,48.0,656.2527875000001
-30,"#focoinsper - 2024.1 - Administração, Economia e Direito",João Pedro Gomes,jazz.joao01,3º simulado,2701,18811.0,1000.0025,46.0,656.2524874999999
-31,"#focoinsper - 2024.1 - Administração, Economia e Direito",Filippe Fontana,jazz.felipe20,4º simulado,2701,15751.0,1000.00307,51.0,656.2524625000001
-32,"#focoinsper - 2024.1 - Administração, Economia e Direito",Daniel Kroeff,jazz.daniel35,1º simulado,2701,15423.0,999.8925099999999,49.0,656.13005
-33,"#focoinsper - 2024.1 - Administração, Economia e Direito",Daniel Kroeff,jazz.daniel35,3º simulado,2701,14672.0,1000.0025,49.0,645.8363375
-34,"#focoinsper - 2024.1 - Administração, Economia e Direito",Clara Postiga,jazz.clara01,1º simulado,2701,16252.0,999.8925099999999,48.0,645.7969375
-35,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Enzo Ryu,jazz.enzo12,4º simulado,2701,9454.0,1000.00307,47.0,635.4205625
-36,"#focoinsper - 2024.1 - Administração, Economia e Direito",Filippe Fontana,jazz.felipe20,Prova Antiga 2019.1,2701,17913.0,1000.0025,48.0,635.4199625
-37,"#focoinsper - 2024.1 - Administração, Economia e Direito",Filippe Fontana,jazz.felipe20,3º simulado,2701,15578.0,1000.0025,46.0,635.4196875
-38,"#focoinsper - 2024.1 - Administração, Economia e Direito",Luiz Otavio de Camargo Cury,jazz.luiz06,1º simulado,2701,17381.0,999.8925099999999,46.0,635.3831624999999
-39,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Karyne Alencar Machado,karyneam13,4º simulado,3301,16773.0,1000.0101,47.0,626.6740799999999
-40,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Gianlucca Severo de Melo,Gianlucca,2º simulado,4453,17257.0,1000.0101,47.0,626.67396
-41,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Gianlucca Severo de Melo,Gianlucca,1º simulado,3301,18234.0,1000.0101,47.0,626.67384
-42,"#focoinsper - 2024.1 - Administração, Economia e Direito",Pedro Guerra,jazz.pedro16,3º simulado,2701,18726.0,1000.0025,45.0,625.002975
-43,"#focoinsper - 2024.1 - Administração, Economia e Direito",Isabela Cubas de Almeida Melo,jazz.isabela12,1º simulado,2701,18110.0,999.8925099999999,45.0,624.9681374999999
-44,"#focoinsper - 2024.1 - Administração, Economia e Direito",João Pedro Gomes,jazz.joao01,1º simulado,2701,18576.0,999.8925099999999,45.0,624.9675875
-45,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Laura,jazz.laura26,Prova Antiga 2019.1,2701,15196.0,1000.0025,42.0,614.5842
-46,"#focoinsper - 2024.1 - Administração, Economia e Direito",Matheus Andrade Lordello de Mattos,jazz.matheus26,1º simulado,2701,15150.0,999.8925099999999,40.0,614.47655
-47,"#focoinsper - 2024.1 - Administração, Economia e Direito",Ian Dallamaria,jazz.ian80,Prova Antiga 2019.1,2701,16026.0,1000.0025,46.0,604.16925
-48,"#focoinsper - 2024.1 - Administração, Economia e Direito",Antonio Unterstell Granzotto,jazz.antonio15,3º simulado,2701,17122.0,1000.0025,42.0,604.168725
-49,"#focoinsper - 2024.1 - Administração, Economia e Direito",João Pedro Gomes,jazz.joao01,2º simulado,2701,18831.0,1000.00307,42.0,604.1678375
-50,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Karyne Alencar Machado,karyneam13,1º simulado,3301,17751.0,1000.0101,45.0,600.0072
-51,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Enzo Ryu,jazz.enzo12,3º simulado,2701,16674.0,1000.0025,42.0,593.7529374999999
-52,"#focoinsper - 2024.1 - Administração, Economia e Direito",Antonio Unterstell Granzotto,jazz.antonio15,4º simulado,2701,17458.0,1000.00307,40.0,593.7522125
-53,"#focoinsper - 2024.1 - Administração, Economia e Direito",Marina Dall'Oglio,jazz.marina03,1º simulado,2701,14174.0,999.8925099999999,44.0,593.7175
-54,"#focoinsper - 2024.1 - Administração, Economia e Direito",Ana Clara Storck,jazz.ana58,1º simulado,2701,16421.0,999.8925099999999,45.0,593.715475
-55,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Henrique Colin Ramalho,HenriqueCR,2º simulado,4453,15371.0,1000.0101,44.0,586.6746
-56,"#focoinsper - 2024.1 - Administração, Economia e Direito",Henrique Guimaraes,jazz.henrique17,3º simulado,2701,18901.0,1000.0025,42.0,583.3366625
-57,"#focoinsper - 2024.1 - Administração, Economia e Direito",Joao Pedro Menegazzo,jazz.joao00,Prova Antiga 2019.1,2701,17953.0,1000.0025,43.0,583.3362875
-58,"#focoinsper - 2024.1 - Administração, Economia e Direito",Guilherme Brandão,jazz.guilherme77,1º simulado,2701,15800.0,999.8925099999999,42.0,583.220525
-59,"#focoinsper - 2024.1 - Administração, Economia e Direito",Filippe Fontana,jazz.felipe20,2º simulado,2701,16441.0,1000.00307,45.0,572.9200000000001
-60,"#focoinsper - 2024.1 - Administração, Economia e Direito",Ian Dallamaria,jazz.ian80,1º simulado,2701,13624.0,999.8925099999999,46.0,572.795
-61,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Isadora Mendonça,jazz.isadora31,4º simulado,2701,17827.0,1000.00307,45.0,562.50275
-62,"#focoinsper - 2024.1 - Administração, Economia e Direito",Anthony Avedissian Silva,jazz.anthony07,3º simulado,2701,10809.0,1000.0025,37.0,552.08355
-63,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Henrique Colin Ramalho,HenriqueCR,3º simulado,3301,14087.0,1000.0101,41.0,546.672
-64,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Karyne Alencar Machado,karyneam13,3º simulado,3301,17395.0,1000.0101,41.0,546.6708
-65,"#focoinsper - 2024.1 - Administração, Economia e Direito",Isabela Cubas de Almeida Melo,jazz.isabela12,Prova Antiga 2019.1,2701,17461.0,1000.0025,42.0,541.6686625
-66,"#focoinsper - 2024.1 - Administração, Economia e Direito",Pedro Guerra,jazz.pedro16,2º simulado,2701,18604.0,1000.00307,43.0,541.6685125
-67,"#focoinsper - 2024.1 - Administração, Economia e Direito",Arthur del puppo,jazz.arthur24,1º simulado,2701,12958.0,999.8925099999999,37.0,541.5593624999999
-68,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Isadora Mendonça,jazz.isadora31,3º simulado,2701,17407.0,1000.0025,41.0,531.252525
-69,"#focoinsper - 2024.1 - Administração, Economia e Direito",Guilherme Brandão,jazz.guilherme77,2º simulado,2701,18085.0,1000.00307,39.0,531.2514125
-70,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Laura,jazz.laura26,3º simulado,2701,15822.0,1000.0025,39.0,520.8358875
-71,"#focoinsper - 2024.1 - Administração, Economia e Direito",Enzo allage marins,jazz.enzo58,2º simulado,2701,17773.0,1000.00307,40.0,520.8357875
-72,"#focoinsper - 2024.1 - Administração, Economia e Direito",Ian Dallamaria,jazz.ian80,2º simulado,2701,15366.0,1000.00307,41.0,520.835725
-73,"#focoinsper - 2024.1 - Administração, Economia e Direito",André parente Alves Cavalcanti Filho,jazz.andre78,2º simulado,2701,17195.0,1000.00307,36.0,510.41845
-74,"#focoinsper - 2024.1 - Administração, Economia e Direito",Antonio Unterstell Granzotto,jazz.antonio15,1º simulado,2701,18084.0,999.8925099999999,37.0,499.97205
-75,"#focoinsper - 2024.1 - Administração, Economia e Direito",André parente Alves Cavalcanti Filho,jazz.andre78,1º simulado,2701,18958.0,999.8925099999999,40.0,499.9668
-76,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Isadora Mendonça,jazz.isadora31,1º simulado,2701,9063.0,999.8925099999999,36.0,499.891625
-77,"#focoinsper - 2024.1 - Administração, Economia e Direito",Enzo allage marins,jazz.enzo58,1º simulado,2701,17718.0,999.8925099999999,39.0,499.8851125
-78,"#focoinsper - 2024.1 - Administração, Economia e Direito",Luiz Otavio de Camargo Cury,jazz.luiz06,2º simulado,2701,13785.0,1000.00307,34.0,479.1698
-79,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Karyne Alencar Machado,karyneam13,2º simulado,4453,11990.0,1000.0101,34.0,453.33948
-80,"#focoinsper - 2024.1 - Administração, Economia e Direito",Antonio Unterstell Granzotto,jazz.antonio15,2º simulado,2701,16990.0,1000.00307,36.0,447.91835
-81,"#focoinsper - 2024.1 - Administração, Economia e Direito",Henrique Guimaraes,jazz.henrique17,2º simulado,2701,18902.0,1000.00307,32.0,447.9175375
-82,"#focoinsper - 2024.1 - Administração, Economia e Direito",Ana Clara Storck,jazz.ana58,2º simulado,2701,15818.0,1000.00307,31.0,437.50239999999997
-83,"#focoinsper - 2024.1 - Administração, Economia e Direito",Isabela Cubas de Almeida Melo,jazz.isabela12,2º simulado,2701,18431.0,1000.00307,33.0,427.08705000000003
-84,"#focoinsper - 2024.1 - Administração, Economia e Direito",Henrique Guimaraes,jazz.henrique17,1º simulado,2701,18894.0,999.8925099999999,28.0,427.06669999999997
-85,"#focoinsper - 2024.1 - Administração, Economia e Direito",Arthur del puppo,jazz.arthur24,2º simulado,2701,16953.0,1000.00307,31.0,416.6694375
-86,"#focoinsper - 2024.1 - Administração, Economia e Direito",Anthony Avedissian Silva,jazz.anthony07,1º simulado,2701,15304.0,999.8925099999999,29.0,416.6473
-87,"#focoinsper - 2024.1 - Administração, Economia e Direito",Filippe Fontana,jazz.felipe20,1º simulado,2701,15754.0,999.8925099999999,33.0,416.63998749999996
-88,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Laura,jazz.laura26,1º simulado,2701,15950.0,999.8925099999999,30.0,416.56197499999996
-89,#focoinsper 2º fase - 2024.1 - Engenharias e Ciência da Computação,pietro bettega,jazz.pietro43,1º simulado,3301,18902.0,1000.0101,29.0,386.6712
-90,"#focoinsper - 2024.1 - Administração, Economia e Direito",Arthur del puppo,jazz.arthur24,4º simulado,2701,18900.0,1000.00307,29.0,375.00147499999997
-91,"#focoinsper - 2024.1 - Administração, Economia e Direito",Marina Dall'Oglio,jazz.marina03,4º simulado,2701,18894.0,1000.00307,24.0,354.16802500000006
-92,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Laura,jazz.laura26,2º simulado,2701,15909.0,1000.00307,24.0,354.167625
-93,"#focoinsper - 2024.1 - Administração, Economia e Direito",Anthony Avedissian Silva,jazz.anthony07,2º simulado,2701,12992.0,1000.00307,26.0,333.33570000000003
-94,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Isadora Mendonça,jazz.isadora31,2º simulado,2701,18389.0,1000.00307,25.0,312.5025375
-95,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Isadora Mendonça,jazz.isadora31,Prova Antiga 2019.1,2701,13469.0,1000.0025,22.0,312.5011375
-96,"#focoinsper - 2024.1 - Administração, Economia e Direito",Joao Pedro Menegazzo,jazz.joao00,4º simulado,2701,4906.0,1000.00307,19.0,270.83475
-97,"#focoinsper - 2024.1 - Administração, Economia e Direito",Marina Dall'Oglio,jazz.marina03,2º simulado,2701,15107.0,1000.00307,20.0,250.00240000000002
-98,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Enzo Ryu,jazz.enzo12,Prova Antiga 2019.1,2701,1080.0,1000.0025,9.0,104.1680125
-99,"#focoinsper - 2024.1 - Administração, Economia e Direito",Henrique Guimaraes,jazz.henrique17,Prova Antiga 2019.1,2701,2238.0,1000.0025,4.0,52.08381250000001
-100,"#focoinsper - 2024.1 - Administração, Economia e Direito",Antonio Unterstell Granzotto,jazz.antonio15,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-101,"#focoinsper - 2024.1 - Administração, Economia e Direito",Anthony Avedissian Silva,jazz.anthony07,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-102,"#focoinsper - 2024.1 - Administração, Economia e Direito",Anthony Avedissian Silva,jazz.anthony07,4º simulado,2701,0.0,1000.00307,0.0,0.0
-103,#focoinsper 2º fase - 2024.1 - Engenharias e Ciência da Computação,pietro bettega,jazz.pietro43,2º simulado,4453,0.0,1000.0101,0.0,0.0
-104,#focoinsper 2º fase - 2024.1 - Engenharias e Ciência da Computação,pietro bettega,jazz.pietro43,3º simulado,3301,0.0,1000.0101,0.0,0.0
-105,"#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito",Laura,jazz.laura26,4º simulado,2701,0.0,1000.00307,0.0,0.0
-106,"#focoinsper - 2024.1 - Administração, Economia e Direito",Ana Clara Storck,jazz.ana58,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-107,"#focoinsper - 2024.1 - Administração, Economia e Direito",Ana Clara Storck,jazz.ana58,3º simulado,2701,0.0,1000.0025,0.0,0.0
-108,"#focoinsper - 2024.1 - Administração, Economia e Direito",Clara Postiga,jazz.clara01,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-109,"#focoinsper - 2024.1 - Administração, Economia e Direito",Ana Clara Storck,jazz.ana58,4º simulado,2701,0.0,1000.00307,0.0,0.0
-110,"#focoinsper - 2024.1 - Administração, Economia e Direito",João Dutra,jazz.joao08,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-111,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Gianlucca Severo de Melo,Gianlucca,4º simulado,3301,0.0,1000.0101,0.0,0.0
-112,#focoinsper - 2024.1 - Engenharias e Ciência da Computação,Henrique Colin Ramalho,HenriqueCR,4º simulado,3301,0.0,1000.0101,0.0,0.0
-113,"#focoinsper - 2024.1 - Administração, Economia e Direito",Matheus Andrade Lordello de Mattos,jazz.matheus26,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-114,"#focoinsper - 2024.1 - Administração, Economia e Direito",Luiz Otavio de Camargo Cury,jazz.luiz06,3º simulado,2701,0.0,1000.0025,0.0,0.0
-115,"#focoinsper - 2024.1 - Administração, Economia e Direito",Luiz Otavio de Camargo Cury,jazz.luiz06,4º simulado,2701,0.0,1000.00307,0.0,0.0
-116,"#focoinsper - 2024.1 - Administração, Economia e Direito",Luiz Otavio de Camargo Cury,jazz.luiz06,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-117,"#focoinsper - 2024.1 - Administração, Economia e Direito",Isabela Cubas de Almeida Melo,jazz.isabela12,3º simulado,2701,0.0,1000.0025,0.0,0.0
-118,"#focoinsper - 2024.1 - Administração, Economia e Direito",Marina Dall'Oglio,jazz.marina03,3º simulado,2701,0.0,1000.0025,0.0,0.0
-119,"#focoinsper - 2024.1 - Administração, Economia e Direito",Marina Dall'Oglio,jazz.marina03,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-120,"#focoinsper - 2024.1 - Administração, Economia e Direito",Henrique Guimaraes,jazz.henrique17,4º simulado,2701,0.0,1000.00307,0.0,0.0
-121,"#focoinsper - 2024.1 - Administração, Economia e Direito",Matheus Andrade Lordello de Mattos,jazz.matheus26,4º simulado,2701,0.0,1000.00307,0.0,0.0
-122,"#focoinsper - 2024.1 - Administração, Economia e Direito",Gustavo Barroso,jazz.gustavo67,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-123,"#focoinsper - 2024.1 - Administração, Economia e Direito",Daniel Kroeff,jazz.daniel35,4º simulado,2701,0.0,1000.00307,0.0,0.0
-124,"#focoinsper - 2024.1 - Administração, Economia e Direito",Gustavo Barroso,jazz.gustavo67,4º simulado,2701,0.0,1000.00307,0.0,0.0
-125,"#focoinsper - 2024.1 - Administração, Economia e Direito",Guilherme Brandão,jazz.guilherme77,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-126,"#focoinsper - 2024.1 - Administração, Economia e Direito",Pedro Guerra,jazz.pedro16,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-127,"#focoinsper - 2024.1 - Administração, Economia e Direito",Enzo allage marins,jazz.enzo58,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-128,"#focoinsper - 2024.1 - Administração, Economia e Direito",Enzo allage marins,jazz.enzo58,4º simulado,2701,0.0,1000.00307,0.0,0.0
-129,"#focoinsper - 2024.1 - Administração, Economia e Direito",Enzo allage marins,jazz.enzo58,3º simulado,2701,0.0,1000.0025,0.0,0.0
-130,"#focoinsper - 2024.1 - Administração, Economia e Direito",João Dutra,jazz.joao08,2º simulado,2701,0.0,1000.00307,0.0,0.0
-131,"#focoinsper - 2024.1 - Administração, Economia e Direito",Daniel Kroeff,jazz.daniel35,Prova Antiga 2019.1,2701,0.0,1000.0025,0.0,0.0
-132,#focoinsper 2º fase - 2024.1 - Engenharias e Ciência da Computação - Pietro,pietro bettega,jazz.pietro43,4º simulado,2701,0.0,1000.0101,0.0,0.0
+,Turma,Nome do aluno(a),Login do aluno(a),Simulado,Número da questão,Gabarito,Tempo na questão,Valor da questão,Unnamed: 10,Unnamed: 11,Acerto,Nota na questão,Novo Nota na questão,Novo Valor da questão
+0,Engenharias e Ciência da Computação,Hector Mathias,hectorsoares2005@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,52.0,722.25,722.1500000000001,799.92
+1,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,49.0,687.5125,687.2249999999999,799.6800000000001
+2,"Administração, Economia e Direito",João Eduardo,jefraitz@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,45.0,604.1500000000001,603.925,799.6800000000001
+3,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,39.0,541.6625,541.6125,799.92
+4,"Administração, Economia e Direito",Livia Costanzo,costanzovica@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,37.0,531.2625,531.0375,799.6800000000001
+5,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,39.0,489.57500000000005,489.3875,799.6800000000001
+6,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,32.0,458.3625,458.15,799.6800000000001
+7,"Administração, Economia e Direito",José Henrique,zealc2003@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,32.0,395.79999999999995,395.675,799.6800000000001
+8,"Administração, Economia e Direito",Gabriel Iwakura,gabriiwa@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,2.0,41.675000000000004,41.65,799.6800000000001
+9,"Administração, Economia e Direito",Andre Parente,andrefilhoparente@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.6800000000001
+10,"Administração, Economia e Direito",Pedro Del Valle,delv4hack@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.6800000000001
+11,"Administração, Economia e Direito",Lucas Borges,lucassbborges@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.6800000000001
+12,"Administração, Economia e Direito",João Pedro Cunha,peupepcunha@hotmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.6800000000001
+13,"Administração, Economia e Direito",João Pedro Zanin,jpzanin4@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.6800000000001
+14,"Administração, Economia e Direito",Antônio Mendes,antoniodourado3005@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.6800000000001
+15,"Administração, Economia e Direito",Eduardo Paiva,eduardoapaiva0409@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.6800000000001
+16,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.6800000000001
+17,"Administração, Economia e Direito",Bruno Marrey,brunomarrey13@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.6800000000001
+18,"Administração, Economia e Direito",Beatriz Maia,beatrizmaiareis@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.6800000000001
+19,Engenharias e Ciência da Computação,Wesley Alves,wesleyalves987654@gmail.com,1º simulado,2701,0.0,0.0,1000.0,0.0,0.0,0.0,0.0,0.0,799.92

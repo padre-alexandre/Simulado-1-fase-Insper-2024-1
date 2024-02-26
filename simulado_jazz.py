@@ -38,6 +38,7 @@ scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/aut
 creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 client = gspread.authorize(creds)
 
+# RETIRAR LINHA ABAIXO POR CONTA DO ERRO: gspread.exceptions.APIError: {'code': 503, 'message': 'The service is currently unavailable.', 'status': 'UNAVAILABLE'} 
 sheet = client.open('Banco de Dados - Relatório Simulado Nacional').sheet1          # Enquanto estiver rodando na nuvem
 #sheet = client.open('Banco de Dados - Relatório Simulado Nacional - Teste').sheet1   # Enquanto estiver rodando no local
 
@@ -83,67 +84,96 @@ st.markdown(html_header, unsafe_allow_html=True)
 ### Leitura das bases de dados
 
 base_matriz = pd.read_csv('./matrizquestoes.csv')
+
 base_resultados = pd.read_csv('./resultado1fase.csv')
 base_resultados_2fase = pd.read_csv('./resultado2fase.csv')
 
 ### Turmas
 
-turma_eng12 = '#focoinsper - 2024.1 - Engenharias e Ciência da Computação'
-turma_cien12 = '#focoinsper - 2024.1 - Engenharias e Ciência da Computação'
-turma_adm12 = '#focoinsper - 2024.1 - Administração, Economia e Direito'
-turma_eco12 = '#focoinsper - 2024.1 - Administração, Economia e Direito'
-turma_dir12 = '#focoinsper - 2024.1 - Administração, Economia e Direito'
+turma_eng12 = 'Engenharias e Ciência da Computação'
+turma_cien12 = 'Engenharias e Ciência da Computação'
+turma_adm12 = 'Administração, Economia e Direito'
+turma_eco12 = 'Administração, Economia e Direito'
+turma_dir12 = 'Administração, Economia e Direito'
 
-turma_eng2 = '#focoinsper 2º fase - 2024.1 - Engenharias e Ciência da Computação'
-turma_cien2 = '#focoinsper 2º fase - 2024.1 - Engenharias e Ciência da Computação'
-turma_adm2 = '#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito'
-turma_eco2 = '#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito'
-turma_dir2 = '#focoinsper 2º fase - 2024.1 - Administração, Economia e Direito'
+turma_eng2 = 'Engenharias e Ciência da Computação'
+turma_cien2 = 'Engenharias e Ciência da Computação'
+turma_adm2 = 'Administração, Economia e Direito'
+turma_eco2 = 'Administração, Economia e Direito'
+turma_dir2 = 'Administração, Economia e Direito'
 
 ### Renomeando colunas e ajustando células vazias
 
+base_resultados['disciplina'] = ''
+base_resultados['assunto'] = ''
 for i in range(len(base_resultados['atividade_nome'])):
     if (base_resultados['turma'][i] == turma_eng12 or base_resultados['turma'][i] == turma_eng2 or base_resultados['turma'][i] == turma_cien12 or base_resultados['turma'][i] == turma_cien2):
-        if base_resultados['Simulado'][i] == '1º simulado':
-            if base_resultados['num_exercicio'][i] > 48 and base_resultados['num_exercicio'][i] != 73:
-                base_resultados['num_exercicio'][i] = base_resultados['num_exercicio'][i] + 25
-        if base_resultados['Simulado'][i] == '2º simulado':
-            if base_resultados['num_exercicio'][i] > 0 and base_resultados['num_exercicio'][i] <= 24:
-                base_resultados['num_exercicio'][i] = base_resultados['num_exercicio'][i] + 73
-        if base_resultados['Simulado'][i] == '3º simulado':
-            if base_resultados['num_exercicio'][i] > 48 and base_resultados['num_exercicio'][i] != 73:
-                base_resultados['num_exercicio'][i] = base_resultados['num_exercicio'][i] + 25
-        if base_resultados['Simulado'][i] == '4º simulado':
-            if base_resultados['num_exercicio'][i] > 48 and base_resultados['num_exercicio'][i] != 73:
-                base_resultados['num_exercicio'][i] = base_resultados['num_exercicio'][i] + 25
-      
-base = pd.merge(base_resultados, base_matriz, on = ['num_exercicio','Simulado'], how = 'inner')
+        matriz_questoes = pd.DataFrame()
+        matriz_questoes = base_matriz[base_matriz['Simulado'] == base_resultados['Simulado'][i]]
+        matriz_questoes2 = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências Humanas']
+        matriz_questoes3 = matriz_questoes2[matriz_questoes2['num_exercicio_eng'] == base_resultados['num_exercicio'][i]].reset_index(drop = True)
+
+        if len(matriz_questoes3) > 0:
+            base_resultados['disciplina'][i] = matriz_questoes3['disciplina'][0]
+            base_resultados['assunto'][i] = matriz_questoes3['assunto'][0]
+    else:
+        matriz_questoes4 = pd.DataFrame()
+        matriz_questoes4 = base_matriz[base_matriz['Simulado'] == base_resultados['Simulado'][i]]
+        matriz_questoes5 = matriz_questoes4[matriz_questoes4['disciplina'] != 'Ciências da Natureza']
+        matriz_questoes6 = matriz_questoes5[matriz_questoes5['num_exercicio'] == base_resultados['num_exercicio'][i]].reset_index(drop = True)
+
+        if len(matriz_questoes6) > 0:
+            base_resultados['disciplina'][i] = matriz_questoes6['disciplina'][0]
+            base_resultados['assunto'][i] = matriz_questoes6['assunto'][0]
+
+base = base_resultados.copy()
+
 
 base.rename(columns = {'atividade_nome':'Nome da avaliação','turma':'Turma','aluno_nome':'Nome do aluno(a)','aluno_login':'Login do aluno(a)','num_exercicio':'Número da questão','resp_aluno':'Resposta do aluno(a)','gabarito':'Gabarito','certo_ou_errado':'Certo ou errado','tempo_no_exercicio(s)':'Tempo na questão','valor_do_exercicio':'Valor da questão','disciplina':'Disciplina','frente':'Frente','assunto':'Assunto'}, inplace = True)
 base['Resposta do aluno(a)'] = base['Resposta do aluno(a)'].fillna('x')
 base['Tempo na questão'] = base['Tempo na questão'].fillna(0)
-base['Valor da questão'] = base['Valor da questão'].apply(lambda x: float(x.replace(".","").replace(",",".")))
+
+#base['Valor da questão'] = base['Valor da questão'].apply(lambda x: float(x.replace(".","").replace(",",".")))
+base['Valor da questão'] = base['Valor da questão'].apply(lambda x: float(str(x).replace(".", "").replace(",", ".")))
+
 
 ### Resultados Gerais
 
 base['Acerto'] = 0.00
 base['Nota na questão'] = 0.00
+base['Novo Nota na questão'] = 0.00
+base['Novo Valor da questão'] = 0.00
+
+#base['Valor da questão'] = base['Valor da questão'].astype(float)
 
 for i in range(len(base['Nome da avaliação'])):
-    if base['Certo ou errado'][i] == 'certo':
+    if (base['Turma'][i] == 'Engenharias e Ciência da Computação' and base['Número da questão'][i] != 73):
+        base['Novo Valor da questão'][i] = 11.11
+    elif (base['Turma'][i] == 'Administração, Economia e Direito' and base['Disciplina'][i] == 'Matemática'):
+        base['Novo Valor da questão'][i] = 16.66
+    elif (base['Turma'][i] == 'Administração, Economia e Direito' and base['Disciplina'][i] == 'Linguagens'):
+        base['Novo Valor da questão'][i] = 8.33
+    elif (base['Turma'][i] == 'Administração, Economia e Direito' and base['Disciplina'][i] == 'Ciências Humanas'):
+        base['Novo Valor da questão'][i] = 8.33
+    elif (base['Número da questão'][i] == 73):
+        base['Novo Valor da questão'][i] = 0.00
+        
+    if (base['Certo ou errado'][i] == 'certo' and base['Número da questão'][i] != 73):
         base['Acerto'][i] = 1
-        base['Nota na questão'][i] = base['Acerto'][i]*base['Valor da questão'][i]
+    else: 
+        base['Acerto'][i] = 0
 
-base['Login do aluno(a)'] = base['Login do aluno(a)'].apply(extract_login)
+    base['Novo Nota na questão'][i] = base['Acerto'][i]*base['Novo Valor da questão'][i]
+    base['Nota na questão'][i] = base['Acerto'][i]*base['Valor da questão'][i]
+
+#base['Login do aluno(a)'] = base['Login do aluno(a)'].apply(extract_login)
 resultados_gerais = base.groupby(['Nome da avaliação','Turma','Nome do aluno(a)','Login do aluno(a)','Simulado']).sum().reset_index()
-    
+
 resultados_gerais2 = resultados_gerais.groupby(['Turma','Nome do aluno(a)','Login do aluno(a)','Simulado']).sum().reset_index()
 resultados_gerais2_aux = resultados_gerais2.copy()
 for i in range(len(resultados_gerais2_aux['Login do aluno(a)'])):
-    if (resultados_gerais2_aux['Turma'][i] == turma_eng12 or resultados_gerais2_aux['Turma'][i] == turma_eng2 or resultados_gerais2_aux['Turma'][i] == turma_cien12 or resultados_gerais2_aux['Turma'][i] == turma_cien2):
-        resultados_gerais2_aux['Nota na questão'][i] = (6/5)*resultados_gerais2_aux['Nota na questão'][i]
-    else:
-        resultados_gerais2_aux['Nota na questão'][i] = 1.25*resultados_gerais2_aux['Nota na questão'][i]
+    resultados_gerais2_aux['Nota na questão'][i] = 1.25*resultados_gerais2_aux['Nota na questão'][i]
+    resultados_gerais2_aux['Novo Nota na questão'][i] = 1.25*resultados_gerais2_aux['Novo Nota na questão'][i]
 
 resultados_gerais3 = resultados_gerais2_aux.sort_values(by = 'Nota na questão', ascending = False).reset_index(drop = True)                
 
@@ -162,10 +192,12 @@ if len(login_aluno) > 0:
     
     row = [str(datetime.today()),turma_aluno['Turma'][0],nome_aluno3['Nome do aluno(a)'][0],login_aluno, simulado_selecionado]
     index = 2
+    # RETIRAR LINHA ABAIXO POR CONTA DO ERRO: gspread.exceptions.APIError: {'code': 503, 'message': 'The service is currently unavailable.', 'status': 'UNAVAILABLE'} 
     sheet.insert_row(row, index)
 
 if login_aluno != '':
     resultados_gerais3.to_csv('resultado_compilado.csv')
+
     resultados_gerais_aluno1 = resultados_gerais3[resultados_gerais3['Nome do aluno(a)'] == nome_aluno3['Nome do aluno(a)'][0]]
     resultados_gerais_aluno = resultados_gerais_aluno1[resultados_gerais_aluno1['Simulado'] == simulado_selecionado].reset_index()
     #resultados_gerais_aluno.rename(columns = {'index':'Classificação'}, inplace = True)
@@ -179,7 +211,7 @@ if login_aluno != '':
 
     resultados_gerais4 = resultados_gerais3[resultados_gerais3['Nota na questão'] > 0]
 
-    resultados_gerais4_aux = resultados_gerais4[['Login do aluno(a)','Número da questão','Tempo na questão','Valor da questão','Acerto','Nota na questão','Simulado']]
+    resultados_gerais4_aux = resultados_gerais4[['Login do aluno(a)','Número da questão','Tempo na questão','Valor da questão','Acerto','Nota na questão','Simulado', 'Novo Nota na questão']]
     resultados_gerais5_aux = resultados_gerais4_aux.copy()
     resultados_gerais5 = resultados_gerais5_aux[resultados_gerais5_aux['Simulado'] == simulado_selecionado].reset_index()
 
@@ -200,6 +232,8 @@ if login_aluno != '':
     alunos_fizeram['Nome do aluno(a)'] = resultados_gerais4_aux2['Nome do aluno(a)']
 
     ### Resultados gerais do aluno
+
+
 
     numero_candidatos = len(resultados_gerais4['Nome do aluno(a)'])
     aux = resultados_gerais4[(resultados_gerais4['Turma'] == turma_eng12) | (resultados_gerais4['Turma'] == turma_eng2)]
@@ -239,7 +273,7 @@ if login_aluno != '':
     <div class="card">
       <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
        height: 50px;">
-        <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(int(round(resultados_gerais5['Nota na questão'].mean(),0)))+"""</p>
+        <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(int(round(resultados_gerais5['Novo Nota na questão'].mean(),0)))+"""</p>
       </div>
     </div>
     """
@@ -301,9 +335,9 @@ if login_aluno != '':
             st.markdown(html_card_header1, unsafe_allow_html=True)
             fig_c1 = go.Figure(go.Indicator(
                 mode="number+delta",
-                value=round(resultados_gerais_aluno['Nota na questão'][0],1),
+                value=round(resultados_gerais_aluno['Novo Nota na questão'][0],1),
                 number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}},
-                delta={'position': "bottom", 'reference': int(round(truncar(resultados_gerais5['Nota na questão'].mean(),-1),0)), 'relative': False},
+                delta={'position': "bottom", 'reference': int(round(truncar(resultados_gerais5['Novo Nota na questão'].mean(),-1),0)), 'relative': False},
                 domain={'x': [0, 1], 'y': [0, 1]}))
             fig_c1.update_layout(autosize=False,
                                  width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
@@ -340,24 +374,25 @@ if login_aluno != '':
         with col5:
             st.write("")
         with col6:
-            st.markdown(html_card_header3, unsafe_allow_html=True)
-            fig_c2 = go.Figure(go.Indicator(
-                mode="number+delta",
-                value=hours_aluno,
-                number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": resultados_gerais_aluno['Tempo na questão2'][0]},
-                #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
-                domain={'x': [0, 1], 'y': [0, 1]}))
-            fig_c2.update_layout(autosize=False,
-                                 width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                 paper_bgcolor="#FFF0FC", font={'size': 20})
-            fig_c2.update_traces(delta_decreasing_color="#FF4136",
-                                 delta_increasing_color="#3D9970",
-                                 delta_valueformat='f',
-                                 selector=dict(type='indicator'))
-            st.plotly_chart(fig_c2)
-            st.markdown(html_card_footer3, unsafe_allow_html=True)
-            st.markdown(html_br, unsafe_allow_html=True)
-            st.markdown(html_card_footer_med3, unsafe_allow_html=True)
+            st.write("")
+            #st.markdown(html_card_header3, unsafe_allow_html=True)
+            #fig_c2 = go.Figure(go.Indicator(
+            #    mode="number+delta",
+            #    value=hours_aluno,
+            #    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": resultados_gerais_aluno['Tempo na questão2'][0]},
+            #    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
+            #    domain={'x': [0, 1], 'y': [0, 1]}))
+            #fig_c2.update_layout(autosize=False,
+            #                     width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
+            #                     paper_bgcolor="#FFF0FC", font={'size': 20})
+            #fig_c2.update_traces(delta_decreasing_color="#FF4136",
+            #                     delta_increasing_color="#3D9970",
+            #                     delta_valueformat='f',
+            #                     selector=dict(type='indicator'))
+            #st.plotly_chart(fig_c2)
+            #st.markdown(html_card_footer3, unsafe_allow_html=True)
+            #st.markdown(html_br, unsafe_allow_html=True)
+            #st.markdown(html_card_footer_med3, unsafe_allow_html=True)
         with col7:
             st.write("")
     
@@ -509,7 +544,7 @@ if login_aluno != '':
     """
 
 
-
+    
     if resultados_gerais_aluno['Turma'][0] != turma_eng12 and resultados_gerais_aluno['Turma'][0] != turma_eng2 and resultados_gerais_aluno['Turma'][0] != turma_cien12 and resultados_gerais_aluno['Turma'][0] != turma_cien2:
         html_card_footer2_disc_med_cie="""
     <div class="card">
@@ -697,24 +732,25 @@ if login_aluno != '':
             with col5:
                 st.write("")
             with col6:
-                st.markdown(html_card_header3, unsafe_allow_html=True)
-                fig_c2 = go.Figure(go.Indicator(
-                    mode="number+delta",
-                    value=hours_aluno,
-                    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": matematica_aluno_tempo_str},
-                    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
-                    domain={'x': [0, 1], 'y': [0, 1]}))
-                fig_c2.update_layout(autosize=False,
-                                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                    paper_bgcolor="#FFF0FC", font={'size': 20})
-                fig_c2.update_traces(delta_decreasing_color="#FF4136",
-                                    delta_increasing_color="#3D9970",
-                                    delta_valueformat='f',
-                                    selector=dict(type='indicator'))
-                st.plotly_chart(fig_c2)
-                st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_card_footer_med_mat3, unsafe_allow_html=True)
+                st.write("")
+                #st.markdown(html_card_header3, unsafe_allow_html=True)
+                #fig_c2 = go.Figure(go.Indicator(
+                #    mode="number+delta",
+                #    value=hours_aluno,
+                #    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": matematica_aluno_tempo_str},
+                #    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
+                #    domain={'x': [0, 1], 'y': [0, 1]}))
+                #fig_c2.update_layout(autosize=False,
+                #                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
+                #                    paper_bgcolor="#FFF0FC", font={'size': 20})
+                #fig_c2.update_traces(delta_decreasing_color="#FF4136",
+                #                    delta_increasing_color="#3D9970",
+                #                    delta_valueformat='f',
+                #                    selector=dict(type='indicator'))
+                #st.plotly_chart(fig_c2)
+                #st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
+                #st.markdown(html_br, unsafe_allow_html=True)
+                #st.markdown(html_card_footer_med_mat3, unsafe_allow_html=True)
             with col7:
                 st.write("")
 
@@ -789,27 +825,6 @@ if login_aluno != '':
                 <th>"""+str(matematica_tabela3['Resultado Individual'][7])+"""</th>
                 <th>"""+str(matematica_tabela3['Resultado Geral'][7])+"""</th>
                 <th>"""+str(matematica_tabela3['Status'][7])+"""</th>
-              </tr>
-              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(matematica_tabela3['Assunto'][8])+"""</th>
-                <th>"""+str(matematica_tabela3['Quantidade de questões'][8])+"""</th>
-                <th>"""+str(matematica_tabela3['Resultado Individual'][8])+"""</th>
-                <th>"""+str(matematica_tabela3['Resultado Geral'][8])+"""</th>
-                <th>"""+str(matematica_tabela3['Status'][8])+"""</th>
-              </tr>
-              <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(matematica_tabela3['Assunto'][9])+"""</th>
-                <th>"""+str(matematica_tabela3['Quantidade de questões'][9])+"""</th>
-                <th>"""+str(matematica_tabela3['Resultado Individual'][9])+"""</th>
-                <th>"""+str(matematica_tabela3['Resultado Geral'][9])+"""</th>
-                <th>"""+str(matematica_tabela3['Status'][9])+"""</th>
-              </tr>
-              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(matematica_tabela3['Assunto'][10])+"""</th>
-                <th>"""+str(matematica_tabela3['Quantidade de questões'][10])+"""</th>
-                <th>"""+str(matematica_tabela3['Resultado Individual'][10])+"""</th>
-                <th>"""+str(matematica_tabela3['Resultado Geral'][10])+"""</th>
-                <th>"""+str(matematica_tabela3['Status'][10])+"""</th>
               </tr>
             </table>
             """
@@ -1420,24 +1435,25 @@ if login_aluno != '':
             with col5:
                 st.write("")
             with col6:
-                st.markdown(html_card_header3, unsafe_allow_html=True)
-                fig_c2 = go.Figure(go.Indicator(
-                    mode="number+delta",
-                    value=hours_aluno,
-                    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": linguagens_aluno_tempo_str},
-                    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
-                    domain={'x': [0, 1], 'y': [0, 1]}))
-                fig_c2.update_layout(autosize=False,
-                                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                    paper_bgcolor="#FFF0FC", font={'size': 20})
-                fig_c2.update_traces(delta_decreasing_color="#FF4136",
-                                    delta_increasing_color="#3D9970",
-                                    delta_valueformat='f',
-                                    selector=dict(type='indicator'))
-                st.plotly_chart(fig_c2)
-                st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_card_footer_med_lin3, unsafe_allow_html=True)
+                st.write("")
+                #st.markdown(html_card_header3, unsafe_allow_html=True)
+                #fig_c2 = go.Figure(go.Indicator(
+                #    mode="number+delta",
+                #    value=hours_aluno,
+                #    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": linguagens_aluno_tempo_str},
+                #    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
+                #    domain={'x': [0, 1], 'y': [0, 1]}))
+                #fig_c2.update_layout(autosize=False,
+                #                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
+                #                    paper_bgcolor="#FFF0FC", font={'size': 20})
+                #fig_c2.update_traces(delta_decreasing_color="#FF4136",
+                #                    delta_increasing_color="#3D9970",
+                #                    delta_valueformat='f',
+                #                    selector=dict(type='indicator'))
+                #st.plotly_chart(fig_c2)
+                #st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
+                #st.markdown(html_br, unsafe_allow_html=True)
+                #st.markdown(html_card_footer_med_lin3, unsafe_allow_html=True)
             with col7:
                 st.write("")
 
@@ -1505,34 +1521,6 @@ if login_aluno != '':
                 <th>"""+str(linguagens_tabela3['Resultado Individual'][6])+"""</th>
                 <th>"""+str(linguagens_tabela3['Resultado Geral'][6])+"""</th>
                 <th>"""+str(linguagens_tabela3['Status'][6])+"""</th>
-              </tr>
-              <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(linguagens_tabela3['Assunto'][7])+"""</th>
-                <th>"""+str(linguagens_tabela3['Quantidade de questões'][7])+"""</th>
-                <th>"""+str(linguagens_tabela3['Resultado Individual'][7])+"""</th>
-                <th>"""+str(linguagens_tabela3['Resultado Geral'][7])+"""</th>
-                <th>"""+str(linguagens_tabela3['Status'][7])+"""</th>
-              </tr>
-              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(linguagens_tabela3['Assunto'][8])+"""</th>
-                <th>"""+str(linguagens_tabela3['Quantidade de questões'][8])+"""</th>
-                <th>"""+str(linguagens_tabela3['Resultado Individual'][8])+"""</th>
-                <th>"""+str(linguagens_tabela3['Resultado Geral'][8])+"""</th>
-                <th>"""+str(linguagens_tabela3['Status'][8])+"""</th>
-              </tr>
-              <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(linguagens_tabela3['Assunto'][9])+"""</th>
-                <th>"""+str(linguagens_tabela3['Quantidade de questões'][9])+"""</th>
-                <th>"""+str(linguagens_tabela3['Resultado Individual'][9])+"""</th>
-                <th>"""+str(linguagens_tabela3['Resultado Geral'][9])+"""</th>
-                <th>"""+str(linguagens_tabela3['Status'][9])+"""</th>
-              </tr>
-              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                <th>"""+str(linguagens_tabela3['Assunto'][10])+"""</th>
-                <th>"""+str(linguagens_tabela3['Quantidade de questões'][10])+"""</th>
-                <th>"""+str(linguagens_tabela3['Resultado Individual'][10])+"""</th>
-                <th>"""+str(linguagens_tabela3['Resultado Geral'][10])+"""</th>
-                <th>"""+str(linguagens_tabela3['Status'][10])+"""</th>
               </tr>
             </table>
             """
@@ -1993,24 +1981,25 @@ if login_aluno != '':
             with col5:
                 st.write("")
             with col6:
-                st.markdown(html_card_header3, unsafe_allow_html=True)
-                fig_c2 = go.Figure(go.Indicator(
-                    mode="number+delta",
-                    value=hours_aluno,
-                    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": ciencias_aluno_tempo_str},
-                    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
-                    domain={'x': [0, 1], 'y': [0, 1]}))
-                fig_c2.update_layout(autosize=False,
-                                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                    paper_bgcolor="#FFF0FC", font={'size': 20})
-                fig_c2.update_traces(delta_decreasing_color="#FF4136",
-                                    delta_increasing_color="#3D9970",
-                                    delta_valueformat='f',
-                                    selector=dict(type='indicator'))
-                st.plotly_chart(fig_c2)
-                st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_card_footer_med_cie3, unsafe_allow_html=True)
+                st.write("")
+                #st.markdown(html_card_header3, unsafe_allow_html=True)
+                #fig_c2 = go.Figure(go.Indicator(
+                #    mode="number+delta",
+                #    value=hours_aluno,
+                #    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": ciencias_aluno_tempo_str},
+                #    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
+                #    domain={'x': [0, 1], 'y': [0, 1]}))
+                #fig_c2.update_layout(autosize=False,
+                #                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
+                #                    paper_bgcolor="#FFF0FC", font={'size': 20})
+                #fig_c2.update_traces(delta_decreasing_color="#FF4136",
+                #                    delta_increasing_color="#3D9970",
+                #                    delta_valueformat='f',
+                #                    selector=dict(type='indicator'))
+                #st.plotly_chart(fig_c2)
+                #st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
+                #st.markdown(html_br, unsafe_allow_html=True)
+                #st.markdown(html_card_footer_med_cie3, unsafe_allow_html=True)
             with col7:
                 st.write("")
 
@@ -2121,20 +2110,6 @@ if login_aluno != '':
                     <th>"""+str(ciencias_tabela3['Resultado Individual'][12])+"""</th>
                     <th>"""+str(ciencias_tabela3['Resultado Geral'][12])+"""</th>
                     <th>"""+str(ciencias_tabela3['Status'][12])+"""</th>
-                </tr>
-                <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][13])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][13])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][13])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][13])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][13])+"""</th>
-                </tr>
-                <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][14])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][14])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][14])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][14])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][14])+"""</th>
                 </tr>
                 </tr>
                 </tr>
@@ -2650,84 +2625,6 @@ if login_aluno != '':
                     <th>"""+str(ciencias_tabela3['Resultado Geral'][9])+"""</th>
                     <th>"""+str(ciencias_tabela3['Status'][9])+"""</th>
                 </tr>
-                <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][10])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][10])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][10])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][10])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][10])+"""</th>
-                </tr>
-                <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][11])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][11])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][11])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][11])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][11])+"""</th>
-                </tr>
-                <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][12])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][12])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][12])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][12])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][12])+"""</th>
-                </tr>
-                <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][13])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][13])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][13])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][13])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][13])+"""</th>
-                </tr>
-                <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][14])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][14])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][14])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][14])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][14])+"""</th>
-                </tr>
-                <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][15])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][15])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][15])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][15])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][15])+"""</th>
-                </tr>
-                <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][16])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][16])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][16])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][16])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][16])+"""</th>
-                </tr>
-                <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][17])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][17])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][17])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][17])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][17])+"""</th>
-                </tr>
-                <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][18])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][18])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][18])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][18])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][18])+"""</th>
-                </tr>
-                <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][19])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][19])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][19])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][19])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][19])+"""</th>
-                </tr>
-                <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
-                    <th>"""+str(ciencias_tabela3['Assunto'][20])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Quantidade de questões'][20])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Individual'][20])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Resultado Geral'][20])+"""</th>
-                    <th>"""+str(ciencias_tabela3['Status'][20])+"""</th>
-                </tr>
-                </table>
                 """
             elif simulado_selecionado == '2º simulado':
                 html_table_cie_nat=""" 
@@ -3154,22 +3051,22 @@ if login_aluno != '':
     redacao_aluno_media3['Competência'] = redacao_aluno_media2['Competência']
     redacao_aluno_media3['Nota na questão'] = redacao_aluno_media2['Nota na questão']
     
-    redacao_tempo = pd.merge(base_redacao2, base, on = ['Login do aluno(a)','Simulado'], how = 'left')
+    #redacao_tempo = pd.merge(base_redacao2, base, on = ['Login do aluno(a)','Simulado'], how = 'left')
 
-    redacao_tempo2 = redacao_tempo[redacao_tempo['Número da questão'] == 73]
-    redacao_tempo3 = redacao_tempo2[redacao_tempo2['Nota na questão_x'] > 0]
+    #redacao_tempo2 = redacao_tempo[redacao_tempo['Número da questão'] == 73]
+    #redacao_tempo3 = redacao_tempo2[redacao_tempo2['Nota na questão_x'] > 0]
 
-    redacao_aluno_tempo2 = redacao_tempo2[redacao_tempo2['Login do aluno(a)'] == login_aluno]
+    #redacao_aluno_tempo2 = redacao_tempo2[redacao_tempo2['Login do aluno(a)'] == login_aluno]
 
-    redacao_aluno_tempo = redacao_aluno_tempo2['Tempo na questão'].mean()
-    hours_aluno, minutes_aluno = divmod(int(redacao_aluno_tempo), 3600)
-    minutes_certo, seconds = divmod(minutes_aluno, 60)
-    redacao_aluno_tempo_str = ' h '+str(minutes_certo)+' min '+str(seconds)+' s' 
+    #redacao_aluno_tempo = redacao_aluno_tempo2['Tempo na questão'].mean()
+    #hours_aluno, minutes_aluno = divmod(int(redacao_aluno_tempo), 3600)
+    #minutes_certo, seconds = divmod(minutes_aluno, 60)
+    #redacao_aluno_tempo_str = ' h '+str(minutes_certo)+' min '+str(seconds)+' s' 
 
-    redacao_media_tempo = redacao_tempo3['Tempo na questão'].mean()
-    hours_mat_media, minutes_mat_media = divmod(int(redacao_media_tempo), 3600)
-    minutes_certo, seconds_mat_media = divmod(minutes_mat_media, 60)
-    redacao_media_tempo_str = str(hours_mat_media)+' h '+str(minutes_certo)+' min '+str(seconds_mat_media)+' s'
+    #redacao_media_tempo = redacao_tempo3['Tempo na questão'].mean()
+    #hours_mat_media, minutes_mat_media = divmod(int(redacao_media_tempo), 3600)
+    #minutes_certo, seconds_mat_media = divmod(minutes_mat_media, 60)
+    #redacao_media_tempo_str = str(hours_mat_media)+' h '+str(minutes_certo)+' min '+str(seconds_mat_media)+' s'
 
     redacao_tabela = pd.merge(redacao_aluno_media,redacao_detalhes_media, on = 'Competência', how = 'inner')
 
@@ -3227,14 +3124,14 @@ if login_aluno != '':
     </div>
     """
 
-    html_card_footer_med_red3="""
-        <div class="card">
-        <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
-        height: 50px;">
-            <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(redacao_media_tempo_str)+"""</p>
-        </div>
-        </div>
-        """
+    #html_card_footer_med_red3="""
+    #    <div class="card">
+    #    <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;
+    #    height: 50px;">
+    #        <p class="card-title" style="background-color:#FFA73E; color:#FFFFFF; font-family:Georgia; text-align: center; padding: 0px 0;">Média Geral: """+str(redacao_media_tempo_str)+"""</p>
+    #    </div>
+    #    </div>
+    #    """
 
     base_redacao_disciplina = base_redacao2.groupby('Login do aluno(a)').sum().reset_index()
     
@@ -3300,24 +3197,25 @@ if login_aluno != '':
             with col3:
                 st.write("")
             with col4:
-                st.markdown(html_card_header3, unsafe_allow_html=True)
-                fig_c2 = go.Figure(go.Indicator(
-                    mode="number+delta",
-                    value=hours_aluno,
-                    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": redacao_aluno_tempo_str},
-                    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
-                    domain={'x': [0, 1], 'y': [0, 1]}))
-                fig_c2.update_layout(autosize=False,
-                                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
-                                    paper_bgcolor="#FFF0FC", font={'size': 20})
-                fig_c2.update_traces(delta_decreasing_color="#FF4136",
-                                    delta_increasing_color="#3D9970",
-                                    delta_valueformat='f',
-                                    selector=dict(type='indicator'))
-                st.plotly_chart(fig_c2)
-                st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
-                st.markdown(html_br, unsafe_allow_html=True)
-                st.markdown(html_card_footer_med_red3, unsafe_allow_html=True)
+                st.write("")
+                #st.markdown(html_card_header3, unsafe_allow_html=True)
+                #fig_c2 = go.Figure(go.Indicator(
+                #    mode="number+delta",
+                #    value=hours_aluno,
+                #    number={'suffix': "", "font": {"size": 40, 'color': "#9E089E", 'family': "Arial"}, "valueformat": ".0f", "suffix": redacao_aluno_tempo_str},
+                #    #delta={'position': "bottom", 'reference': int(round(resultados_gerais5['Acerto'].mean(),0))},
+                #    domain={'x': [0, 1], 'y': [0, 1]}))
+                #fig_c2.update_layout(autosize=False,
+                #                    width=350, height=90, margin=dict(l=20, r=20, b=20, t=50),
+                #                    paper_bgcolor="#FFF0FC", font={'size': 20})
+                #fig_c2.update_traces(delta_decreasing_color="#FF4136",
+                #                    delta_increasing_color="#3D9970",
+                #                    delta_valueformat='f',
+                #                    selector=dict(type='indicator'))
+                #st.plotly_chart(fig_c2)
+                #st.markdown(html_card_footer_duracao3, unsafe_allow_html=True)
+                #st.markdown(html_br, unsafe_allow_html=True)
+                #st.markdown(html_card_footer_med_red3, unsafe_allow_html=True)
             with col5:
                 st.write("")
             with col6:
@@ -3546,20 +3444,20 @@ if login_aluno != '':
 
     tabela_detalhes_aluno3 = pd.merge(tabela_detalhes_aluno2, tabela_detalhes_media2, on = ['Número da questão','Assunto'], how = 'inner')
 
-    if turma_aluno['Turma'][0] == turma_eng12 or turma_aluno['Turma'][0] == turma_eng2 or turma_aluno['Turma'][0] == turma_cien12 or turma_aluno['Turma'][0] == turma_cien2:
-        for i in range(len(tabela_detalhes_aluno3['Número da questão'])):
-            if simulado_selecionado == '1º simulado':
-                if tabela_detalhes_aluno3['Número da questão'][i] > 73:
-                    tabela_detalhes_aluno3['Número da questão'][i] = tabela_detalhes_aluno3['Número da questão'][i] - 25
-            elif simulado_selecionado == '2º simulado':
-                if tabela_detalhes_aluno3['Número da questão'][i] > 73:
-                    tabela_detalhes_aluno3['Número da questão'][i] = tabela_detalhes_aluno3['Número da questão'][i] - 73
-            elif simulado_selecionado == '3º simulado':
-                if tabela_detalhes_aluno3['Número da questão'][i] > 73:
-                    tabela_detalhes_aluno3['Número da questão'][i] = tabela_detalhes_aluno3['Número da questão'][i] - 25
-            elif simulado_selecionado == '4º simulado':
-                if tabela_detalhes_aluno3['Número da questão'][i] > 73:
-                    tabela_detalhes_aluno3['Número da questão'][i] = tabela_detalhes_aluno3['Número da questão'][i] - 25
+    #if turma_aluno['Turma'][0] == turma_eng12 or turma_aluno['Turma'][0] == turma_eng2 or turma_aluno['Turma'][0] == turma_cien12 or turma_aluno['Turma'][0] == turma_cien2:
+        #for i in range(len(tabela_detalhes_aluno3['Número da questão'])):
+        #    if simulado_selecionado == '1º simulado':
+        #        if tabela_detalhes_aluno3['Número da questão'][i] > 73:
+        #            tabela_detalhes_aluno3['Número da questão'][i] = tabela_detalhes_aluno3['Número da questão'][i] - 25
+        #    elif simulado_selecionado == '2º simulado':
+        #        if tabela_detalhes_aluno3['Número da questão'][i] > 73:
+        #            tabela_detalhes_aluno3['Número da questão'][i] = tabela_detalhes_aluno3['Número da questão'][i] - 73
+        #    elif simulado_selecionado == '3º simulado':
+        #        if tabela_detalhes_aluno3['Número da questão'][i] > 73:
+        #            tabela_detalhes_aluno3['Número da questão'][i] = tabela_detalhes_aluno3['Número da questão'][i] - 25
+        #    elif simulado_selecionado == '4º simulado':
+        #        if tabela_detalhes_aluno3['Número da questão'][i] > 73:
+        #            tabela_detalhes_aluno3['Número da questão'][i] = tabela_detalhes_aluno3['Número da questão'][i] - 25
 
         #for i in range(len(tabela_detalhes_aluno3['Número da questão'])):
             #if tabela_detalhes_aluno3['Número da questão'][i] > 90:
@@ -3584,8 +3482,9 @@ if login_aluno != '':
         tabela_detalhes_aluno4['Tempo na questão_y'][i] = texto1+' min '+texto2+' s' 
         tabela_detalhes_aluno4['Acerto_x'][i] = "{0:.0%}".format(tabela_detalhes_aluno4['Acerto_x'][i])
         tabela_detalhes_aluno4['Acerto_y'][i] = "{0:.0%}".format(tabela_detalhes_aluno4['Acerto_y'][i])
-         
-        if tabela_detalhes_aluno4['Resposta do aluno(a)'][i] == tabela_detalhes_aluno4['Gabarito'][i]:# or (tabela_detalhes_aluno4['Número da questão'][i] == 73 and tabela_detalhes_aluno4['Acerto_x'][i] > tabela_detalhes_aluno4['Acerto_y'][i]): #tabela_detalhes_aluno4['Acerto_x'][i] == '100%' or tabela_detalhes_aluno4['Acerto_x'][i] > tabela_detalhes_aluno4['Acerto_y'][i]:
+
+        #if tabela_detalhes_aluno4['Resposta do aluno(a)'][i] == tabela_detalhes_aluno4['Gabarito'][i]:# or (tabela_detalhes_aluno4['Número da questão'][i] == 73 and tabela_detalhes_aluno4['Acerto_x'][i] > tabela_detalhes_aluno4['Acerto_y'][i]): #tabela_detalhes_aluno4['Acerto_x'][i] == '100%' or tabela_detalhes_aluno4['Acerto_x'][i] > tabela_detalhes_aluno4['Acerto_y'][i]:
+        if tabela_detalhes_aluno4['Novo Nota na questão_x'][i] == tabela_detalhes_aluno4['Novo Valor da questão_x'][i]:
             cor_back.append('#a5ffa5')
             cor_texto.append('#008800')
 
@@ -3600,7 +3499,7 @@ if login_aluno != '':
     tabela_final = tabela_questoes(tabela_detalhes_aluno4,'Número da questão','Área do conhecimento','Assunto','Resposta do aluno(a)','Gabarito','Resultado Individual','Resultado Geral','Tempo na questão','Média geral',cor_texto,cor_back)
         
     with st.container():
-        col1, col2, col3 = st.columns([0.5, 20, 0.5])
+        col1, col2, col3 = st.columns([0.5, 2, 0.5])
         with col1:
             st.write("")
         with col2:
