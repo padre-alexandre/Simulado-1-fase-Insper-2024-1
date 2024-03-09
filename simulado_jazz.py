@@ -155,33 +155,40 @@ bar_color = '#9E089E'
 progress_bar = st.progress(0)
 percentage_text = st.empty()
 
-# Substituindo o range(len(...)) pelo tqdm para adicionar a barra de progresso
-for i in tqdm(range(len(base_resultados['atividade_nome'])), desc='Processando dados', unit='item'):
-    turma_atual = base_resultados['turma'][i]
-    simulado_atual = base_resultados['Simulado'][i]
-    num_exercicio_atual = base_resultados['num_exercicio'][i]
+# Entrada do login do aluno
+login_aluno = st.text_input('Digite o seu login', '')
 
-    matriz_questoes = base_matriz[base_matriz['Simulado'] == simulado_atual]
+# Verifique se o login foi preenchido
+if login_aluno:
+    # Substituindo o range(len(...)) pelo tqdm para adicionar a barra de progresso
+    for i in tqdm(range(len(base_resultados['atividade_nome'])), desc='Processando dados', unit='item'):
+        turma_atual = base_resultados['turma'][i]
+        simulado_atual = base_resultados['Simulado'][i]
+        num_exercicio_atual = base_resultados['num_exercicio'][i]
 
-    if turma_atual in [turma_eng12, turma_eng2, turma_cien12, turma_cien2]:
-        matriz_questoes = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências Humanas']
-        matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio_eng'] == num_exercicio_atual].reset_index(drop=True)
-    else:
-        matriz_questoes = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências da Natureza']
-        matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio'] == num_exercicio_atual].reset_index(drop=True)
+        matriz_questoes = base_matriz[base_matriz['Simulado'] == simulado_atual]
 
-    # matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio_eng'] == num_exercicio_atual].reset_index(drop=True)
+        if turma_atual in [turma_eng12, turma_eng2, turma_cien12, turma_cien2]:
+            matriz_questoes = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências Humanas']
+            matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio_eng'] == num_exercicio_atual].reset_index(drop=True)
+        else:
+            matriz_questoes = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências da Natureza']
+            matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio'] == num_exercicio_atual].reset_index(drop=True)
 
-    if len(matriz_questoes) > 0:
-        base_resultados['disciplina'][i] = matriz_questoes['disciplina'][0]
-        base_resultados['assunto'][i] = matriz_questoes['assunto'][0]
+        # matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio_eng'] == num_exercicio_atual].reset_index(drop=True)
 
-    # Atualizando a barra de progresso e o componente de texto a cada iteração
-    progress_bar.progress((i + 1) / len(base_resultados['atividade_nome']))
-    percentage_text.text(f"{round((i + 1) / len(base_resultados['atividade_nome']) * 100)}%")
+        if len(matriz_questoes) > 0:
+            base_resultados['disciplina'][i] = matriz_questoes['disciplina'][0]
+            base_resultados['assunto'][i] = matriz_questoes['assunto'][0]
 
-# Removendo a barra de progresso e o componente de texto no final do loop
-st.empty()
+        # Atualizando a barra de progresso e o componente de texto a cada iteração
+        progress_bar.progress((i + 1) / len(base_resultados['atividade_nome']))
+        percentage_text.text(f"{round((i + 1) / len(base_resultados['atividade_nome']) * 100)}%")
+
+    # Removendo a barra de progresso e o componente de texto no final do loop
+    st.empty()
+else:
+    st.warning('Por favor, preencha o campo de login para continuar.')
 
 base = base_resultados.copy()
 
@@ -241,7 +248,7 @@ for i in range(len(resultados_gerais2_aux['Login do aluno(a)'])):
 resultados_gerais3 = resultados_gerais2_aux.sort_values(by = 'Nota na questão', ascending = False).reset_index(drop = True)                
 
 ### Selecionar o aluno
-login_aluno = st.text_input('Digite o seu login', '')
+#login_aluno = st.text_input('Digite o seu login', '')
 
 simulados = resultados_gerais3['Simulado'].drop_duplicates().sort_values()
 
