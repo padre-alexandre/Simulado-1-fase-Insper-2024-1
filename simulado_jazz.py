@@ -106,25 +106,82 @@ turma_dir2 = 'Administração, Economia e Direito'
 
 base_resultados['disciplina'] = ''
 base_resultados['assunto'] = ''
-for i in range(len(base_resultados['atividade_nome'])):
-    if (base_resultados['turma'][i] == turma_eng12 or base_resultados['turma'][i] == turma_eng2 or base_resultados['turma'][i] == turma_cien12 or base_resultados['turma'][i] == turma_cien2):
-        matriz_questoes = pd.DataFrame()
-        matriz_questoes = base_matriz[base_matriz['Simulado'] == base_resultados['Simulado'][i]]
-        matriz_questoes2 = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências Humanas']
-        matriz_questoes3 = matriz_questoes2[matriz_questoes2['num_exercicio_eng'] == base_resultados['num_exercicio'][i]].reset_index(drop = True)
+#for i in range(len(base_resultados['atividade_nome'])):
+#    if (base_resultados['turma'][i] == turma_eng12 or base_resultados['turma'][i] == turma_eng2 or base_resultados['turma'][i] == turma_cien12 or base_resultados['turma'][i] == turma_cien2):
+#        matriz_questoes = pd.DataFrame()
+#        matriz_questoes = base_matriz[base_matriz['Simulado'] == base_resultados['Simulado'][i]]
+#        matriz_questoes2 = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências Humanas']
+#        matriz_questoes3 = matriz_questoes2[matriz_questoes2['num_exercicio_eng'] == base_resultados['num_exercicio'][i]].reset_index(drop = True)
+#
+#        if len(matriz_questoes3) > 0:
+#            base_resultados['disciplina'][i] = matriz_questoes3['disciplina'][0]
+#            base_resultados['assunto'][i] = matriz_questoes3['assunto'][0]
+#    else:
+#        matriz_questoes4 = pd.DataFrame()
+#        matriz_questoes4 = base_matriz[base_matriz['Simulado'] == base_resultados['Simulado'][i]]
+#        matriz_questoes5 = matriz_questoes4[matriz_questoes4['disciplina'] != 'Ciências da Natureza']
+#        matriz_questoes6 = matriz_questoes5[matriz_questoes5['num_exercicio'] == base_resultados['num_exercicio'][i]].reset_index(drop = True)
+#
+#        if len(matriz_questoes6) > 0:
+#            base_resultados['disciplina'][i] = matriz_questoes6['disciplina'][0]
+#            base_resultados['assunto'][i] = matriz_questoes6['assunto'][0]
 
-        if len(matriz_questoes3) > 0:
-            base_resultados['disciplina'][i] = matriz_questoes3['disciplina'][0]
-            base_resultados['assunto'][i] = matriz_questoes3['assunto'][0]
+#for i in range(len(base_resultados['atividade_nome'])):
+#    turma_atual = base_resultados['turma'][i]
+#    simulado_atual = base_resultados['Simulado'][i]
+#    num_exercicio_atual = base_resultados['num_exercicio'][i]
+
+#    matriz_questoes = base_matriz[base_matriz['Simulado'] == simulado_atual]
+#
+#    if turma_atual in [turma_eng12, turma_eng2, turma_cien12, turma_cien2]:
+#        matriz_questoes = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências Humanas']
+#        matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio_eng'] == num_exercicio_atual].reset_index(drop=True)
+#    else:
+#        matriz_questoes = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências da Natureza']
+#        matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio'] == num_exercicio_atual].reset_index(drop=True)
+
+    #matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio_eng'] == num_exercicio_atual].reset_index(drop=True)
+
+#    if len(matriz_questoes) > 0:
+#        base_resultados['disciplina'][i] = matriz_questoes['disciplina'][0]
+#        base_resultados['assunto'][i] = matriz_questoes['assunto'][0]
+
+from tqdm import tqdm
+
+# Definindo a cor da barra de progresso
+bar_color = '#9E089E'
+
+# Criando a barra de progresso e o componente de texto para mostrar a porcentagem
+progress_bar = st.progress(0)
+percentage_text = st.empty()
+
+# Substituindo o range(len(...)) pelo tqdm para adicionar a barra de progresso
+for i in tqdm(range(len(base_resultados['atividade_nome'])), desc='Processando dados', unit='item'):
+    turma_atual = base_resultados['turma'][i]
+    simulado_atual = base_resultados['Simulado'][i]
+    num_exercicio_atual = base_resultados['num_exercicio'][i]
+
+    matriz_questoes = base_matriz[base_matriz['Simulado'] == simulado_atual]
+
+    if turma_atual in [turma_eng12, turma_eng2, turma_cien12, turma_cien2]:
+        matriz_questoes = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências Humanas']
+        matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio_eng'] == num_exercicio_atual].reset_index(drop=True)
     else:
-        matriz_questoes4 = pd.DataFrame()
-        matriz_questoes4 = base_matriz[base_matriz['Simulado'] == base_resultados['Simulado'][i]]
-        matriz_questoes5 = matriz_questoes4[matriz_questoes4['disciplina'] != 'Ciências da Natureza']
-        matriz_questoes6 = matriz_questoes5[matriz_questoes5['num_exercicio'] == base_resultados['num_exercicio'][i]].reset_index(drop = True)
+        matriz_questoes = matriz_questoes[matriz_questoes['disciplina'] != 'Ciências da Natureza']
+        matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio'] == num_exercicio_atual].reset_index(drop=True)
 
-        if len(matriz_questoes6) > 0:
-            base_resultados['disciplina'][i] = matriz_questoes6['disciplina'][0]
-            base_resultados['assunto'][i] = matriz_questoes6['assunto'][0]
+    # matriz_questoes = matriz_questoes[matriz_questoes['num_exercicio_eng'] == num_exercicio_atual].reset_index(drop=True)
+
+    if len(matriz_questoes) > 0:
+        base_resultados['disciplina'][i] = matriz_questoes['disciplina'][0]
+        base_resultados['assunto'][i] = matriz_questoes['assunto'][0]
+
+    # Atualizando a barra de progresso e o componente de texto a cada iteração
+    progress_bar.progress((i + 1) / len(base_resultados['atividade_nome']))
+    percentage_text.text(f"{round((i + 1) / len(base_resultados['atividade_nome']) * 100)}%")
+
+# Removendo a barra de progresso e o componente de texto no final do loop
+st.empty()
 
 base = base_resultados.copy()
 
@@ -142,29 +199,35 @@ base['Valor da questão'] = base['Valor da questão'].apply(lambda x: float(str(
 base['Acerto'] = 0.00
 base['Nota na questão'] = 0.00
 base['Novo Nota na questão'] = 0.00
-base['Novo Valor da questão'] = 0.00
+base['Novo Valor da questão'] = base['Valor da questão']
 
 #base['Valor da questão'] = base['Valor da questão'].astype(float)
 
-for i in range(len(base['Nome da avaliação'])):
-    if (base['Turma'][i] == 'Engenharias e Ciência da Computação' and base['Número da questão'][i] != 73):
-        base['Novo Valor da questão'][i] = 11.11
-    elif (base['Turma'][i] == 'Administração, Economia e Direito' and base['Disciplina'][i] == 'Matemática'):
-        base['Novo Valor da questão'][i] = 16.66
-    elif (base['Turma'][i] == 'Administração, Economia e Direito' and base['Disciplina'][i] == 'Linguagens'):
-        base['Novo Valor da questão'][i] = 8.33
-    elif (base['Turma'][i] == 'Administração, Economia e Direito' and base['Disciplina'][i] == 'Ciências Humanas'):
-        base['Novo Valor da questão'][i] = 8.33
-    elif (base['Número da questão'][i] == 73):
-        base['Novo Valor da questão'][i] = 0.00
+#for i in range(len(base['Nome da avaliação'])):
+    #if (base['Turma'][i] == 'Engenharias e Ciência da Computação' and base['Número da questão'][i] != 73):
+    #    base['Novo Valor da questão'][i] = 11.11
+    #elif (base['Turma'][i] == 'Administração, Economia e Direito' and base['Disciplina'][i] == 'Matemática'):
+    #    base['Novo Valor da questão'][i] = 16.66
+    #elif (base['Turma'][i] == 'Administração, Economia e Direito' and base['Disciplina'][i] == 'Linguagens'):
+    #    base['Novo Valor da questão'][i] = 8.33
+    #elif (base['Turma'][i] == 'Administração, Economia e Direito' and base['Disciplina'][i] == 'Ciências Humanas'):
+    #    base['Novo Valor da questão'][i] = 8.33
+    #elif (base['Número da questão'][i] == 73):
+    #    base['Novo Valor da questão'][i] = 0.00
         
-    if (base['Certo ou errado'][i] == 'certo' and base['Número da questão'][i] != 73):
-        base['Acerto'][i] = 1
-    else: 
-        base['Acerto'][i] = 0
+    #if (base['Certo ou errado'][i] == 'certo' and base['Número da questão'][i] != 73):
+    #    base['Acerto'][i] = 1
+    #else: 
+    #    base['Acerto'][i] = 0
 
-    base['Novo Nota na questão'][i] = base['Acerto'][i]*base['Novo Valor da questão'][i]
-    base['Nota na questão'][i] = base['Acerto'][i]*base['Valor da questão'][i]
+    #base['Novo Nota na questão'][i] = base['Acerto'][i]*base['Novo Valor da questão'][i]
+    #base['Nota na questão'][i] = base['Acerto'][i]*base['Valor da questão'][i]
+
+import numpy as np
+
+base['Acerto'] = np.where((base['Certo ou errado'] == 'certo') & (base['Número da questão'] != 73), 1, 0)
+base['Novo Nota na questão'] = base['Acerto'] * base['Novo Valor da questão']
+base['Nota na questão'] = base['Acerto'] * base['Valor da questão']
 
 #base['Login do aluno(a)'] = base['Login do aluno(a)'].apply(extract_login)
 resultados_gerais = base.groupby(['Nome da avaliação','Turma','Nome do aluno(a)','Login do aluno(a)','Simulado']).sum().reset_index()
@@ -325,7 +388,7 @@ if login_aluno != '':
       </div>
     </div>
     """
-    
+
     ### Block 1#########################################################################################
     with st.container():
         col1, col2, col3, col4, col5, col6, col7 = st.columns([1,20,1,20,1,20,1])
@@ -402,7 +465,7 @@ if login_aluno != '':
     #### Resultados gerais por disciplina
     
     base_alunos_fizeram_aux = base[base['Nome do aluno(a)'].isin(alunos_fizeram['Nome do aluno(a)'])].reset_index(drop = True)
-    
+
     base_alunos_fizeram = base_alunos_fizeram_aux[base_alunos_fizeram_aux['Simulado'] == simulado_selecionado]
 
     base_alunos_fizeram_aux2 = base_alunos_fizeram.drop(columns = ['Nome da avaliação','Resposta do aluno(a)','Gabarito','Certo ou errado','Assunto','Unnamed: 10','Unnamed: 11'])
@@ -446,6 +509,7 @@ if login_aluno != '':
     resultados_gerais_disciplina_med_lin = resultados_gerais_disciplina5[resultados_gerais_disciplina5['Disciplina'] == 'Linguagens'].reset_index(drop = True)
     resultados_gerais_disciplina_med_hum = resultados_gerais_disciplina5[resultados_gerais_disciplina5['Disciplina'] == 'Ciências Humanas'].reset_index(drop = True)
     resultados_gerais_disciplina_med_nat = resultados_gerais_disciplina5[resultados_gerais_disciplina5['Disciplina'] == 'Ciências da Natureza'].reset_index(drop = True)
+
 
     if len(resultados_ciencias_hum['Disciplina']) == 0:
         resultados_ciencias_fim = resultados_ciencias_nat.copy()
@@ -525,7 +589,7 @@ if login_aluno != '':
       </div>
     </div>
     """
-    
+
     html_card_footer2_disc_med_mat="""
     <div class="card">
       <div class="card-body" style="border-radius: 10px 10px 10px 10px; background: #FFA73E; padding-top: 12px; width: 350px;

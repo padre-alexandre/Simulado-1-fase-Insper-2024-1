@@ -16,9 +16,19 @@ def classificacao_cor(value):
         color = '#910a08'
     return 'color: %s' % color
 
+#def truncar(num, digits):
+#    sp = str(num).split('.')
+#    return float(str(sp[0])+'.'+str(sp[1][0:digits]))
+
 def truncar(num, digits):
     sp = str(num).split('.')
-    return float(str(sp[0])+'.'+str(sp[1][0:digits]))
+    
+    if len(sp) > 1:
+        parte_decimal = sp[1][:digits]
+    else:
+        parte_decimal = '0' * digits
+    
+    return float(f"{sp[0]}.{parte_decimal}")
 
 def img_to_bytes(img_path):
     img_bytes = Path(img_path).read_bytes()
