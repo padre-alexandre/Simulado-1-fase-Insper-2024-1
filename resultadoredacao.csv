@@ -159,11 +159,11 @@ ID,Nome da avaliação,Turma,Nome do aluno(a),Login do aluno(a),Competência,Val
 53,Simulado 02,"Administração, Economia e Direito",Antônio Mendes,antoniodourado3005@gmail.com,Competência 3,200,,2º simulado
 54,Simulado 02,"Administração, Economia e Direito",Antônio Mendes,antoniodourado3005@gmail.com,Competência 4,200,,2º simulado
 55,Simulado 02,"Administração, Economia e Direito",Antônio Mendes,antoniodourado3005@gmail.com,Competência 5,200,,2º simulado
-56,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 1,200,,2º simulado
-57,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 2,200,,2º simulado
-58,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 3,200,,2º simulado
-59,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 4,200,,2º simulado
-60,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 5,200,,2º simulado
+56,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 1,200,100,2º simulado
+57,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 2,200,100,2º simulado
+58,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 3,200,100,2º simulado
+59,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 4,200,50,2º simulado
+60,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 5,200,50,2º simulado
 61,Simulado 02,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 1,200,200,2º simulado
 62,Simulado 02,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 2,200,200,2º simulado
 63,Simulado 02,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 3,200,200,2º simulado
@@ -209,3 +209,118 @@ ID,Nome da avaliação,Turma,Nome do aluno(a),Login do aluno(a),Competência,Val
 103,Simulado 02,"Administração, Economia e Direito",Felippo Oliveira,felippo250904@gmail.com,Competência 3,200,,2º simulado
 104,Simulado 02,"Administração, Economia e Direito",Felippo Oliveira,felippo250904@gmail.com,Competência 4,200,,2º simulado
 105,Simulado 02,"Administração, Economia e Direito",Felippo Oliveira,felippo250904@gmail.com,Competência 5,200,,2º simulado
+1,Simulado 02,"Administração, Economia e Direito",Lucas Borges,lucassbborges@gmail.com,Competência 1,200,100,3º simulado
+2,Simulado 02,"Administração, Economia e Direito",Lucas Borges,lucassbborges@gmail.com,Competência 2,200,100,3º simulado
+3,Simulado 02,"Administração, Economia e Direito",Lucas Borges,lucassbborges@gmail.com,Competência 3,200,100,3º simulado
+4,Simulado 02,"Administração, Economia e Direito",Lucas Borges,lucassbborges@gmail.com,Competência 4,200,50,3º simulado
+5,Simulado 02,"Administração, Economia e Direito",Lucas Borges,lucassbborges@gmail.com,Competência 5,200,50,3º simulado
+6,Simulado 02,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 1,200,100,3º simulado
+7,Simulado 02,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 2,200,100,3º simulado
+8,Simulado 02,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 3,200,50,3º simulado
+9,Simulado 02,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 4,200,50,3º simulado
+10,Simulado 02,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 5,200,50,3º simulado
+11,Simulado 02,"Administração, Economia e Direito",Livia Costanzo,costanzovica@gmail.com,Competência 1,200,,3º simulado
+12,Simulado 02,"Administração, Economia e Direito",Livia Costanzo,costanzovica@gmail.com,Competência 2,200,,3º simulado
+13,Simulado 02,"Administração, Economia e Direito",Livia Costanzo,costanzovica@gmail.com,Competência 3,200,,3º simulado
+14,Simulado 02,"Administração, Economia e Direito",Livia Costanzo,costanzovica@gmail.com,Competência 4,200,,3º simulado
+15,Simulado 02,"Administração, Economia e Direito",Livia Costanzo,costanzovica@gmail.com,Competência 5,200,,3º simulado
+16,Simulado 02,"Administração, Economia e Direito",Pedro Del Valle,delv4hack@gmail.com,Competência 1,200,,3º simulado
+17,Simulado 02,"Administração, Economia e Direito",Pedro Del Valle,delv4hack@gmail.com,Competência 2,200,,3º simulado
+18,Simulado 02,"Administração, Economia e Direito",Pedro Del Valle,delv4hack@gmail.com,Competência 3,200,,3º simulado
+19,Simulado 02,"Administração, Economia e Direito",Pedro Del Valle,delv4hack@gmail.com,Competência 4,200,,3º simulado
+20,Simulado 02,"Administração, Economia e Direito",Pedro Del Valle,delv4hack@gmail.com,Competência 5,200,,3º simulado
+21,Simulado 02,"Administração, Economia e Direito",João Eduardo,jefraitz@gmail.com,Competência 1,200,,3º simulado
+22,Simulado 02,"Administração, Economia e Direito",João Eduardo,jefraitz@gmail.com,Competência 2,200,,3º simulado
+23,Simulado 02,"Administração, Economia e Direito",João Eduardo,jefraitz@gmail.com,Competência 3,200,,3º simulado
+24,Simulado 02,"Administração, Economia e Direito",João Eduardo,jefraitz@gmail.com,Competência 4,200,,3º simulado
+25,Simulado 02,"Administração, Economia e Direito",João Eduardo,jefraitz@gmail.com,Competência 5,200,,3º simulado
+26,Simulado 02,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 1,200,,3º simulado
+27,Simulado 02,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 2,200,,3º simulado
+28,Simulado 02,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 3,200,,3º simulado
+29,Simulado 02,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 4,200,,3º simulado
+30,Simulado 02,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 5,200,,3º simulado
+31,Simulado 02,"Administração, Economia e Direito",Gabriel Iwakura,gabriiwa@gmail.com,Competência 1,200,,3º simulado
+32,Simulado 02,"Administração, Economia e Direito",Gabriel Iwakura,gabriiwa@gmail.com,Competência 2,200,,3º simulado
+33,Simulado 02,"Administração, Economia e Direito",Gabriel Iwakura,gabriiwa@gmail.com,Competência 3,200,,3º simulado
+34,Simulado 02,"Administração, Economia e Direito",Gabriel Iwakura,gabriiwa@gmail.com,Competência 4,200,,3º simulado
+35,Simulado 02,"Administração, Economia e Direito",Gabriel Iwakura,gabriiwa@gmail.com,Competência 5,200,,3º simulado
+36,Simulado 02,"Administração, Economia e Direito",Beatriz Maia,beatrizmaiareis@gmail.com,Competência 1,200,150,3º simulado
+37,Simulado 02,"Administração, Economia e Direito",Beatriz Maia,beatrizmaiareis@gmail.com,Competência 2,200,150,3º simulado
+38,Simulado 02,"Administração, Economia e Direito",Beatriz Maia,beatrizmaiareis@gmail.com,Competência 3,200,150,3º simulado
+39,Simulado 02,"Administração, Economia e Direito",Beatriz Maia,beatrizmaiareis@gmail.com,Competência 4,200,100,3º simulado
+40,Simulado 02,"Administração, Economia e Direito",Beatriz Maia,beatrizmaiareis@gmail.com,Competência 5,200,100,3º simulado
+41,Simulado 02,"Administração, Economia e Direito",Bruno Marrey,brunomarrey13@gmail.com,Competência 1,200,,3º simulado
+42,Simulado 02,"Administração, Economia e Direito",Bruno Marrey,brunomarrey13@gmail.com,Competência 2,200,,3º simulado
+43,Simulado 02,"Administração, Economia e Direito",Bruno Marrey,brunomarrey13@gmail.com,Competência 3,200,,3º simulado
+44,Simulado 02,"Administração, Economia e Direito",Bruno Marrey,brunomarrey13@gmail.com,Competência 4,200,,3º simulado
+45,Simulado 02,"Administração, Economia e Direito",Bruno Marrey,brunomarrey13@gmail.com,Competência 5,200,,3º simulado
+46,Simulado 02,Engenharias e Ciência da Computação,Hector Mathias,hectorsoares2005@gmail.com,Competência 1,200,200,3º simulado
+47,Simulado 02,Engenharias e Ciência da Computação,Hector Mathias,hectorsoares2005@gmail.com,Competência 2,200,150,3º simulado
+48,Simulado 02,Engenharias e Ciência da Computação,Hector Mathias,hectorsoares2005@gmail.com,Competência 3,200,200,3º simulado
+49,Simulado 02,Engenharias e Ciência da Computação,Hector Mathias,hectorsoares2005@gmail.com,Competência 4,200,150,3º simulado
+50,Simulado 02,Engenharias e Ciência da Computação,Hector Mathias,hectorsoares2005@gmail.com,Competência 5,200,200,3º simulado
+51,Simulado 02,"Administração, Economia e Direito",Antônio Mendes,antoniodourado3005@gmail.com,Competência 1,200,,3º simulado
+52,Simulado 02,"Administração, Economia e Direito",Antônio Mendes,antoniodourado3005@gmail.com,Competência 2,200,,3º simulado
+53,Simulado 02,"Administração, Economia e Direito",Antônio Mendes,antoniodourado3005@gmail.com,Competência 3,200,,3º simulado
+54,Simulado 02,"Administração, Economia e Direito",Antônio Mendes,antoniodourado3005@gmail.com,Competência 4,200,,3º simulado
+55,Simulado 02,"Administração, Economia e Direito",Antônio Mendes,antoniodourado3005@gmail.com,Competência 5,200,,3º simulado
+56,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 1,200,,3º simulado
+57,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 2,200,,3º simulado
+58,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 3,200,,3º simulado
+59,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 4,200,,3º simulado
+60,Simulado 02,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 5,200,,3º simulado
+61,Simulado 02,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 1,200,,3º simulado
+62,Simulado 02,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 2,200,,3º simulado
+63,Simulado 02,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 3,200,,3º simulado
+64,Simulado 02,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 4,200,,3º simulado
+65,Simulado 02,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 5,200,,3º simulado
+66,Simulado 02,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 1,200,,3º simulado
+67,Simulado 02,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 2,200,,3º simulado
+68,Simulado 02,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 3,200,,3º simulado
+69,Simulado 02,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 4,200,,3º simulado
+70,Simulado 02,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 5,200,,3º simulado
+71,Simulado 02,"Administração, Economia e Direito",André Parente,andrefilhoparente@gmail.com,Competência 1,200,,3º simulado
+72,Simulado 02,"Administração, Economia e Direito",André Parente,andrefilhoparente@gmail.com,Competência 2,200,,3º simulado
+73,Simulado 02,"Administração, Economia e Direito",André Parente,andrefilhoparente@gmail.com,Competência 3,200,,3º simulado
+74,Simulado 02,"Administração, Economia e Direito",André Parente,andrefilhoparente@gmail.com,Competência 4,200,,3º simulado
+75,Simulado 02,"Administração, Economia e Direito",André Parente,andrefilhoparente@gmail.com,Competência 5,200,,3º simulado
+76,Simulado 02,"Administração, Economia e Direito",João Pedro Cunha,peupepcunha@hotmail.com,Competência 1,200,,3º simulado
+77,Simulado 02,"Administração, Economia e Direito",João Pedro Cunha,peupepcunha@hotmail.com,Competência 2,200,,3º simulado
+78,Simulado 02,"Administração, Economia e Direito",João Pedro Cunha,peupepcunha@hotmail.com,Competência 3,200,,3º simulado
+79,Simulado 02,"Administração, Economia e Direito",João Pedro Cunha,peupepcunha@hotmail.com,Competência 4,200,,3º simulado
+80,Simulado 02,"Administração, Economia e Direito",João Pedro Cunha,peupepcunha@hotmail.com,Competência 5,200,,3º simulado
+81,Simulado 02,"Administração, Economia e Direito",Eduardo Paiva,eduardoapaiva0409@gmail.com,Competência 1,200,,3º simulado
+82,Simulado 02,"Administração, Economia e Direito",Eduardo Paiva,eduardoapaiva0409@gmail.com,Competência 2,200,,3º simulado
+83,Simulado 02,"Administração, Economia e Direito",Eduardo Paiva,eduardoapaiva0409@gmail.com,Competência 3,200,,3º simulado
+84,Simulado 02,"Administração, Economia e Direito",Eduardo Paiva,eduardoapaiva0409@gmail.com,Competência 4,200,,3º simulado
+85,Simulado 02,"Administração, Economia e Direito",Eduardo Paiva,eduardoapaiva0409@gmail.com,Competência 5,200,,3º simulado
+86,Simulado 02,"Administração, Economia e Direito",José Henrique,zealc2003@gmail.com,Competência 1,200,100,3º simulado
+87,Simulado 02,"Administração, Economia e Direito",José Henrique,zealc2003@gmail.com,Competência 2,200,100,3º simulado
+88,Simulado 02,"Administração, Economia e Direito",José Henrique,zealc2003@gmail.com,Competência 3,200,100,3º simulado
+89,Simulado 02,"Administração, Economia e Direito",José Henrique,zealc2003@gmail.com,Competência 4,200,50,3º simulado
+90,Simulado 02,"Administração, Economia e Direito",José Henrique,zealc2003@gmail.com,Competência 5,200,50,3º simulado
+91,Simulado 02,"Administração, Economia e Direito",Beatriz Aragão,beatrizaragaogpereira@gmail.com,Competência 1,200,,3º simulado
+92,Simulado 02,"Administração, Economia e Direito",Beatriz Aragão,beatrizaragaogpereira@gmail.com,Competência 2,200,,3º simulado
+93,Simulado 02,"Administração, Economia e Direito",Beatriz Aragão,beatrizaragaogpereira@gmail.com,Competência 3,200,,3º simulado
+94,Simulado 02,"Administração, Economia e Direito",Beatriz Aragão,beatrizaragaogpereira@gmail.com,Competência 4,200,,3º simulado
+95,Simulado 02,"Administração, Economia e Direito",Beatriz Aragão,beatrizaragaogpereira@gmail.com,Competência 5,200,,3º simulado
+96,Simulado 02,"Administração, Economia e Direito",Enzo Vicente,enzoboasorte@gmail.com,Competência 1,200,,3º simulado
+97,Simulado 02,"Administração, Economia e Direito",Enzo Vicente,enzoboasorte@gmail.com,Competência 2,200,,3º simulado
+98,Simulado 02,"Administração, Economia e Direito",Enzo Vicente,enzoboasorte@gmail.com,Competência 3,200,,3º simulado
+99,Simulado 02,"Administração, Economia e Direito",Enzo Vicente,enzoboasorte@gmail.com,Competência 4,200,,3º simulado
+100,Simulado 02,"Administração, Economia e Direito",Enzo Vicente,enzoboasorte@gmail.com,Competência 5,200,,3º simulado
+101,Simulado 02,"Administração, Economia e Direito",Felippo Oliveira,felippo250904@gmail.com,Competência 1,200,,3º simulado
+102,Simulado 02,"Administração, Economia e Direito",Felippo Oliveira,felippo250904@gmail.com,Competência 2,200,,3º simulado
+103,Simulado 02,"Administração, Economia e Direito",Felippo Oliveira,felippo250904@gmail.com,Competência 3,200,,3º simulado
+104,Simulado 02,"Administração, Economia e Direito",Felippo Oliveira,felippo250904@gmail.com,Competência 4,200,,3º simulado
+105,Simulado 02,"Administração, Economia e Direito",Felippo Oliveira,felippo250904@gmail.com,Competência 5,200,,3º simulado
+106,Simulado 02,"Administração, Economia e Direito",Luiz Otávio,tavinho.cury@gmail.com,Competência 1,200,,3º simulado
+107,Simulado 02,"Administração, Economia e Direito",Luiz Otávio,tavinho.cury@gmail.com,Competência 2,200,,3º simulado
+108,Simulado 02,"Administração, Economia e Direito",Luiz Otávio,tavinho.cury@gmail.com,Competência 3,200,,3º simulado
+109,Simulado 02,"Administração, Economia e Direito",Luiz Otávio,tavinho.cury@gmail.com,Competência 4,200,,3º simulado
+110,Simulado 02,"Administração, Economia e Direito",Luiz Otávio,tavinho.cury@gmail.com,Competência 5,200,,3º simulado
+111,Simulado 02,"Administração, Economia e Direito",Maria Luisa,malusobral80@gmail.com,Competência 1,200,100,3º simulado
+112,Simulado 02,"Administração, Economia e Direito",Maria Luisa,malusobral80@gmail.com,Competência 2,200,100,3º simulado
+113,Simulado 02,"Administração, Economia e Direito",Maria Luisa,malusobral80@gmail.com,Competência 3,200,100,3º simulado
+114,Simulado 02,"Administração, Economia e Direito",Maria Luisa,malusobral80@gmail.com,Competência 4,200,100,3º simulado
+115,Simulado 02,"Administração, Economia e Direito",Maria Luisa,malusobral80@gmail.com,Competência 5,200,100,3º simulado

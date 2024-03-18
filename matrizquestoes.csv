@@ -193,3 +193,100 @@ num_exercicio,disciplina,assunto,Simulado,num_exercicio_eng
 95,Ciências da Natureza,Química - Estrutura do Átomo,2º simulado,60
 96,Ciências da Natureza,Química - Estequiometria,2º simulado,70
 97,Ciências da Natureza,Física - Cinemática,2º simulado,71
+1,Matemática,Juros,3º simulado,1
+2,Ciências Humanas,História - Feudalismo,3º simulado,
+3,Ciências Humanas,Atualidades - Oriente Médio,3º simulado,
+4,Linguagens,Funções da Linguagem,3º simulado,4
+5,Matemática,Circunferência,3º simulado,5
+6,Ciências Humanas,História - Grécia,3º simulado,
+7,Ciências Humanas,História - Sociedade Açucareira,3º simulado,
+8,Matemática,Porcentagem,3º simulado,8
+9,Linguagens,Interpretação de Texto,3º simulado,9
+10,Linguagens,Figuras de Linguagem,3º simulado,10
+11,Linguagens,Interpretação de Texto,3º simulado,11
+12,Matemática,Áreas,3º simulado,12
+13,Linguagens,Interpretação de Texto,3º simulado,13
+14,Matemática,Conjuntos,3º simulado,14
+15,Linguagens,Interpretação de Texto,3º simulado,15
+16,Matemática,Áreas,3º simulado,16
+17,Ciências Humanas,Geografia - Industrialização,3º simulado,
+18,Linguagens,Funções da Linguagem,3º simulado,18
+19,Linguagens,Texto verbal e não verbal,3º simulado,19
+20,Ciências Humanas,Atualidades - Oriente Médio,3º simulado,
+21,Matemática,Inequação do 2º grau,3º simulado,21
+22,Ciências Humanas,Geografia - Industrialização,3º simulado,
+23,Ciências Humanas,Geografia - Globalização,3º simulado,
+24,Ciências Humanas,História - Roma,3º simulado,
+25,Matemática,Áreas,3º simulado,25
+26,Linguagens,Funções da Linguagem,3º simulado,26
+27,Matemática,Circunferência,3º simulado,27
+28,Ciências Humanas,História - Mineração,3º simulado,
+29,Linguagens,Interpretação de Texto,3º simulado,29
+30,Linguagens,Interpretação de Texto,3º simulado,30
+31,Linguagens,Texto verbal e não verbal,3º simulado,31
+32,Ciências Humanas,Geografia - Globalização,3º simulado,
+33,Matemática,Porcentagem,3º simulado,33
+34,Ciências Humanas,Geografia - Vegetação,3º simulado,
+35,Linguagens,Texto verbal e não verbal,3º simulado,35
+36,Ciências Humanas,História - Período Colonial,3º simulado,
+37,Linguagens,Figuras de Linguagem,3º simulado,37
+38,Linguagens,Funções da Linguagem,3º simulado,38
+39,Matemática,Função Composta,3º simulado,39
+40,Linguagens,Interpretação de Texto,3º simulado,40
+41,Matemática,Gráfico de função,3º simulado,41
+42,Ciências Humanas,História - Período Colonial,3º simulado,
+43,Ciências Humanas,História - Período Colonial,3º simulado,
+44,Linguagens,Texto verbal e não verbal,3º simulado,44
+45,Ciências Humanas,História - Idade Média,3º simulado,
+46,Matemática,Porcentagem,3º simulado,46
+47,Ciências Humanas,Geografia - Vegetação,3º simulado,
+48,Linguagens,Funções da Linguagem,3º simulado,48
+49,Linguagens,Texto verbal e não verbal,3º simulado,49
+50,Matemática,Porcentagem,3º simulado,50
+51,Matemática,Juros,3º simulado,51
+52,Matemática,Semelhança de triângulos,3º simulado,52
+53,Matemática,Função Composta,3º simulado,53
+54,Ciências Humanas,História - Grécia,3º simulado,
+55,Ciências Humanas,Geografia - Clima,3º simulado,
+56,Matemática,Sistemas de equação do 1º grau,3º simulado,56
+57,Matemática,Gráfico de função,3º simulado,57
+58,Matemática,Regra de 3,3º simulado,58
+59,Ciências Humanas,Geografia - Escala,3º simulado,
+60,Ciências Humanas,Geografia - Clima,3º simulado,
+61,Linguagens,Funções da Linguagem,3º simulado,61
+62,Linguagens,Funções da Linguagem,3º simulado,62
+63,Ciências Humanas,História - Roma,3º simulado,
+64,Matemática,Áreas,3º simulado,64
+65,Linguagens,Funções da Linguagem,3º simulado,65
+66,Matemática,Função Composta,3º simulado,66
+67,Ciências Humanas,Geografia - Clima,3º simulado,
+68,Linguagens,Interpretação de Texto,3º simulado,68
+69,Ciências Humanas,História - Mineração,3º simulado,
+70,Matemática,Porcentagem,3º simulado,70
+71,Matemática,Circunferência,3º simulado,71
+72,Linguagens,Texto verbal e não verbal,3º simulado,72
+73,Redação,,3º simulado,73
+74,Ciências da Natureza,Física - Dinâmica,3º simulado,2
+75,Ciências da Natureza,Biologia - Evolução,3º simulado,3
+76,Ciências da Natureza,Química - Ligação Iônica,3º simulado,6
+77,Ciências da Natureza,Química - Número de oxidação,3º simulado,7
+78,Ciências da Natureza,Biologia - Evolução,3º simulado,17
+79,Ciências da Natureza,Biologia - Evolução,3º simulado,20
+80,Ciências da Natureza,Biologia - Evolução,3º simulado,22
+81,Ciências da Natureza,Biologia - Evolução,3º simulado,23
+82,Ciências da Natureza,Física - Dinâmica,3º simulado,24
+83,Ciências da Natureza,Química - Tabela periódica,3º simulado,28
+84,Ciências da Natureza,Biologia - Evolução,3º simulado,32
+85,Ciências da Natureza,Biologia - Evolução,3º simulado,34
+86,Ciências da Natureza,Química - Estequiometria,3º simulado,36
+87,Ciências da Natureza,Química - Distribuição eletrônica,3º simulado,42
+88,Ciências da Natureza,Química - Distribuição eletrônica,3º simulado,43
+89,Ciências da Natureza,Física - Dinâmica,3º simulado,45
+90,Ciências da Natureza,Biologia - Evolução,3º simulado,47
+91,Ciências da Natureza,Química - Reações de oxidação,3º simulado,54
+92,Ciências da Natureza,Física - Dinâmica,3º simulado,55
+93,Ciências da Natureza,Física - Dinâmica,3º simulado,59
+94,Ciências da Natureza,Física - Dinâmica,3º simulado,60
+95,Ciências da Natureza,Física - Energia,3º simulado,63
+96,Ciências da Natureza,Física - Dinâmica,3º simulado,67
+97,Ciências da Natureza,Química - Ligação Iônica,3º simulado,69
