@@ -489,7 +489,7 @@ if login_aluno != '':
     
     resultados_gerais_disciplina3_aux = resultados_gerais_disciplina3.drop(columns = ['Turma','Login do aluno(a)','Nome do aluno(a)','Simulado'])
     
-    st.dataframe(resultados_gerais_disciplina3_aux)
+    #st.dataframe(resultados_gerais_disciplina3_aux)
 
     resultados_gerais_disciplina4 = resultados_gerais_disciplina3_aux.groupby('Disciplina').agg({
         'Tempo na questão': 'mean',
