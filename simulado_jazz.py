@@ -489,7 +489,18 @@ if login_aluno != '':
     
     resultados_gerais_disciplina3_aux = resultados_gerais_disciplina3.drop(columns = ['Turma','Login do aluno(a)','Nome do aluno(a)','Simulado'])
     
-    resultados_gerais_disciplina4 = resultados_gerais_disciplina3_aux.groupby('Disciplina').mean().reset_index()
+    st.dataframe(resultados_gerais_disciplina3_aux)
+
+    resultados_gerais_disciplina4 = resultados_gerais_disciplina3_aux.groupby('Disciplina').agg({
+        'Tempo na questão': 'mean',
+        'Valor da questão': 'mean',
+        'Acerto': 'mean',
+        'Nota na questão': 'mean',
+        'Novo Nota na questão': 'mean',
+        'Novo Valor da questão': 'mean'
+    }).reset_index()
+
+    #resultados_gerais_disciplina4 = resultados_gerais_disciplina3_aux.groupby('Disciplina').mean().reset_index()
     resultados_gerais_disciplina5 = resultados_gerais_disciplina4.sort_values(by = 'Disciplina', ascending = False)
 
     ### Resultados do aluno por disciplina
