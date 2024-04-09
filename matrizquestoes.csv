@@ -1,292 +1,389 @@
-num_exercicio,disciplina,assunto,Simulado,num_exercicio_eng
-1,Matemática,Sistema de equações do 1º grau,1º simulado,1
-2,Matemática,Sistema de equações do 1º grau,1º simulado,2
-3,Linguagens,Interpretação de Texto,1º simulado,3
-4,Linguagens,Interpretação de Texto,1º simulado,4
-5,Matemática,Triângulo Retângulo,1º simulado,5
-6,Ciências Humanas,História - Pré-História e Antiguidade Oriental,1º simulado,
-7,Ciências Humanas,Geografia - Clima,1º simulado,
-8,Linguagens,Interpretação de Texto,1º simulado,8
-9,Linguagens,Interpretação de Texto,1º simulado,9
-10,Linguagens,Interpretação de Texto,1º simulado,10
-11,Matemática,Operações Numéricas,1º simulado,11
-12,Matemática,Equação do 2º grau,1º simulado,12
-13,Linguagens,Interpretação de Texto,1º simulado,13
-14,Ciências Humanas,História - Pré-História e Antiguidade Oriental,1º simulado,
-15,Ciências Humanas,Geografia - Relevo,1º simulado,
-16,Ciências Humanas,Geografia - Regionalização,1º simulado,
-17,Linguagens,Verbo,1º simulado,17
-18,Ciências Humanas,Atualidades - Guerra na Síria,1º simulado,
-19,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,1º simulado,
-20,Linguagens,Orações,1º simulado,20
-21,Linguagens,Interpretação de Texto,1º simulado,21
-22,Ciências Humanas,História - Pré-História e Antiguidade Oriental,1º simulado,
-23,Linguagens,Interpretação de Texto,1º simulado,23
-24,Linguagens,Interpretação de Texto,1º simulado,24
-25,Linguagens,Concordância Nominal,1º simulado,25
-26,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,1º simulado,
-27,Ciências Humanas,Geografia - Globalização,1º simulado,
-28,Matemática,Inequação do 1º grau,1º simulado,28
-29,Matemática,Triângulo Retângulo,1º simulado,29
-30,Linguagens,Interpretação de Texto,1º simulado,30
-31,Matemática,Ângulos,1º simulado,31
-32,Ciências Humanas,História - Período Colonial,1º simulado,
-33,Ciências Humanas,Geografia - Relevo,1º simulado,
-34,Linguagens,Figuras de Linguagem,1º simulado,34
-35,Linguagens,Gênero Textual,1º simulado,35
-36,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,1º simulado,
-37,Matemática,Sistema de equações do 1º grau,1º simulado,37
-38,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,1º simulado,
-39,Linguagens,Interpretação de Texto,1º simulado,39
-40,Matemática,Operações Numéricas,1º simulado,40
-41,Matemática,Operações Numéricas,1º simulado,41
-42,Ciências Humanas,História - Pré-História e Antiguidade Oriental,1º simulado,
-43,Linguagens,Interpretação de Texto,1º simulado,43
-44,Matemática,Operações Numéricas,1º simulado,44
-45,Linguagens,Verbo,1º simulado,45
-46,Matemática,Triângulo Retângulo,1º simulado,46
-47,Matemática,MMC e MDC,1º simulado,47
-48,Matemática,Ângulos,1º simulado,48
-49,Matemática,Operações Numéricas,1º simulado,49
-50,Ciências Humanas,Geografia - Regionalização,1º simulado,
-51,Matemática,Sistema de equações do 1º grau,1º simulado,51
-52,Matemática,MMC e MDC,1º simulado,52
-53,Ciências Humanas,Geografia - Comunismo,1º simulado,
-54,Ciências Humanas,Geografia - Oriente Médio,1º simulado,
-55,Matemática,Ângulos,1º simulado,55
-56,Ciências Humanas,História - Grécia Antiga,1º simulado,
-57,Linguagens,Interpretação de Texto,1º simulado,57
-58,Ciências Humanas,Geografia - Economia,1º simulado,
-59,Linguagens,Interpretação de Texto,1º simulado,59
-60,Ciências Humanas,Geografia - Clima,1º simulado,
-61,Linguagens,Interpretação de Texto,1º simulado,61
-62,Matemática,Sistema de equações do 1º grau,1º simulado,62
-63,Linguagens,Interpretação de Texto,1º simulado,63
-64,Matemática,Triângulo Retângulo,1º simulado,64
-65,Ciências Humanas,Atualidades - Guerra na Síria,1º simulado,
-66,Matemática,Ângulos,1º simulado,66
-67,Matemática,Operações Numéricas,1º simulado,67
-68,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,1º simulado,
-69,Ciências Humanas,Atualidades - Palestina,1º simulado,
-70,Linguagens,Interpretação de Texto,1º simulado,70
-71,Linguagens,Preposição,1º simulado,71
-72,Matemática,Equação do 1º grau,1º simulado,72
-73,Redação,Redação,1º simulado,73
-74,Ciências da Natureza,Biologia - Água,1º simulado,6
-75,Ciências da Natureza,Física - Vetores,1º simulado,7
-76,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,14
-77,Ciências da Natureza,Química - Balanceamento,1º simulado,15
-78,Ciências da Natureza,Química - Entalpia,1º simulado,16
-79,Ciências da Natureza,Física - Cinemática,1º simulado,18
-80,Ciências da Natureza,Química - Átomos,1º simulado,19
-81,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,22
-82,Ciências da Natureza,Química - Ligações Químicas,1º simulado,26
-83,Ciências da Natureza,Química - Ligações Químicas,1º simulado,27
-84,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,32
-85,Ciências da Natureza,Química - Ligações Químicas,1º simulado,33
-86,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,36
-87,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,38
-88,Ciências da Natureza,Biologia - Água,1º simulado,42
-89,Ciências da Natureza,Química - Funções Orgânicas,1º simulado,50
-90,Ciências da Natureza,Física - Cinemática,1º simulado,53
-91,Ciências da Natureza,Física - Cinemática,1º simulado,54
-92,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,56
-93,Ciências da Natureza,Física - Cinemática,1º simulado,58
-94,Ciências da Natureza,Física - Cinemática,1º simulado,60
-95,Ciências da Natureza,Física - Cinemática,1º simulado,65
-96,Ciências da Natureza,Química - Distribuição Eletrônica,1º simulado,68
-97,Ciências da Natureza,Física - Vetores,1º simulado,69
-1,Matemática,Equação do 2º grau,2º simulado,1
-2,Matemática,Triângulo,2º simulado,2
-3,Linguagens,Interpretação de Texto,2º simulado,3
-4,Ciências Humanas,História - Grécia,2º simulado,
-5,Linguagens,Texto não verbal,2º simulado,5
-6,Ciências Humanas,Atualidades - Palestina,2º simulado,
-7,Linguagens,Interpretação de Texto,2º simulado,7
-8,Ciências Humanas,História - Sociedade Açucareira,2º simulado,
-9,Linguagens,Funções da Linguagem,2º simulado,9
-10,Linguagens,Interpretação de Texto,2º simulado,10
-11,Matemática,Conjuntos,2º simulado,11
-12,Matemática,Conjuntos,2º simulado,12
-13,Linguagens,Interpretação de Texto,2º simulado,13
-14,Ciências Humanas,Geografia - Demografia,2º simulado,
-15,Matemática,Conjuntos,2º simulado,15
-16,Matemática,Sistema de equações do 1º grau,2º simulado,16
-17,Linguagens,Interpretação de Texto,2º simulado,17
-18,Matemática,Triângulo,2º simulado,18
-19,Ciências Humanas,História - Escravidão,2º simulado,
-20,Linguagens,Funções da Linguagem,2º simulado,20
-21,Ciências Humanas,História - Grécia,2º simulado,
-22,Linguagens,Interpretação de Texto,2º simulado,22
-23,Ciências Humanas,Filosofia/Sociologia - Cultura,2º simulado,
-24,Linguagens,Interpretação de Texto,2º simulado,24
-25,Ciências Humanas,Geografia - Vegetação,2º simulado,
-26,Linguagens,Interpretação de Texto,2º simulado,26
-27,Ciências Humanas,Geografia - Clima,2º simulado,
-28,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,2º simulado,
-29,Matemática,Porcentagem,2º simulado,29
-30,Matemática,Porcentagem,2º simulado,30
-31,Ciências Humanas,Geografia - Neoliberalismo,2º simulado,
-32,Linguagens,Figuras de Linguagem,2º simulado,32
-33,Ciências Humanas,História - Período Colonial,2º simulado,
-34,Ciências Humanas,História - Roma,2º simulado,
-35,Ciências Humanas,Atualidades - Palestina,2º simulado,
-36,Linguagens,Funções da Linguagem,2º simulado,36
-37,Matemática,Triângulo,2º simulado,37
-38,Ciências Humanas,Geografia - Industrialização Brasileira,2º simulado,
-39,Ciências Humanas,Geografia - Clima,2º simulado,
-40,Ciências Humanas,História - Sociedade Açucareira,2º simulado,
-41,Matemática,Porcentagem,2º simulado,41
-42,Matemática,Porcentagem,2º simulado,42
-43,Matemática,Conjuntos,2º simulado,43
-44,Matemática,Sistema de equações do 1º grau,2º simulado,44
-45,Linguagens,Interpretação de Texto,2º simulado,45
-46,Linguagens,Interpretação de Texto,2º simulado,46
-47,Ciências Humanas,História - Roma,2º simulado,
-48,Linguagens,Interpretação de Texto,2º simulado,48
-49,Matemática,Equação do 1º grau,2º simulado,49
-50,Ciências Humanas,Geografia - Clima,2º simulado,
-51,Linguagens,Tipos Textuais,2º simulado,51
-52,Linguagens,Figuras de Linguagem,2º simulado,52
-53,Linguagens,Interpretação de Texto,2º simulado,53
-54,Matemática,Triângulo,2º simulado,54
-55,Matemática,Ângulos,2º simulado,55
-56,Ciências Humanas,Geografia - Rochas,2º simulado,
-57,Ciências Humanas,Geografia - Industrialização Brasileira,2º simulado,
-58,Linguagens,Figuras de Linguagem,2º simulado,58
-59,Matemática,Triângulo,2º simulado,59
-60,Ciências Humanas,História - Grécia,2º simulado,
-61,Matemática,Porcentagem,2º simulado,61
-62,Linguagens,Interpretação de Texto,2º simulado,62
-63,Matemática,Conjuntos,2º simulado,63
-64,Matemática,Triângulo Retângulo,2º simulado,64
-65,Matemática,Ângulos,2º simulado,65
-66,Linguagens,Funções da Linguagem,2º simulado,66
-67,Matemática,Conjuntos,2º simulado,67
-68,Linguagens,Gêneros Textuais,2º simulado,68
-69,Linguagens,Texto não verbal,2º simulado,69
-70,Ciências Humanas,Filosofia/Sociologia - Cultura,2º simulado,
-71,Ciências Humanas,Geografia - Vegetação,2º simulado,
-72,Matemática,Juros,2º simulado,72
-73,Redação,Redação,2º simulado,73
-74,Ciências da Natureza,Biologia - Taxonomia,2º simulado,4
-75,Ciências da Natureza,Química - Ligações Químicas,2º simulado,6
-76,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,8
-77,Ciências da Natureza,Física - Cinemática,2º simulado,14
-78,Ciências da Natureza,Biologia - Taxonomia,2º simulado,19
-79,Ciências da Natureza,Química - Distribuição Eletrônica,2º simulado,21
-80,Ciências da Natureza,Química - Estequiometria,2º simulado,23
-81,Ciências da Natureza,Física - Dinâmica,2º simulado,25
-82,Ciências da Natureza,Física - Cinemática,2º simulado,27
-83,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,28
-84,Ciências da Natureza,Física - Cinemática,2º simulado,31
-85,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,33
-86,Ciências da Natureza,Química - Estrutura do Átomo,2º simulado,34
-87,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,35
-88,Ciências da Natureza,Física - Cinemática,2º simulado,38
-89,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,39
-90,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,40
-91,Ciências da Natureza,Química - Ligações Químicas,2º simulado,47
-92,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,50
-93,Ciências da Natureza,Física - Dinâmica,2º simulado,56
-94,Ciências da Natureza,Física - Dinâmica,2º simulado,57
-95,Ciências da Natureza,Química - Estrutura do Átomo,2º simulado,60
-96,Ciências da Natureza,Química - Estequiometria,2º simulado,70
-97,Ciências da Natureza,Física - Cinemática,2º simulado,71
-1,Matemática,Juros,3º simulado,1
-2,Ciências Humanas,História - Feudalismo,3º simulado,
-3,Ciências Humanas,Atualidades - Oriente Médio,3º simulado,
-4,Linguagens,Funções da Linguagem,3º simulado,4
-5,Matemática,Circunferência,3º simulado,5
-6,Ciências Humanas,História - Grécia,3º simulado,
-7,Ciências Humanas,História - Sociedade Açucareira,3º simulado,
-8,Matemática,Porcentagem,3º simulado,8
-9,Linguagens,Interpretação de Texto,3º simulado,9
-10,Linguagens,Figuras de Linguagem,3º simulado,10
-11,Linguagens,Interpretação de Texto,3º simulado,11
-12,Matemática,Áreas,3º simulado,12
-13,Linguagens,Interpretação de Texto,3º simulado,13
-14,Matemática,Conjuntos,3º simulado,14
-15,Linguagens,Interpretação de Texto,3º simulado,15
-16,Matemática,Áreas,3º simulado,16
-17,Ciências Humanas,Geografia - Industrialização,3º simulado,
-18,Linguagens,Funções da Linguagem,3º simulado,18
-19,Linguagens,Texto verbal e não verbal,3º simulado,19
-20,Ciências Humanas,Atualidades - Oriente Médio,3º simulado,
-21,Matemática,Inequação do 2º grau,3º simulado,21
-22,Ciências Humanas,Geografia - Industrialização,3º simulado,
-23,Ciências Humanas,Geografia - Globalização,3º simulado,
-24,Ciências Humanas,História - Roma,3º simulado,
-25,Matemática,Áreas,3º simulado,25
-26,Linguagens,Funções da Linguagem,3º simulado,26
-27,Matemática,Circunferência,3º simulado,27
-28,Ciências Humanas,História - Mineração,3º simulado,
-29,Linguagens,Interpretação de Texto,3º simulado,29
-30,Linguagens,Interpretação de Texto,3º simulado,30
-31,Linguagens,Texto verbal e não verbal,3º simulado,31
-32,Ciências Humanas,Geografia - Globalização,3º simulado,
-33,Matemática,Porcentagem,3º simulado,33
-34,Ciências Humanas,Geografia - Vegetação,3º simulado,
-35,Linguagens,Texto verbal e não verbal,3º simulado,35
-36,Ciências Humanas,História - Período Colonial,3º simulado,
-37,Linguagens,Figuras de Linguagem,3º simulado,37
-38,Linguagens,Funções da Linguagem,3º simulado,38
-39,Matemática,Função Composta,3º simulado,39
-40,Linguagens,Interpretação de Texto,3º simulado,40
-41,Matemática,Gráfico de função,3º simulado,41
-42,Ciências Humanas,História - Período Colonial,3º simulado,
-43,Ciências Humanas,História - Período Colonial,3º simulado,
-44,Linguagens,Texto verbal e não verbal,3º simulado,44
-45,Ciências Humanas,História - Idade Média,3º simulado,
-46,Matemática,Porcentagem,3º simulado,46
-47,Ciências Humanas,Geografia - Vegetação,3º simulado,
-48,Linguagens,Funções da Linguagem,3º simulado,48
-49,Linguagens,Texto verbal e não verbal,3º simulado,49
-50,Matemática,Porcentagem,3º simulado,50
-51,Matemática,Juros,3º simulado,51
-52,Matemática,Semelhança de triângulos,3º simulado,52
-53,Matemática,Função Composta,3º simulado,53
-54,Ciências Humanas,História - Grécia,3º simulado,
-55,Ciências Humanas,Geografia - Clima,3º simulado,
-56,Matemática,Sistemas de equação do 1º grau,3º simulado,56
-57,Matemática,Gráfico de função,3º simulado,57
-58,Matemática,Regra de 3,3º simulado,58
-59,Ciências Humanas,Geografia - Escala,3º simulado,
-60,Ciências Humanas,Geografia - Clima,3º simulado,
-61,Linguagens,Funções da Linguagem,3º simulado,61
-62,Linguagens,Funções da Linguagem,3º simulado,62
-63,Ciências Humanas,História - Roma,3º simulado,
-64,Matemática,Áreas,3º simulado,64
-65,Linguagens,Funções da Linguagem,3º simulado,65
-66,Matemática,Função Composta,3º simulado,66
-67,Ciências Humanas,Geografia - Clima,3º simulado,
-68,Linguagens,Interpretação de Texto,3º simulado,68
-69,Ciências Humanas,História - Mineração,3º simulado,
-70,Matemática,Porcentagem,3º simulado,70
-71,Matemática,Circunferência,3º simulado,71
-72,Linguagens,Texto verbal e não verbal,3º simulado,72
-73,Redação,,3º simulado,73
-74,Ciências da Natureza,Física - Dinâmica,3º simulado,2
-75,Ciências da Natureza,Biologia - Evolução,3º simulado,3
-76,Ciências da Natureza,Química - Ligação Iônica,3º simulado,6
-77,Ciências da Natureza,Química - Número de oxidação,3º simulado,7
-78,Ciências da Natureza,Biologia - Evolução,3º simulado,17
-79,Ciências da Natureza,Biologia - Evolução,3º simulado,20
-80,Ciências da Natureza,Biologia - Evolução,3º simulado,22
-81,Ciências da Natureza,Biologia - Evolução,3º simulado,23
-82,Ciências da Natureza,Física - Dinâmica,3º simulado,24
-83,Ciências da Natureza,Química - Tabela periódica,3º simulado,28
-84,Ciências da Natureza,Biologia - Evolução,3º simulado,32
-85,Ciências da Natureza,Biologia - Evolução,3º simulado,34
-86,Ciências da Natureza,Química - Estequiometria,3º simulado,36
-87,Ciências da Natureza,Química - Distribuição eletrônica,3º simulado,42
-88,Ciências da Natureza,Química - Distribuição eletrônica,3º simulado,43
-89,Ciências da Natureza,Física - Dinâmica,3º simulado,45
-90,Ciências da Natureza,Biologia - Evolução,3º simulado,47
-91,Ciências da Natureza,Química - Reações de oxidação,3º simulado,54
-92,Ciências da Natureza,Física - Dinâmica,3º simulado,55
-93,Ciências da Natureza,Física - Dinâmica,3º simulado,59
-94,Ciências da Natureza,Física - Dinâmica,3º simulado,60
-95,Ciências da Natureza,Física - Energia,3º simulado,63
-96,Ciências da Natureza,Física - Dinâmica,3º simulado,67
-97,Ciências da Natureza,Química - Ligação Iônica,3º simulado,69
+num_exercicio,disciplina,assunto,Simulado,num_exercicio_eng,Frente
+1,Matemática,Sistema de equações do 1º grau,1º simulado,1,Matemática A
+2,Matemática,Sistema de equações do 1º grau,1º simulado,2,Matemática A
+3,Linguagens,Interpretação de Texto,1º simulado,3,Linguagens
+4,Linguagens,Interpretação de Texto,1º simulado,4,Linguagens
+5,Matemática,Triângulo Retângulo,1º simulado,5,Matemática B
+6,Ciências Humanas,História - Pré-História e Antiguidade Oriental,1º simulado,,História Geral
+7,Ciências Humanas,Geografia - Clima,1º simulado,,Geografia Física
+8,Linguagens,Interpretação de Texto,1º simulado,8,Linguagens
+9,Linguagens,Interpretação de Texto,1º simulado,9,Linguagens
+10,Linguagens,Interpretação de Texto,1º simulado,10,Linguagens
+11,Matemática,Operações Numéricas,1º simulado,11,Matemática C
+12,Matemática,Equação do 2º grau,1º simulado,12,Matemática A
+13,Linguagens,Interpretação de Texto,1º simulado,13,Linguagens
+14,Ciências Humanas,História - Pré-História e Antiguidade Oriental,1º simulado,,História Geral
+15,Ciências Humanas,Geografia - Relevo,1º simulado,,Geografia Física
+16,Ciências Humanas,Geografia - Regionalização,1º simulado,,Geografia Humana
+17,Linguagens,Verbo,1º simulado,17,Linguagens
+18,Ciências Humanas,Atualidades - Guerra na Síria,1º simulado,,Atualidades
+19,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,1º simulado,,História do Brasil
+20,Linguagens,Orações,1º simulado,20,Linguagens
+21,Linguagens,Interpretação de Texto,1º simulado,21,Linguagens
+22,Ciências Humanas,História - Pré-História e Antiguidade Oriental,1º simulado,,História Geral
+23,Linguagens,Interpretação de Texto,1º simulado,23,Linguagens
+24,Linguagens,Interpretação de Texto,1º simulado,24,Linguagens
+25,Linguagens,Concordância Nominal,1º simulado,25,Linguagens
+26,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,1º simulado,,História do Brasil
+27,Ciências Humanas,Geografia - Globalização,1º simulado,,Geografia Humana
+28,Matemática,Inequação do 1º grau,1º simulado,28,Matemática A
+29,Matemática,Triângulo Retângulo,1º simulado,29,Matemática B
+30,Linguagens,Interpretação de Texto,1º simulado,30,Linguagens
+31,Matemática,Ângulos,1º simulado,31,Matemática B
+32,Ciências Humanas,História - Período Colonial,1º simulado,,História do Brasil
+33,Ciências Humanas,Geografia - Relevo,1º simulado,,Geografia Física
+34,Linguagens,Figuras de Linguagem,1º simulado,34,Linguagens
+35,Linguagens,Gênero Textual,1º simulado,35,Linguagens
+36,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,1º simulado,,História do Brasil
+37,Matemática,Sistema de equações do 1º grau,1º simulado,37,Matemática A
+38,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,1º simulado,,História do Brasil
+39,Linguagens,Interpretação de Texto,1º simulado,39,Linguagens
+40,Matemática,Operações Numéricas,1º simulado,40,Matemática C
+41,Matemática,Operações Numéricas,1º simulado,41,Matemática C
+42,Ciências Humanas,História - Pré-História e Antiguidade Oriental,1º simulado,,História Geral
+43,Linguagens,Interpretação de Texto,1º simulado,43,Linguagens
+44,Matemática,Operações Numéricas,1º simulado,44,Matemática C
+45,Linguagens,Verbo,1º simulado,45,Linguagens
+46,Matemática,Triângulo Retângulo,1º simulado,46,Matemática B
+47,Matemática,MMC e MDC,1º simulado,47,Matemática C
+48,Matemática,Ângulos,1º simulado,48,Matemática B
+49,Matemática,Operações Numéricas,1º simulado,49,Matemática C
+50,Ciências Humanas,Geografia - Regionalização,1º simulado,,Geografia Humana
+51,Matemática,Sistema de equações do 1º grau,1º simulado,51,Matemática A
+52,Matemática,MMC e MDC,1º simulado,52,Matemática C
+53,Ciências Humanas,Geografia - Comunismo,1º simulado,,Geografia Humana
+54,Ciências Humanas,Geografia - Oriente Médio,1º simulado,,Geografia Humana
+55,Matemática,Ângulos,1º simulado,55,Matemática B
+56,Ciências Humanas,História - Grécia Antiga,1º simulado,,História Geral
+57,Linguagens,Interpretação de Texto,1º simulado,57,Linguagens
+58,Ciências Humanas,Geografia - Economia,1º simulado,,Geografia Humana
+59,Linguagens,Interpretação de Texto,1º simulado,59,Linguagens
+60,Ciências Humanas,Geografia - Clima,1º simulado,,Geografia Física
+61,Linguagens,Interpretação de Texto,1º simulado,61,Linguagens
+62,Matemática,Sistema de equações do 1º grau,1º simulado,62,Matemática A
+63,Linguagens,Interpretação de Texto,1º simulado,63,Linguagens
+64,Matemática,Triângulo Retângulo,1º simulado,64,Matemática B
+65,Ciências Humanas,Atualidades - Guerra na Síria,1º simulado,,Atualidades
+66,Matemática,Ângulos,1º simulado,66,Matemática B
+67,Matemática,Operações Numéricas,1º simulado,67,Matemática C
+68,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,1º simulado,,História do Brasil
+69,Ciências Humanas,Atualidades - Palestina,1º simulado,,Atualidades
+70,Linguagens,Interpretação de Texto,1º simulado,70,Linguagens
+71,Linguagens,Preposição,1º simulado,71,Linguagens
+72,Matemática,Equação do 1º grau,1º simulado,72,Matemática A
+73,Redação,Redação,1º simulado,73,Redação
+74,Ciências da Natureza,Biologia - Água,1º simulado,6,Biologia
+75,Ciências da Natureza,Física - Vetores,1º simulado,7,Física
+76,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,14,Biologia
+77,Ciências da Natureza,Química - Balanceamento,1º simulado,15,Química
+78,Ciências da Natureza,Química - Entalpia,1º simulado,16,Química
+79,Ciências da Natureza,Física - Cinemática,1º simulado,18,Física
+80,Ciências da Natureza,Química - Átomos,1º simulado,19,Química
+81,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,22,Biologia
+82,Ciências da Natureza,Química - Ligações Químicas,1º simulado,26,Química
+83,Ciências da Natureza,Química - Ligações Químicas,1º simulado,27,Química
+84,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,32,Biologia
+85,Ciências da Natureza,Química - Ligações Químicas,1º simulado,33,Química
+86,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,36,Biologia
+87,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,38,Biologia
+88,Ciências da Natureza,Biologia - Água,1º simulado,42,Biologia
+89,Ciências da Natureza,Química - Funções Orgânicas,1º simulado,50,Química
+90,Ciências da Natureza,Física - Cinemática,1º simulado,53,Física
+91,Ciências da Natureza,Física - Cinemática,1º simulado,54,Física
+92,Ciências da Natureza,Biologia - Bioquímica Celular,1º simulado,56,Biologia
+93,Ciências da Natureza,Física - Cinemática,1º simulado,58,Física
+94,Ciências da Natureza,Física - Cinemática,1º simulado,60,Física
+95,Ciências da Natureza,Física - Cinemática,1º simulado,65,Física
+96,Ciências da Natureza,Química - Distribuição Eletrônica,1º simulado,68,Química
+97,Ciências da Natureza,Física - Vetores,1º simulado,69,Física
+1,Matemática,Equação do 2º grau,2º simulado,1,Matemática A
+2,Matemática,Triângulo,2º simulado,2,Matemática B
+3,Linguagens,Interpretação de Texto,2º simulado,3,Linguagens
+4,Ciências Humanas,História - Grécia,2º simulado,,História Geral
+5,Linguagens,Texto não verbal,2º simulado,5,Linguagens
+6,Ciências Humanas,Atualidades - Palestina,2º simulado,,Atualidades
+7,Linguagens,Interpretação de Texto,2º simulado,7,Linguagens
+8,Ciências Humanas,História - Sociedade Açucareira,2º simulado,,História do Brasil
+9,Linguagens,Funções da Linguagem,2º simulado,9,Linguagens
+10,Linguagens,Interpretação de Texto,2º simulado,10,Linguagens
+11,Matemática,Conjuntos,2º simulado,11,Matemática A
+12,Matemática,Conjuntos,2º simulado,12,Matemática A
+13,Linguagens,Interpretação de Texto,2º simulado,13,Linguagens
+14,Ciências Humanas,Geografia - Demografia,2º simulado,,Geografia Humana
+15,Matemática,Conjuntos,2º simulado,15,Matemática A
+16,Matemática,Sistema de equações do 1º grau,2º simulado,16,Matemática A
+17,Linguagens,Interpretação de Texto,2º simulado,17,Linguagens
+18,Matemática,Triângulo,2º simulado,18,Matemática B
+19,Ciências Humanas,História - Escravidão,2º simulado,,História do Brasil
+20,Linguagens,Funções da Linguagem,2º simulado,20,Linguagens
+21,Ciências Humanas,História - Grécia,2º simulado,,História Geral
+22,Linguagens,Interpretação de Texto,2º simulado,22,Linguagens
+23,Ciências Humanas,Filosofia/Sociologia - Cultura,2º simulado,,Filosofia/Sociologia
+24,Linguagens,Interpretação de Texto,2º simulado,24,Linguagens
+25,Ciências Humanas,Geografia - Vegetação,2º simulado,,Geografia Física
+26,Linguagens,Interpretação de Texto,2º simulado,26,Linguagens
+27,Ciências Humanas,Geografia - Clima,2º simulado,,Geografia Física
+28,Ciências Humanas,História - Grandes Navegações e Período Pré-Colonial,2º simulado,,História do Brasil
+29,Matemática,Porcentagem,2º simulado,29,Matemática C
+30,Matemática,Porcentagem,2º simulado,30,Matemática C
+31,Ciências Humanas,Geografia - Neoliberalismo,2º simulado,,Geografia Humana
+32,Linguagens,Figuras de Linguagem,2º simulado,32,Linguagens
+33,Ciências Humanas,História - Período Colonial,2º simulado,,História do Brasil
+34,Ciências Humanas,História - Roma,2º simulado,,História Geral
+35,Ciências Humanas,Atualidades - Palestina,2º simulado,,Atualidades
+36,Linguagens,Funções da Linguagem,2º simulado,36,Linguagens
+37,Matemática,Triângulo,2º simulado,37,Matemática B
+38,Ciências Humanas,Geografia - Industrialização Brasileira,2º simulado,,Geografia Humana
+39,Ciências Humanas,Geografia - Clima,2º simulado,,Geografia Física
+40,Ciências Humanas,História - Sociedade Açucareira,2º simulado,,História do Brasil
+41,Matemática,Porcentagem,2º simulado,41,Matemática C
+42,Matemática,Porcentagem,2º simulado,42,Matemática C
+43,Matemática,Conjuntos,2º simulado,43,Matemática A
+44,Matemática,Sistema de equações do 1º grau,2º simulado,44,Matemática A
+45,Linguagens,Interpretação de Texto,2º simulado,45,Linguagens
+46,Linguagens,Interpretação de Texto,2º simulado,46,Linguagens
+47,Ciências Humanas,História - Roma,2º simulado,,História Geral
+48,Linguagens,Interpretação de Texto,2º simulado,48,Linguagens
+49,Matemática,Equação do 1º grau,2º simulado,49,Matemática A
+50,Ciências Humanas,Geografia - Clima,2º simulado,,Geografia Física
+51,Linguagens,Tipos Textuais,2º simulado,51,Linguagens
+52,Linguagens,Figuras de Linguagem,2º simulado,52,Linguagens
+53,Linguagens,Interpretação de Texto,2º simulado,53,Linguagens
+54,Matemática,Triângulo,2º simulado,54,Matemática B
+55,Matemática,Ângulos,2º simulado,55,Matemática B
+56,Ciências Humanas,Geografia - Rochas,2º simulado,,Geografia Física
+57,Ciências Humanas,Geografia - Industrialização Brasileira,2º simulado,,Geografia Humana
+58,Linguagens,Figuras de Linguagem,2º simulado,58,Linguagens
+59,Matemática,Triângulo,2º simulado,59,Matemática B
+60,Ciências Humanas,História - Grécia,2º simulado,,História Geral
+61,Matemática,Porcentagem,2º simulado,61,Matemática C
+62,Linguagens,Interpretação de Texto,2º simulado,62,Linguagens
+63,Matemática,Conjuntos,2º simulado,63,Matemática A
+64,Matemática,Triângulo Retângulo,2º simulado,64,Matemática B
+65,Matemática,Ângulos,2º simulado,65,Matemática B
+66,Linguagens,Funções da Linguagem,2º simulado,66,Linguagens
+67,Matemática,Conjuntos,2º simulado,67,Matemática A
+68,Linguagens,Gêneros Textuais,2º simulado,68,Linguagens
+69,Linguagens,Texto não verbal,2º simulado,69,Linguagens
+70,Ciências Humanas,Filosofia/Sociologia - Cultura,2º simulado,,Filosofia/Sociologia
+71,Ciências Humanas,Geografia - Vegetação,2º simulado,,Geografia Física
+72,Matemática,Juros,2º simulado,72,Matemática C
+73,Redação,Redação,2º simulado,73,Redação
+74,Ciências da Natureza,Biologia - Taxonomia,2º simulado,4,Biologia
+75,Ciências da Natureza,Química - Ligações Químicas,2º simulado,6,Química
+76,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,8,Biologia
+77,Ciências da Natureza,Física - Cinemática,2º simulado,14,Física
+78,Ciências da Natureza,Biologia - Taxonomia,2º simulado,19,Biologia
+79,Ciências da Natureza,Química - Distribuição Eletrônica,2º simulado,21,Química
+80,Ciências da Natureza,Química - Estequiometria,2º simulado,23,Química
+81,Ciências da Natureza,Física - Dinâmica,2º simulado,25,Física
+82,Ciências da Natureza,Física - Cinemática,2º simulado,27,Física
+83,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,28,Biologia
+84,Ciências da Natureza,Física - Cinemática,2º simulado,31,Física
+85,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,33,Biologia
+86,Ciências da Natureza,Química - Estrutura do Átomo,2º simulado,34,Química
+87,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,35,Biologia
+88,Ciências da Natureza,Física - Cinemática,2º simulado,38,Física
+89,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,39,Biologia
+90,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,40,Biologia
+91,Ciências da Natureza,Química - Ligações Químicas,2º simulado,47,Química
+92,Ciências da Natureza,Biologia - Bioquímica Celular,2º simulado,50,Biologia
+93,Ciências da Natureza,Física - Dinâmica,2º simulado,56,Física
+94,Ciências da Natureza,Física - Dinâmica,2º simulado,57,Física
+95,Ciências da Natureza,Química - Estrutura do Átomo,2º simulado,60,Química
+96,Ciências da Natureza,Química - Estequiometria,2º simulado,70,Química
+97,Ciências da Natureza,Física - Cinemática,2º simulado,71,Física
+1,Matemática,Juros,3º simulado,1,Matemática C
+2,Ciências Humanas,História - Feudalismo,3º simulado,,História Geral
+3,Ciências Humanas,Atualidades - Oriente Médio,3º simulado,,Atualidades
+4,Linguagens,Funções da Linguagem,3º simulado,4,Linguagens
+5,Matemática,Circunferência,3º simulado,5,Matemática B
+6,Ciências Humanas,História - Grécia,3º simulado,,História Geral
+7,Ciências Humanas,História - Sociedade Açucareira,3º simulado,,História do Brasil
+8,Matemática,Porcentagem,3º simulado,8,Matemática C
+9,Linguagens,Interpretação de Texto,3º simulado,9,Linguagens
+10,Linguagens,Figuras de Linguagem,3º simulado,10,Linguagens
+11,Linguagens,Interpretação de Texto,3º simulado,11,Linguagens
+12,Matemática,Áreas,3º simulado,12,Matemática B
+13,Linguagens,Interpretação de Texto,3º simulado,13,Linguagens
+14,Matemática,Conjuntos,3º simulado,14,Matemática A
+15,Linguagens,Interpretação de Texto,3º simulado,15,Linguagens
+16,Matemática,Áreas,3º simulado,16,Matemática B
+17,Ciências Humanas,Geografia - Industrialização,3º simulado,,Geografia Humana
+18,Linguagens,Funções da Linguagem,3º simulado,18,Linguagens
+19,Linguagens,Texto verbal e não verbal,3º simulado,19,Linguagens
+20,Ciências Humanas,Atualidades - Oriente Médio,3º simulado,,Atualidades
+21,Matemática,Inequação do 2º grau,3º simulado,21,Matemática A
+22,Ciências Humanas,Geografia - Industrialização,3º simulado,,Geografia Humana
+23,Ciências Humanas,Geografia - Globalização,3º simulado,,Geografia Humana
+24,Ciências Humanas,História - Roma,3º simulado,,História Geral
+25,Matemática,Áreas,3º simulado,25,Matemática B
+26,Linguagens,Funções da Linguagem,3º simulado,26,Linguagens
+27,Matemática,Circunferência,3º simulado,27,Matemática B
+28,Ciências Humanas,História - Mineração,3º simulado,,História do Brasil
+29,Linguagens,Interpretação de Texto,3º simulado,29,Linguagens
+30,Linguagens,Interpretação de Texto,3º simulado,30,Linguagens
+31,Linguagens,Texto verbal e não verbal,3º simulado,31,Linguagens
+32,Ciências Humanas,Geografia - Globalização,3º simulado,,Geografia Humana
+33,Matemática,Porcentagem,3º simulado,33,Matemática C
+34,Ciências Humanas,Geografia - Vegetação,3º simulado,,Geografia Física
+35,Linguagens,Texto verbal e não verbal,3º simulado,35,Linguagens
+36,Ciências Humanas,História - Período Colonial,3º simulado,,História do Brasil
+37,Linguagens,Figuras de Linguagem,3º simulado,37,Linguagens
+38,Linguagens,Funções da Linguagem,3º simulado,38,Linguagens
+39,Matemática,Função Composta,3º simulado,39,Matemática A
+40,Linguagens,Interpretação de Texto,3º simulado,40,Linguagens
+41,Matemática,Gráfico de função,3º simulado,41,Matemática A
+42,Ciências Humanas,História - Período Colonial,3º simulado,,História do Brasil
+43,Ciências Humanas,História - Período Colonial,3º simulado,,História do Brasil
+44,Linguagens,Texto verbal e não verbal,3º simulado,44,Linguagens
+45,Ciências Humanas,História - Idade Média,3º simulado,,História Geral
+46,Matemática,Porcentagem,3º simulado,46,Matemática C
+47,Ciências Humanas,Geografia - Vegetação,3º simulado,,Geografia Física
+48,Linguagens,Funções da Linguagem,3º simulado,48,Linguagens
+49,Linguagens,Texto verbal e não verbal,3º simulado,49,Linguagens
+50,Matemática,Porcentagem,3º simulado,50,Matemática C
+51,Matemática,Juros,3º simulado,51,Matemática C
+52,Matemática,Semelhança de triângulos,3º simulado,52,Matemática B
+53,Matemática,Função Composta,3º simulado,53,Matemática A
+54,Ciências Humanas,História - Grécia,3º simulado,,História Geral
+55,Ciências Humanas,Geografia - Clima,3º simulado,,Geografia Física
+56,Matemática,Sistemas de equação do 1º grau,3º simulado,56,Matemática A
+57,Matemática,Gráfico de função,3º simulado,57,Matemática A
+58,Matemática,Regra de 3,3º simulado,58,Matemática C
+59,Ciências Humanas,Geografia - Escala,3º simulado,,Geografia Física
+60,Ciências Humanas,Geografia - Clima,3º simulado,,Geografia Física
+61,Linguagens,Funções da Linguagem,3º simulado,61,Linguagens
+62,Linguagens,Funções da Linguagem,3º simulado,62,Linguagens
+63,Ciências Humanas,História - Roma,3º simulado,,História Geral
+64,Matemática,Áreas,3º simulado,64,Matemática B
+65,Linguagens,Funções da Linguagem,3º simulado,65,Linguagens
+66,Matemática,Função Composta,3º simulado,66,Matemática A
+67,Ciências Humanas,Geografia - Clima,3º simulado,,Geografia Física
+68,Linguagens,Interpretação de Texto,3º simulado,68,Linguagens
+69,Ciências Humanas,História - Mineração,3º simulado,,História do Brasil
+70,Matemática,Porcentagem,3º simulado,70,Matemática C
+71,Matemática,Circunferência,3º simulado,71,Matemática B
+72,Linguagens,Texto verbal e não verbal,3º simulado,72,Linguagens
+73,Redação,Redação,3º simulado,73,Redação
+74,Ciências da Natureza,Física - Dinâmica,3º simulado,2,Física
+75,Ciências da Natureza,Biologia - Evolução,3º simulado,3,Biologia
+76,Ciências da Natureza,Química - Ligação Iônica,3º simulado,6,Química
+77,Ciências da Natureza,Química - Número de oxidação,3º simulado,7,Química
+78,Ciências da Natureza,Biologia - Evolução,3º simulado,17,Biologia
+79,Ciências da Natureza,Biologia - Evolução,3º simulado,20,Biologia
+80,Ciências da Natureza,Biologia - Evolução,3º simulado,22,Biologia
+81,Ciências da Natureza,Biologia - Evolução,3º simulado,23,Biologia
+82,Ciências da Natureza,Física - Dinâmica,3º simulado,24,Física
+83,Ciências da Natureza,Química - Tabela periódica,3º simulado,28,Química
+84,Ciências da Natureza,Biologia - Evolução,3º simulado,32,Biologia
+85,Ciências da Natureza,Biologia - Evolução,3º simulado,34,Biologia
+86,Ciências da Natureza,Química - Estequiometria,3º simulado,36,Química
+87,Ciências da Natureza,Química - Distribuição eletrônica,3º simulado,42,Química
+88,Ciências da Natureza,Química - Distribuição eletrônica,3º simulado,43,Química
+89,Ciências da Natureza,Física - Dinâmica,3º simulado,45,Física
+90,Ciências da Natureza,Biologia - Evolução,3º simulado,47,Biologia
+91,Ciências da Natureza,Química - Reações de oxidação,3º simulado,54,Química
+92,Ciências da Natureza,Física - Dinâmica,3º simulado,55,Física
+93,Ciências da Natureza,Física - Dinâmica,3º simulado,59,Física
+94,Ciências da Natureza,Física - Dinâmica,3º simulado,60,Física
+95,Ciências da Natureza,Física - Energia,3º simulado,63,Física
+96,Ciências da Natureza,Física - Dinâmica,3º simulado,67,Física
+97,Ciências da Natureza,Química - Ligação Iônica,3º simulado,69,Química
+1,Matemática,Distância entre retas,4º simulado,1,Matemática B
+2,Ciências Humanas,Geografia - Agrária,4º simulado,,Geografia Humana
+3,Matemática,Regra de 3,4º simulado,3,Matemática C
+4,Ciências Humanas,Geografia - Relevo,4º simulado,,Geografia Física
+5,Ciências Humanas,História - Primeiro Reinado,4º simulado,,História do Brasil
+6,Linguagens,Variantes Linguísticas,4º simulado,6,Linguagens
+7,Matemática,Função do 1º grau,4º simulado,7,Matemática A
+8,Linguagens,Figuras de Linguagem,4º simulado,8,Linguagens
+9,Ciências Humanas,História - Idade Média,4º simulado,,História Geral
+10,Ciências Humanas,História - Idade Média,4º simulado,,História Geral
+11,Matemática,Função do 2º grau,4º simulado,11,Matemática A
+12,Matemática,Equação da reta,4º simulado,12,Matemática B
+13,Linguagens,Texto verbal e não verbal,4º simulado,13,Linguagens
+14,Linguagens,Funções da Linguagem,4º simulado,14,Linguagens
+15,Matemática,Função do 2º grau,4º simulado,15,Matemática A
+16,Linguagens,Variantes Linguísticas,4º simulado,16,Linguagens
+17,Ciências Humanas,História - Primeiro Reinado,4º simulado,,História do Brasil
+18,Linguagens,Figuras de Linguagem,4º simulado,18,Linguagens
+19,Ciências Humanas,Geografia - Clima,4º simulado,,Geografia Física
+20,Linguagens,Interpretação de Texto,4º simulado,20,Linguagens
+21,Linguagens,Interpretação de Texto,4º simulado,21,Linguagens
+22,Matemática,Progressão Aritmética,4º simulado,22,Matemática C
+23,Ciências Humanas,Geografia - Urbanização,4º simulado,,Geografia Humana
+24,Linguagens,Interpretação de Texto,4º simulado,24,Linguagens
+25,Matemática,Ponto e reta,4º simulado,25,Matemática B
+26,Ciências Humanas,Geografia - Demografia,4º simulado,,Geografia Humana
+27,Ciências Humanas,História - Escravidão,4º simulado,,História do Brasil
+28,Linguagens,Interpretação de Texto,4º simulado,28,Linguagens
+29,Matemática,Equação da reta,4º simulado,29,Matemática B
+30,Linguagens,Interpretação de Texto,4º simulado,30,Linguagens
+31,Linguagens,Interpretação de Texto,4º simulado,31,Linguagens
+32,Linguagens,Interpretação de Texto,4º simulado,32,Linguagens
+33,Ciências Humanas,História - Primeiro e Segundo Reinado,4º simulado,,História do Brasil
+34,Ciências Humanas,História - Primeiro e Segundo Reinado,4º simulado,,História do Brasil
+35,Ciências Humanas,Geografia - Clima,4º simulado,,Geografia Física
+36,Linguagens,Interpretação de Texto,4º simulado,36,Linguagens
+37,Matemática,Função do 1º grau,4º simulado,37,Matemática A
+38,Linguagens,Tipos Textuais,4º simulado,38,Linguagens
+39,Ciências Humanas,Geografia - Clima,4º simulado,,Geografia Física
+40,Matemática,Áreas,4º simulado,40,Matemática B
+41,Linguagens,Interpretação de Texto,4º simulado,41,Linguagens
+42,Matemática,Razão e Proporção,4º simulado,42,Matemática C
+43,Ciências Humanas,Geografia - Urbanização,4º simulado,,Geografia Humana
+44,Ciências Humanas,Geografia - Urbanização,4º simulado,,Geografia Humana
+45,Linguagens,Interpretação de Texto,4º simulado,45,Linguagens
+46,Ciências Humanas,Geografia - Demografia,4º simulado,,Geografia Humana
+47,Linguagens,Figuras de Linguagem,4º simulado,47,Linguagens
+48,Linguagens,Tipos Textuais,4º simulado,48,Linguagens
+49,Matemática,Equação da reta,4º simulado,49,Matemática B
+50,Matemática,Progressão Aritmética,4º simulado,50,Matemática C
+51,Ciências Humanas,História - Mercantilismo,4º simulado,,Atualidades
+52,Matemática,Regra de 3,4º simulado,52,Matemática C
+53,Matemática,Juros,4º simulado,53,Matemática C
+54,Ciências Humanas,Geografia - Energias,4º simulado,,Geografia Física
+55,Matemática,Juros,4º simulado,55,Matemática C
+56,Matemática,Função do 1º grau,4º simulado,56,Matemática A
+57,Ciências Humanas,Geografia - Globalização,4º simulado,,Geografia Humana
+58,Linguagens,Figuras de Linguagem,4º simulado,58,Linguagens
+59,Matemática,Equação da reta,4º simulado,59,Matemática B
+60,Matemática,Porcentagem,4º simulado,60,Matemática C
+61,Ciências Humanas,Geografia - Economia,4º simulado,,Geografia Humana
+62,Linguagens,Interpretação de Texto,4º simulado,62,Linguagens
+63,Matemática,Função do 1º grau,4º simulado,63,Matemática A
+64,Ciências Humanas,História - Revolução Francesa,4º simulado,,História Geral
+65,Ciências Humanas,Atualidades - Trabalho,4º simulado,,Atualidades
+66,Matemática,Função do 2º grau,4º simulado,66,Matemática A
+67,Linguagens,Funções da Linguagem,4º simulado,67,Linguagens
+68,Matemática,Função do 2º grau,4º simulado,68,Matemática A
+69,Linguagens,Texto verbal e não verbal,4º simulado,69,Linguagens
+70,Linguagens,Tipos Textuais,4º simulado,70,Linguagens
+71,Ciências Humanas,História - Democracia,4º simulado,,História Geral
+72,Matemática,Retas,4º simulado,72,Matemática B
+73,Redação,Redação,4º simulado,73,Redação
+74,Ciências da Natureza,Física - Dinâmica,4º simulado,2,Física
+75,Ciências da Natureza,Química - Átomo,4º simulado,4,Química
+76,Ciências da Natureza,Física - Dinâmica,4º simulado,5,Física
+77,Ciências da Natureza,Química - Ligações Químicas,4º simulado,9,Química
+78,Ciências da Natureza,Biologia - Células,4º simulado,10,Biologia
+79,Ciências da Natureza,Biologia - Ácidos Nucleicos,4º simulado,17,Biologia
+80,Ciências da Natureza,Química - Ligações Químicas,4º simulado,19,Química
+81,Ciências da Natureza,Química - Ligações Químicas,4º simulado,23,Química
+82,Ciências da Natureza,Física - Dinâmica,4º simulado,26,Física
+83,Ciências da Natureza,Química - Ligações Químicas,4º simulado,27,Química
+84,Ciências da Natureza,Biologia - Ácidos Nucleicos,4º simulado,33,Biologia
+85,Ciências da Natureza,Química - Ligações Químicas,4º simulado,34,Química
+86,Ciências da Natureza,Física - Dinâmica,4º simulado,35,Física
+87,Ciências da Natureza,Física - Cinemática,4º simulado,39,Física
+88,Ciências da Natureza,Física - Cinemática,4º simulado,43,Física
+89,Ciências da Natureza,Química - Átomo,4º simulado,44,Química
+90,Ciências da Natureza,Biologia - Ácidos Nucleicos,4º simulado,46,Biologia
+91,Ciências da Natureza,Biologia - Ácidos Nucleicos,4º simulado,51,Biologia
+92,Ciências da Natureza,Física - Dinâmica,4º simulado,54,Física
+93,Ciências da Natureza,Química - Átomo,4º simulado,57,Química
+94,Ciências da Natureza,Química - Átomo,4º simulado,61,Química
+95,Ciências da Natureza,Química - Ligações Químicas,4º simulado,64,Química
+96,Ciências da Natureza,Biologia - Ácidos Nucleicos,4º simulado,65,Biologia
+97,Ciências da Natureza,Biologia - Células,4º simulado,71,Biologia
