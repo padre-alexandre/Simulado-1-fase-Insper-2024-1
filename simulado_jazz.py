@@ -1170,6 +1170,130 @@ if login_aluno != '':
               </tr>
             </table>
             """
+        elif simulado_selecionado == '5º simulado':
+            html_table=""" 
+            <table bordercolor=#FFF0FC>
+              <tr style="background-color:#9E089E; height: 90px; color:#FFFFFF; font-family:Georgia; font-size: 17px; text-align: center">
+                <th style="width:350px; bordercolor=#FFF0FC">Assunto</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Quantidade de questões</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Resultado Individual</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Resultado Geral</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Status</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][0])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][0])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][0])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][0])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][0])+"""</th>
+              </tr>
+              <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][1])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][1])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][1])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][1])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][1])+"""</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][2])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][2])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][2])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][2])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][2])+"""</th>
+              </tr>
+              <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][3])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][3])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][3])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][3])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][3])+"""</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][4])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][4])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][4])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][4])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][4])+"""</th>
+              </tr>
+              <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][5])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][5])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][5])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][5])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][5])+"""</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][6])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][6])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][6])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][6])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][6])+"""</th>
+              </tr>
+              <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][7])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][7])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][7])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][7])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][7])+"""</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][8])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][8])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][8])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][8])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][8])+"""</th>
+              </tr>
+                <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][9])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][9])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][9])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][9])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][9])+"""</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][10])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][10])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][10])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][10])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][10])+"""</th>
+              </tr>
+                <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][11])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][11])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][11])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][11])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][11])+"""</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][12])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][12])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][12])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][12])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][12])+"""</th>
+              </tr>
+                <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][13])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][13])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][13])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][13])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][13])+"""</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][14])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][14])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][14])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][14])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][14])+"""</th>
+              </tr>
+                <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(matematica_tabela3['Assunto'][15])+"""</th>
+                <th>"""+str(matematica_tabela3['Quantidade de questões'][15])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Individual'][15])+"""</th>
+                <th>"""+str(matematica_tabela3['Resultado Geral'][15])+"""</th>
+                <th>"""+str(matematica_tabela3['Status'][15])+"""</th>
+              </tr>
+            </table>
+            """
         elif simulado_selecionado == 'Prova Antiga 2019.1':
             html_table=""" 
             <table bordercolor=#FFF0FC>
@@ -1285,6 +1409,7 @@ if login_aluno != '':
                 <th>"""+str(matematica_tabela3['Resultado Geral'][14])+"""</th>
                 <th>"""+str(matematica_tabela3['Status'][14])+"""</th>
               </tr>
+              
             </table>
             """
 
@@ -1758,6 +1883,53 @@ if login_aluno != '':
                 <th>"""+str(linguagens_tabela3['Resultado Individual'][5])+"""</th>
                 <th>"""+str(linguagens_tabela3['Resultado Geral'][5])+"""</th>
                 <th>"""+str(linguagens_tabela3['Status'][5])+"""</th>
+              </tr>
+              </table>
+              """
+        elif simulado_selecionado == '5º simulado':
+            html_table_lin=""" 
+            <table bordercolor=#FFF0FC>
+              <tr style="background-color:#9E089E; height: 90px; color:#FFFFFF; font-family:Georgia; font-size: 17px; text-align: center">
+                <th style="width:350px; bordercolor=#FFF0FC">Assunto</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Quantidade de questões</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Resultado Individual</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Resultado Geral</th>
+                <th style="width:150px; bordercolor=#FFF0FC">Status</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(linguagens_tabela3['Assunto'][0])+"""</th>
+                <th>"""+str(linguagens_tabela3['Quantidade de questões'][0])+"""</th>
+                <th>"""+str(linguagens_tabela3['Resultado Individual'][0])+"""</th>
+                <th>"""+str(linguagens_tabela3['Resultado Geral'][0])+"""</th>
+                <th>"""+str(linguagens_tabela3['Status'][0])+"""</th>
+              </tr>
+              <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(linguagens_tabela3['Assunto'][1])+"""</th>
+                <th>"""+str(linguagens_tabela3['Quantidade de questões'][1])+"""</th>
+                <th>"""+str(linguagens_tabela3['Resultado Individual'][1])+"""</th>
+                <th>"""+str(linguagens_tabela3['Resultado Geral'][1])+"""</th>
+                <th>"""+str(linguagens_tabela3['Status'][1])+"""</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(linguagens_tabela3['Assunto'][2])+"""</th>
+                <th>"""+str(linguagens_tabela3['Quantidade de questões'][2])+"""</th>
+                <th>"""+str(linguagens_tabela3['Resultado Individual'][2])+"""</th>
+                <th>"""+str(linguagens_tabela3['Resultado Geral'][2])+"""</th>
+                <th>"""+str(linguagens_tabela3['Status'][2])+"""</th>
+              </tr>
+              <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(linguagens_tabela3['Assunto'][3])+"""</th>
+                <th>"""+str(linguagens_tabela3['Quantidade de questões'][3])+"""</th>
+                <th>"""+str(linguagens_tabela3['Resultado Individual'][3])+"""</th>
+                <th>"""+str(linguagens_tabela3['Resultado Geral'][3])+"""</th>
+                <th>"""+str(linguagens_tabela3['Status'][3])+"""</th>
+              </tr>
+              <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                <th>"""+str(linguagens_tabela3['Assunto'][4])+"""</th>
+                <th>"""+str(linguagens_tabela3['Quantidade de questões'][4])+"""</th>
+                <th>"""+str(linguagens_tabela3['Resultado Individual'][4])+"""</th>
+                <th>"""+str(linguagens_tabela3['Resultado Geral'][4])+"""</th>
+                <th>"""+str(linguagens_tabela3['Status'][4])+"""</th>
               </tr>
               </table>
               """
@@ -2529,6 +2701,144 @@ if login_aluno != '':
                     </tr>
                     </table>
                     """
+            elif simulado_selecionado == '5º simulado':
+                    html_table_cie_hum=""" 
+                    <table bordercolor=#FFF0FC>
+                    <tr style="background-color:#9E089E; height: 90px; color:#FFFFFF; font-family:Georgia; font-size: 17px; text-align: center">
+                        <th style="width:350px; bordercolor=#FFF0FC">Assunto</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Quantidade de questões</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Resultado Individual</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Resultado Geral</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Status</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][0])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][1])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][2])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][3])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][4])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][5])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][6])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][7])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][8])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][9])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][10])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][11])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][12])+"""</th>
+                    </tr>
+                                        <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][13])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][14])+"""</th>
+                    </tr>
+                                        <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][15])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][16])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][16])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][16])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][16])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][16])+"""</th>
+                    </tr>
+                                        <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][17])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][17])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][17])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][17])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][17])+"""</th>
+                    </tr>
+                    </table>
+                    """
             elif simulado_selecionado == 'Prova Antiga 2019.1':
                     html_table_cie_hum=""" 
                     <table bordercolor=#FFF0FC>
@@ -2858,6 +3168,254 @@ if login_aluno != '':
                 </tr>
                 </table>
                 """
+            elif simulado_selecionado == '4º simulado':
+                    html_table_cie_hum=""" 
+                    <table bordercolor=#FFF0FC>
+                    <tr style="background-color:#9E089E; height: 90px; color:#FFFFFF; font-family:Georgia; font-size: 17px; text-align: center">
+                        <th style="width:350px; bordercolor=#FFF0FC">Assunto</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Quantidade de questões</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Resultado Individual</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Resultado Geral</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Status</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][0])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][1])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][2])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][3])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][4])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][5])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][6])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][7])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][8])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][9])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][10])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][11])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][12])+"""</th>
+                    </tr>
+                                        <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][13])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][14])+"""</th>
+                    </tr>
+                                        <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][15])+"""</th>
+                    </tr>
+                    </table>
+                    """
+            elif simulado_selecionado == '5º simulado':
+                    html_table_cie_hum=""" 
+                    <table bordercolor=#FFF0FC>
+                    <tr style="background-color:#9E089E; height: 90px; color:#FFFFFF; font-family:Georgia; font-size: 17px; text-align: center">
+                        <th style="width:350px; bordercolor=#FFF0FC">Assunto</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Quantidade de questões</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Resultado Individual</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Resultado Geral</th>
+                        <th style="width:150px; bordercolor=#FFF0FC">Status</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][0])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][0])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][1])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][1])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][2])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][2])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][3])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][3])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][4])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][4])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][5])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][5])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][6])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][6])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][7])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][7])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][8])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][8])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][9])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][9])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][10])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][10])+"""</th>
+                    </tr>
+                    <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][11])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][11])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][12])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][12])+"""</th>
+                    </tr>
+                                        <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][13])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][13])+"""</th>
+                    </tr>
+                    <tr style="height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][14])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][14])+"""</th>
+                    </tr>
+                                        <tr style="background-color:#f7d4f0; height: 42px; color:#C81F6D; font-size: 16px;text-align: center">
+                        <th>"""+str(ciencias_tabela3['Assunto'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Quantidade de questões'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Individual'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Resultado Geral'][15])+"""</th>
+                        <th>"""+str(ciencias_tabela3['Status'][15])+"""</th>
+                    </tr>
+                    </table>
+                    """
             elif simulado_selecionado == 'Prova Antiga 2019.1':
                 html_table_cie_nat=""" 
                 <table bordercolor=#FFF0FC>
@@ -3581,4 +4139,3 @@ if login_aluno != '':
             st.markdown(tabela_final, unsafe_allow_html=True)
         with col3:
             st.write("")
-
