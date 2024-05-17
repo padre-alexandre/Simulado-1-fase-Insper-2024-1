@@ -549,11 +549,11 @@ ID,Nome da avaliação,Turma,Nome do aluno(a),Login do aluno(a),Competência,Val
 3,Simulado 06,"Administração, Economia e Direito",Lucas Borges,lucassbborges@gmail.com,Competência 3,200,,6º simulado
 4,Simulado 06,"Administração, Economia e Direito",Lucas Borges,lucassbborges@gmail.com,Competência 4,200,,6º simulado
 5,Simulado 06,"Administração, Economia e Direito",Lucas Borges,lucassbborges@gmail.com,Competência 5,200,,6º simulado
-6,Simulado 06,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 1,200,,6º simulado
-7,Simulado 06,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 2,200,,6º simulado
-8,Simulado 06,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 3,200,,6º simulado
-9,Simulado 06,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 4,200,,6º simulado
-10,Simulado 06,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 5,200,,6º simulado
+6,Simulado 06,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 1,200,200,6º simulado
+7,Simulado 06,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 2,200,150,6º simulado
+8,Simulado 06,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 3,200,150,6º simulado
+9,Simulado 06,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 4,200,150,6º simulado
+10,Simulado 06,"Administração, Economia e Direito",Lucas Carvalho,lucasscarvalho1802@gmail.com,Competência 5,200,150,6º simulado
 11,Simulado 06,"Administração, Economia e Direito",Livia Costanzo,costanzovica@gmail.com,Competência 1,200,,6º simulado
 12,Simulado 06,"Administração, Economia e Direito",Livia Costanzo,costanzovica@gmail.com,Competência 2,200,,6º simulado
 13,Simulado 06,"Administração, Economia e Direito",Livia Costanzo,costanzovica@gmail.com,Competência 3,200,,6º simulado
@@ -569,11 +569,11 @@ ID,Nome da avaliação,Turma,Nome do aluno(a),Login do aluno(a),Competência,Val
 23,Simulado 06,"Administração, Economia e Direito",João Eduardo,jefraitz@gmail.com,Competência 3,200,,6º simulado
 24,Simulado 06,"Administração, Economia e Direito",João Eduardo,jefraitz@gmail.com,Competência 4,200,,6º simulado
 25,Simulado 06,"Administração, Economia e Direito",João Eduardo,jefraitz@gmail.com,Competência 5,200,,6º simulado
-26,Simulado 06,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 1,200,,6º simulado
-27,Simulado 06,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 2,200,,6º simulado
-28,Simulado 06,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 3,200,,6º simulado
-29,Simulado 06,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 4,200,,6º simulado
-30,Simulado 06,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 5,200,,6º simulado
+26,Simulado 06,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 1,200,200,6º simulado
+27,Simulado 06,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 2,200,200,6º simulado
+28,Simulado 06,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 3,200,150,6º simulado
+29,Simulado 06,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 4,200,150,6º simulado
+30,Simulado 06,"Administração, Economia e Direito",Matheus Hidalgo,matheushidalgo07@gmail.com,Competência 5,200,150,6º simulado
 31,Simulado 06,"Administração, Economia e Direito",Gabriel Iwakura,gabriiwa@gmail.com,Competência 1,200,,6º simulado
 32,Simulado 06,"Administração, Economia e Direito",Gabriel Iwakura,gabriiwa@gmail.com,Competência 2,200,,6º simulado
 33,Simulado 06,"Administração, Economia e Direito",Gabriel Iwakura,gabriiwa@gmail.com,Competência 3,200,,6º simulado
@@ -604,16 +604,16 @@ ID,Nome da avaliação,Turma,Nome do aluno(a),Login do aluno(a),Competência,Val
 58,Simulado 06,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 3,200,,6º simulado
 59,Simulado 06,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 4,200,,6º simulado
 60,Simulado 06,"Administração, Economia e Direito",Fabricio Miranda,fabricio0607miranda@gmail.com,Competência 5,200,,6º simulado
-61,Simulado 06,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 1,200,,6º simulado
-62,Simulado 06,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 2,200,,6º simulado
-63,Simulado 06,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 3,200,,6º simulado
-64,Simulado 06,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 4,200,,6º simulado
-65,Simulado 06,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 5,200,,6º simulado
-66,Simulado 06,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 1,200,,6º simulado
-67,Simulado 06,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 2,200,,6º simulado
-68,Simulado 06,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 3,200,,6º simulado
-69,Simulado 06,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 4,200,,6º simulado
-70,Simulado 06,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 5,200,,6º simulado
+61,Simulado 06,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 1,200,200,6º simulado
+62,Simulado 06,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 2,200,200,6º simulado
+63,Simulado 06,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 3,200,150,6º simulado
+64,Simulado 06,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 4,200,150,6º simulado
+65,Simulado 06,Engenharias e Ciência da Computação,Pedro Nadotti,nadottipedro5@gmail.com,Competência 5,200,150,6º simulado
+66,Simulado 06,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 1,200,100,6º simulado
+67,Simulado 06,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 2,200,100,6º simulado
+68,Simulado 06,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 3,200,100,6º simulado
+69,Simulado 06,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 4,200,100,6º simulado
+70,Simulado 06,"Administração, Economia e Direito",Cayo Novaes,contactcayo1@gmail.com,Competência 5,200,100,6º simulado
 71,Simulado 06,"Administração, Economia e Direito",André Parente,andrefilhoparente@gmail.com,Competência 1,200,,6º simulado
 72,Simulado 06,"Administração, Economia e Direito",André Parente,andrefilhoparente@gmail.com,Competência 2,200,,6º simulado
 73,Simulado 06,"Administração, Economia e Direito",André Parente,andrefilhoparente@gmail.com,Competência 3,200,,6º simulado
